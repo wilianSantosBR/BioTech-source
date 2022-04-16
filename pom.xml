@@ -1,16 +1,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>me.CHANGEME</groupId>
-    <artifactId>SlimefunAddon</artifactId>
+    <groupId>br.com.ohanacraft</groupId>
+    <artifactId>BioTech</artifactId>
     <version>1.0.0</version>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <author>RelativoBR</author>
     </properties>
 
     <repositories>
@@ -43,28 +44,50 @@
                     <include>*</include>
                 </includes>
             </resource>
+            <resource>
+                <directory>${basedir}</directory>
+
+                <includes>
+                    <include>LICENSE</include>
+                </includes>
+            </resource>
         </resources>
     </build>
 
     <dependencies>
+
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.17.1-R0.1-SNAPSHOT</version>
+            <version>1.18.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
-            <groupId>com.github.Slimefun</groupId>
+            <groupId>io.github.Slimefun</groupId>
             <artifactId>Slimefun4</artifactId>
-            <version>RC-28</version>
+            <version>RC-30</version>
             <scope>provided</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>io.github.baked-libs</groupId>
-                    <artifactId>dough-api</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
+
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>jsr305</artifactId>
+            <version>3.0.2</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.20</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.2.0.RELEASE</version>
+        </dependency>
+
     </dependencies>
 </project>
