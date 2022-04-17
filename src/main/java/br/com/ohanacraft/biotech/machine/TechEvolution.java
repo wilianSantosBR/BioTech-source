@@ -13,7 +13,7 @@ import org.bukkit.inventory.ItemStack;
 
 public class TechEvolution {
 
-    public static final SlimefunItemStack TECH_EVOLUTION = new SlimefunItemStack("TECH_EVOLUTION",
+    public static final SlimefunItemStack TECH_EVOLUTION = new SlimefunItemStack("BIOTECH_TECH_EVOLUTION",
             Material.LOOM, "&aTech &bEvolution", "");
     public static final ItemStack[] RECIPE_TECH_EVOLUTION = {
             Components.TRIPLE_COMPRESSED_LEATHER, Components.TRIPLE_COMPRESSED_WOOL, Components.TRIPLE_COMPRESSED_LEATHER,

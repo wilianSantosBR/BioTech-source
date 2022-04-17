@@ -1,26 +1,23 @@
 package br.com.ohanacraft.biotech.resource;
 
 import br.com.ohanacraft.biotech.BioTech;
-import br.com.ohanacraft.biotech.Categories;
-import br.com.ohanacraft.biotech.addons.supremeExpansion.util.ItemNotPlaceable;
+import br.com.ohanacraft.biotech.resource.MobTech.MobTechType;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import org.bukkit.inventory.ItemStack;
 
-public class Golem {
+public class IronGolem {
 
     public static final SlimefunItemStack SIMPLE_GOLEM =
-            new SlimefunItemStack("SIMPLE_GOLEM",
+            new SlimefunItemStack("BIOTECH_SIMPLE_GOLEM",
                     "e13f34227283796bc017244cb46557d64bd562fa9dab0e12af5d23ad699cf697",
                     "&eGolem &fComum", "");
 
     public static final SlimefunItemStack INTELLIGENCE_GOLEM =
-            new SlimefunItemStack("INTELLIGENCE_GOLEM",
+            new SlimefunItemStack("BIOTECH_INTELLIGENCE_GOLEM",
                     "562f0e9a738265c75bdd92b9e2e02377fec9f3b027086a0dec273bbdf6798be",
                     "&eGolem &fInteligente", "");
 
-    public static final SlimefunItemStack LOCK_GOLEM =
-            new SlimefunItemStack("LOCK_GOLEM",
+    public static final SlimefunItemStack LUCK_GOLEM =
+            new SlimefunItemStack("BIOTECH_LOCK_GOLEM",
                     "ef6e7a9c941e71bbfeb9ccdf91119ed7868bef05e661b1e14d3e34a9b17088d9",
                     "&eGolem &fSortuda", "");
 
@@ -29,8 +26,8 @@ public class Golem {
                     "ca14326aeac97f96189bb9969e7b955ec650d37b7c9790356ff09f32010f1ae0",
                     "&eGolem &fBerserk", "");
 
-    public static final SlimefunItemStack EFFICIENTY_GOLEM =
-            new SlimefunItemStack("EFFICIENTY_GOLEM",
+    public static final SlimefunItemStack EFFICIENCY_GOLEM =
+            new SlimefunItemStack("EFFICIENCY_GOLEM",
                     "6d351a4ef45749565514d22f48e9695005a582b9ddbbbc444647ff0b056f4ffa",
                     "&eGolem &fEficiente", "");
 
@@ -46,18 +43,14 @@ public class Golem {
 
     public static void setup(BioTech plugin) {
 
-        preSetup(plugin, Golem.SIMPLE_GOLEM);
-        preSetup(plugin, Golem.INTELLIGENCE_GOLEM);
-        preSetup(plugin, Golem.LOCK_GOLEM);
-        preSetup(plugin, Golem.BERSERK_GOLEM);
-        preSetup(plugin, Golem.EFFICIENTY_GOLEM);
-        preSetup(plugin, Golem.CLONING_GOLEM);
-        preSetup(plugin, Golem.ACCELERATION_GOLEM);
+        MobTech.preSetup(plugin, IronGolem.SIMPLE_GOLEM, MobTechType.SIMPLE);
+        MobTech.preSetup(plugin, IronGolem.INTELLIGENCE_GOLEM, MobTechType.INTELLIGENCE);
+        MobTech.preSetup(plugin, IronGolem.LUCK_GOLEM, MobTechType.LUCK);
+        MobTech.preSetup(plugin, IronGolem.BERSERK_GOLEM, MobTechType.BERSERK);
+        MobTech.preSetup(plugin, IronGolem.EFFICIENCY_GOLEM, MobTechType.EFFICIENCY);
+        MobTech.preSetup(plugin, IronGolem.CLONING_GOLEM, MobTechType.CLONING);
+        MobTech.preSetup(plugin, IronGolem.ACCELERATION_GOLEM, MobTechType.ACCELERATION);
 
     }
 
-    private static void preSetup(BioTech plugin, SlimefunItemStack item) {
-        new ItemNotPlaceable(Categories.RESOURCE_CATEGORY, item, RecipeType.ENHANCED_CRAFTING_TABLE,
-                new ItemStack[]{}).register(plugin);
-    }
 }

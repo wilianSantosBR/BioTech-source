@@ -10,20 +10,20 @@ import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
-public class TechGenerator {
+public class TechMutation {
 
-    public static final SlimefunItemStack TECH_GENERATOR = new SlimefunItemStack("BIOTECH_TECH_GENERATOR",
-            Material.LOOM, "&aTech &bGenerator", "");
-    public static final ItemStack[] RECIPE_TECH_GENERATOR = {
+    public static final SlimefunItemStack TECH_MUTATION = new SlimefunItemStack("BIOTECH_TECH_MUTATION",
+            Material.LOOM, "&aTech &bMutation", "");
+    public static final ItemStack[] RECIPE_TECH_MUTATION = {
             Components.TRIPLE_COMPRESSED_LEATHER, Components.TRIPLE_COMPRESSED_WOOL, Components.TRIPLE_COMPRESSED_LEATHER,
-            SlimefunItems.HARDENED_METAL_INGOT, new ItemStack(Material.LOOM), SlimefunItems.HARDENED_METAL_INGOT,
+            SlimefunItems.HARDENED_METAL_INGOT, Components.SYNTHETIC_RUBY, SlimefunItems.HARDENED_METAL_INGOT,
             Components.TRIPLE_COMPRESSED_OAK_WOOD, SlimefunItems.ELECTRIC_MOTOR, Components.TRIPLE_COMPRESSED_OAK_WOOD
     };
 
 
     public static void setup(BioTech plugin) {
 
-        preSetup(plugin, TechGenerator.TECH_GENERATOR, TechGenerator.RECIPE_TECH_GENERATOR);
+        preSetup(plugin, TechMutation.TECH_MUTATION, TechMutation.RECIPE_TECH_MUTATION);
 
 
     }

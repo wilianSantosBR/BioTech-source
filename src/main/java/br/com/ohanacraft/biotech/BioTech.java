@@ -1,23 +1,10 @@
 package br.com.ohanacraft.biotech;
 
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import org.bukkit.ChatColor;
-import org.bukkit.configuration.ConfigurationSection;
-import org.bukkit.enchantments.Enchantment;
-import org.bukkit.enchantments.EnchantmentWrapper;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
 
-import javax.annotation.Nonnull;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import java.util.logging.Level;
 
 public class BioTech extends JavaPlugin implements SlimefunAddon {
@@ -30,7 +17,7 @@ public class BioTech extends JavaPlugin implements SlimefunAddon {
         Config cfg = new Config(this);
 
         if (cfg.getBoolean("options.auto-update") && getDescription().getVersion().startsWith("DEV - ")) {
-//            new GitHubBuildsUpdater(this, getFile(), "TheBusyBiscuit/BioTech/master").start();
+//            new GitHubBuildsUpdater(this, getFile(), "").start();
         }
 
         instance = this;
@@ -68,6 +55,53 @@ public class BioTech extends JavaPlugin implements SlimefunAddon {
     }
     public final void log(Level level, String messages) {
         this.getLogger().log(level, messages);
+    }
+
+
+    public static String buildNameTier(String newName, Integer tier) {
+        switch (tier) {
+            case 1:
+                return ChatColor.DARK_GRAY + newName + " I";
+            case 2:
+                return ChatColor.GRAY + newName + " II";
+            case 3:
+                return ChatColor.DARK_GREEN + newName + " III";
+            case 4:
+                return ChatColor.BLUE + newName + " IV";
+            case 5:
+                return ChatColor.DARK_RED + newName + " V";
+            case 6:
+                return ChatColor.GOLD + newName + " VI";
+            case 7:
+                return ChatColor.YELLOW + newName + " VII";
+            case 8:
+                return ChatColor.WHITE + newName + " VIII";
+            default:
+                return ChatColor.DARK_GRAY + newName;
+        }
+    }
+
+    public static String buildIdTier(String newName, Integer tier) {
+        switch (tier) {
+            case 1:
+                return newName + "_I";
+            case 2:
+                return newName + "_II";
+            case 3:
+                return newName + "_III";
+            case 4:
+                return newName + "_IV";
+            case 5:
+                return newName + "_V";
+            case 6:
+                return newName + "_VI";
+            case 7:
+                return newName + "_VII";
+            case 8:
+                return newName + "_VIII";
+            default:
+                return newName + "_0";
+        }
     }
 
 }

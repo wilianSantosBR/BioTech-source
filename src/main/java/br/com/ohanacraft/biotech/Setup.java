@@ -1,7 +1,7 @@
 package br.com.ohanacraft.biotech;
 
 import br.com.ohanacraft.biotech.resource.Bee;
-import br.com.ohanacraft.biotech.resource.Golem;
+import br.com.ohanacraft.biotech.resource.IronGolem;
 
 import javax.annotation.Nonnull;
 
@@ -11,7 +11,7 @@ public class Setup {
 
         Bee.setup(plugin);
 
-        Golem.setup(plugin);
+        IronGolem.setup(plugin);
 
 
     }
