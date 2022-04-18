@@ -33,7 +33,7 @@ public class MobCollectorTech extends SlimefunItem implements Rechargeable, NotP
             "",
             "&fUsed to capture bees and Iron Golen",
             "",
-            LoreBuilder.power(50, "use"),
+            LoreBuilder.power(50, " per use"),
             LoreBuilder.powerCharged(0, 500)
     );
     public static final ItemStack[] RECIPE_MOB_COLLECTOR_I = new ItemStack[]{
@@ -48,7 +48,7 @@ public class MobCollectorTech extends SlimefunItem implements Rechargeable, NotP
             "",
             "&fUsed to capture bees and Iron Golen",
             "",
-            LoreBuilder.power(50, "use"),
+            LoreBuilder.power(50, " per use"),
             LoreBuilder.powerCharged(0, 5000)
     );
     public static final ItemStack[] RECIPE_MOB_COLLECTOR_II = new ItemStack[]{
@@ -63,7 +63,7 @@ public class MobCollectorTech extends SlimefunItem implements Rechargeable, NotP
             "",
             "&fUsed to capture bees and Iron Golen",
             "",
-            LoreBuilder.power(50, "use"),
+            LoreBuilder.power(50, " per use"),
             LoreBuilder.powerCharged(0, 50000)
     );
     public static final ItemStack[] RECIPE_MOB_COLLECTOR_III = new ItemStack[]{
