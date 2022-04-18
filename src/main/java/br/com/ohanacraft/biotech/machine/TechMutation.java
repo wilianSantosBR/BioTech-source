@@ -13,7 +13,7 @@ import org.bukkit.inventory.ItemStack;
 public class TechMutation {
 
     public static final SlimefunItemStack TECH_MUTATION = new SlimefunItemStack("BIOTECH_TECH_MUTATION",
-            Material.LOOM, "&aTech &bMutation", "");
+            Material.SLIME_BLOCK, "&aTech &bMutation", "");
     public static final ItemStack[] RECIPE_TECH_MUTATION = {
             Components.TRIPLE_COMPRESSED_SLIME_BALL, Components.TRIPLE_COMPRESSED_MAGMA_CREAM, Components.TRIPLE_COMPRESSED_SLIME_BALL,
             SlimefunItems.HARDENED_METAL_INGOT, Components.SYNTHETIC_RUBY, SlimefunItems.HARDENED_METAL_INGOT,
