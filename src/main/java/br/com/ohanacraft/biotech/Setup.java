@@ -24,10 +24,10 @@ public class Setup {
 
         TechGenerator.setup(plugin);
 
-        TechEvolution.setup(plugin);
-
-        TechMutation.setup(plugin);
-
+//        TechEvolution.setup(plugin);
+//
+//        TechMutation.setup(plugin);
+//
     }
 
 }
