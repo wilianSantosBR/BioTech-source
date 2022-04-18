@@ -3,9 +3,10 @@ package br.com.ohanacraft.biotech;
 import br.com.ohanacraft.biotech.machine.TechEvolution;
 import br.com.ohanacraft.biotech.machine.TechGenerator;
 import br.com.ohanacraft.biotech.machine.TechMutation;
-import br.com.ohanacraft.biotech.resource.Bee;
+import br.com.ohanacraft.biotech.resource.BeeTech;
 import br.com.ohanacraft.biotech.resource.Components;
-import br.com.ohanacraft.biotech.resource.IronGolem;
+import br.com.ohanacraft.biotech.resource.IronGolemTech;
+import br.com.ohanacraft.biotech.tools.MobCollectorTech;
 
 import javax.annotation.Nonnull;
 
@@ -13,11 +14,13 @@ public class Setup {
 
     public static void setup(@Nonnull BioTech plugin) {
 
-        Bee.setup(plugin);
-
-        IronGolem.setup(plugin);
+        BeeTech.setup(plugin);
 
         Components.setup(plugin);
+
+        MobCollectorTech.setup(plugin);
+
+        IronGolemTech.setup(plugin);
 
         TechEvolution.setup(plugin);
 

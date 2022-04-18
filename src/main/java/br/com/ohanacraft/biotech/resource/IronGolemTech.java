@@ -4,7 +4,7 @@ import br.com.ohanacraft.biotech.BioTech;
 import br.com.ohanacraft.biotech.dto.MobTechDTO;
 import br.com.ohanacraft.biotech.dto.MobTechDTO.MobTechType;
 
-public class IronGolem {
+public class IronGolemTech {
 
     public static final MobTechDTO SIMPLE_GOLEM =
             new MobTechDTO("BIOTECH_SIMPLE_GOLEM",
@@ -50,13 +50,13 @@ public class IronGolem {
 
     public static void setup(BioTech plugin) {
 
-        MobTech.preSetup(plugin, IronGolem.SIMPLE_GOLEM);
-        MobTech.preSetup(plugin, IronGolem.MUTATION_INTELLIGENCE_GOLEM);
-        MobTech.preSetup(plugin, IronGolem.MUTATION_LUCK_GOLEM);
-        MobTech.preSetup(plugin, IronGolem.MUTATION_BERSERK_GOLEM);
-        MobTech.preSetup(plugin, IronGolem.ROBOTIC_EFFICIENCY_GOLEM);
-        MobTech.preSetup(plugin, IronGolem.ROBOTIC_CLONING_GOLEM);
-        MobTech.preSetup(plugin, IronGolem.ROBOTIC_ACCELERATION_GOLEM);
+        MobTech.preSetup(plugin, IronGolemTech.SIMPLE_GOLEM);
+        MobTech.preSetup(plugin, IronGolemTech.MUTATION_INTELLIGENCE_GOLEM);
+        MobTech.preSetup(plugin, IronGolemTech.MUTATION_LUCK_GOLEM);
+        MobTech.preSetup(plugin, IronGolemTech.MUTATION_BERSERK_GOLEM);
+        MobTech.preSetup(plugin, IronGolemTech.ROBOTIC_EFFICIENCY_GOLEM);
+        MobTech.preSetup(plugin, IronGolemTech.ROBOTIC_CLONING_GOLEM);
+        MobTech.preSetup(plugin, IronGolemTech.ROBOTIC_ACCELERATION_GOLEM);
 
     }
 

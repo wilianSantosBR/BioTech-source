@@ -4,7 +4,7 @@ import br.com.ohanacraft.biotech.BioTech;
 import br.com.ohanacraft.biotech.dto.MobTechDTO;
 import br.com.ohanacraft.biotech.dto.MobTechDTO.MobTechType;
 
-public class Bee {
+public class BeeTech {
 
     public static final MobTechDTO SIMPLE_BEE =
             new MobTechDTO("BIOTECH_SIMPLE_BEE",
@@ -51,13 +51,13 @@ public class Bee {
 
     public static void setup(BioTech plugin) {
 
-        MobTech.preSetup(plugin, Bee.SIMPLE_BEE);
-        MobTech.preSetup(plugin, Bee.MUTATION_INTELLIGENCE_BEE);
-        MobTech.preSetup(plugin, Bee.MUTATION_LUCK_BEE);
-        MobTech.preSetup(plugin, Bee.MUTATION_BERSERK_BEE);
-        MobTech.preSetup(plugin, Bee.ROBOTIC_EFFICIENCY_BEE);
-        MobTech.preSetup(plugin, Bee.ROBOTIC_CLONING_BEE);
-        MobTech.preSetup(plugin, Bee.ROBOTIC_ACCELERATION_BEE);
+        MobTech.preSetup(plugin, BeeTech.SIMPLE_BEE);
+        MobTech.preSetup(plugin, BeeTech.MUTATION_INTELLIGENCE_BEE);
+        MobTech.preSetup(plugin, BeeTech.MUTATION_LUCK_BEE);
+        MobTech.preSetup(plugin, BeeTech.MUTATION_BERSERK_BEE);
+        MobTech.preSetup(plugin, BeeTech.ROBOTIC_EFFICIENCY_BEE);
+        MobTech.preSetup(plugin, BeeTech.ROBOTIC_CLONING_BEE);
+        MobTech.preSetup(plugin, BeeTech.ROBOTIC_ACCELERATION_BEE);
 
     }
 
