@@ -71,26 +71,30 @@ public class TechGenerator extends AMachine implements RecipeDisplayItem, Radioa
 
     @Override
     public MachineRecipe findNextRecipe(BlockMenu inv) {
-        ItemStack key = inv.getItemInSlot(getInputSlots()[2]);
-        for (MachineRecipe recipe: recipes) {
-            ItemStack input = recipe.getInput()[0];
-            if (SlimefunUtils.isItemSimilar(key, input, true) && key.getAmount() == 64) {
-                int seconds = 1800;
-                ItemStack b1 = inv.getItemInSlot(getInputSlots()[0]);
-                ItemStack b2 = inv.getItemInSlot(getInputSlots()[1]);
-                if (b1 != null) {
-                    SlimefunItem mob1 = SlimefunItem.getByItem(b1);
-                    if (mob1 instanceof MobTech) {
-                        seconds -= (((MobTech) mob1).getMobTechTier() + 1 ) * b1.getAmount();
+        if(inv != null) {
+            ItemStack key = inv.getItemInSlot(getInputSlots()[2]);
+            if(key != null){
+                for (MachineRecipe recipe : recipes) {
+                    ItemStack input = recipe.getInput()[0];
+                    if (input != null && SlimefunUtils.isItemSimilar(key, input, true) && key.getAmount() == 64) {
+                        int seconds = 1800;
+                        ItemStack b1 = inv.getItemInSlot(getInputSlots()[0]);
+                        ItemStack b2 = inv.getItemInSlot(getInputSlots()[1]);
+                        if (b1 != null) {
+                            SlimefunItem mob1 = SlimefunItem.getByItem(b1);
+                            if (mob1 instanceof MobTech) {
+                                seconds -= (((MobTech) mob1).getMobTechTier() + 1) * b1.getAmount();
+                            }
+                        }
+                        if (b2 != null) {
+                            SlimefunItem mob2 = SlimefunItem.getByItem(b2);
+                            if (mob2 instanceof MobTech) {
+                                seconds -= (((MobTech) mob2).getMobTechTier() + 1) * b2.getAmount();
+                            }
+                        }
+                        return new MachineRecipe(seconds, new ItemStack[]{input}, new ItemStack[]{input.clone()});
                     }
                 }
-                if (b2 != null) {
-                    SlimefunItem mob2 = SlimefunItem.getByItem(b2);
-                    if (mob2 instanceof MobTech) {
-                        seconds -= (((MobTech) mob2).getMobTechTier() + 1 ) * b2.getAmount();
-                    }
-                }
-                return new MachineRecipe(seconds, new ItemStack[] { input }, new ItemStack[] { input.clone() });
             }
         }
         return null;

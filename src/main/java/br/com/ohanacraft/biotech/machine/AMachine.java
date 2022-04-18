@@ -178,7 +178,6 @@ public abstract class AMachine extends SlimefunItem implements EnergyNetComponen
         });
     }
 
-    //Processing Stuff
     public MachineRecipe getProcessing(Block b) {
         return processing.get(b);
     }
