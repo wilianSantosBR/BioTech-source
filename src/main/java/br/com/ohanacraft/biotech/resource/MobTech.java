@@ -21,13 +21,13 @@ public class MobTech extends SlimefunItem implements Radioactive, NotPlaceable {
 
     public static void preSetup(BioTech plugin, MobTechDTO item) {
         if (MobTechType.SIMPLE == item.getMobTechType()) {
-            new MobTech(Categories.TECHMOB_CATEGORY, BioTech.buildItemFromMobTechDTO(item, 0),
+            new MobTech(Categories.RESOURCE_CATEGORY, BioTech.buildItemFromMobTechDTO(item, 0),
                     RecipeType.NULL, new ItemStack[]{})
                     .setMobTechType(item.getMobTechType())
                     .setMobTechTier(0)
                     .register(plugin);
         } else {
-            for (int i = 1; i <= 8; i++) {
+            for (int i = 1; i <= 9; i++) {
                 new MobTech(Categories.TECHMOB_CATEGORY, BioTech.buildItemFromMobTechDTO(item, i),
                         RecipeType.NULL, new ItemStack[]{})
                         .setMobTechType(item.getMobTechType())

@@ -65,21 +65,23 @@ public class BioTech extends JavaPlugin implements SlimefunAddon {
     public static String buildNameTier(String newName, Integer tier) {
         switch (tier) {
             case 1:
-                return ChatColor.DARK_GRAY + newName + " I";
+                return ChatColor.GRAY + newName + " I";
             case 2:
-                return ChatColor.GRAY + newName + " II";
+                return ChatColor.DARK_GREEN + newName + " II";
             case 3:
-                return ChatColor.DARK_GREEN + newName + " III";
+                return ChatColor.GREEN + newName + " III";
             case 4:
-                return ChatColor.BLUE + newName + " IV";
+                return ChatColor.DARK_BLUE + newName + " IV";
             case 5:
-                return ChatColor.DARK_RED + newName + " V";
+                return ChatColor.BLUE + newName + " V";
             case 6:
                 return ChatColor.GOLD + newName + " VI";
             case 7:
                 return ChatColor.YELLOW + newName + " VII";
             case 8:
-                return ChatColor.WHITE + newName + " VIII";
+                return ChatColor.DARK_RED + newName + " VIII";
+            case 9:
+                return ChatColor.DARK_PURPLE + newName + " IX";
             default:
                 return ChatColor.DARK_GRAY + newName;
         }
@@ -103,6 +105,8 @@ public class BioTech extends JavaPlugin implements SlimefunAddon {
                 return newName + "_VII";
             case 8:
                 return newName + "_VIII";
+            case 9:
+                return newName + "_IX";
             default:
                 return newName + "_0";
         }
@@ -132,15 +136,15 @@ public class BioTech extends JavaPlugin implements SlimefunAddon {
         switch (mobTechType) {
             case BERSERK:
             case ACCELERATION:
-                return ChatColor.YELLOW + String.valueOf(tier * 2) + "x "
+                return ChatColor.YELLOW + String.valueOf(tier + 1) + "x "
                         + ChatColor.GRAY + "Velocidade de processamento";
             case LUCK:
             case CLONING:
-                return ChatColor.YELLOW + String.valueOf(tier * 2) + "x "
+                return ChatColor.YELLOW + String.valueOf(tier + 1) + "x "
                         + ChatColor.GRAY + "Quantidade da produção";
             case INTELLIGENCE:
             case EFFICIENCY:
-                return ChatColor.YELLOW + String.valueOf(tier * 2) + "x "
+                return ChatColor.YELLOW + String.valueOf(tier + 1) + "x "
                         + ChatColor.GRAY + "Economia de energia";
             case SIMPLE:
             default:
