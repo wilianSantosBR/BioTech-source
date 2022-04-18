@@ -29,7 +29,7 @@ public class TechEvolution {
     }
 
     private static void preSetup(BioTech plugin, SlimefunItemStack item, ItemStack[] recipe) {
-        new SlimefunItem(Categories.RESOURCE_CATEGORY, item, RecipeType.ENHANCED_CRAFTING_TABLE,
+        new SlimefunItem(Categories.MACHINES_CATEGORY, item, RecipeType.ENHANCED_CRAFTING_TABLE,
                 recipe).register(plugin);
     }
 }
