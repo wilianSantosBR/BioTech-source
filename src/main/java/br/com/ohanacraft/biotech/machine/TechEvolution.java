@@ -2,7 +2,6 @@ package br.com.ohanacraft.biotech.machine;
 
 import br.com.ohanacraft.biotech.BioTech;
 import br.com.ohanacraft.biotech.Categories;
-import br.com.ohanacraft.biotech.addons.supremeExpansion.util.ItemNotPlaceable;
 import br.com.ohanacraft.biotech.resource.Components;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
