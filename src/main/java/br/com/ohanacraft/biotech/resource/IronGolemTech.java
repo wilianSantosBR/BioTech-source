@@ -51,12 +51,14 @@ public class IronGolemTech {
     public static void setup(BioTech plugin) {
 
         MobTech.preSetup(plugin, IronGolemTech.SIMPLE_GOLEM);
-        MobTech.preSetup(plugin, IronGolemTech.MUTATION_INTELLIGENCE_GOLEM);
-        MobTech.preSetup(plugin, IronGolemTech.MUTATION_LUCK_GOLEM);
-        MobTech.preSetup(plugin, IronGolemTech.MUTATION_BERSERK_GOLEM);
+
         MobTech.preSetup(plugin, IronGolemTech.ROBOTIC_EFFICIENCY_GOLEM);
         MobTech.preSetup(plugin, IronGolemTech.ROBOTIC_CLONING_GOLEM);
         MobTech.preSetup(plugin, IronGolemTech.ROBOTIC_ACCELERATION_GOLEM);
+
+        MobTech.preSetup(plugin, IronGolemTech.MUTATION_INTELLIGENCE_GOLEM);
+        MobTech.preSetup(plugin, IronGolemTech.MUTATION_LUCK_GOLEM);
+        MobTech.preSetup(plugin, IronGolemTech.MUTATION_BERSERK_GOLEM);
 
     }
 

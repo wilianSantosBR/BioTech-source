@@ -52,12 +52,14 @@ public class BeeTech {
     public static void setup(BioTech plugin) {
 
         MobTech.preSetup(plugin, BeeTech.SIMPLE_BEE);
-        MobTech.preSetup(plugin, BeeTech.MUTATION_INTELLIGENCE_BEE);
-        MobTech.preSetup(plugin, BeeTech.MUTATION_LUCK_BEE);
-        MobTech.preSetup(plugin, BeeTech.MUTATION_BERSERK_BEE);
+
         MobTech.preSetup(plugin, BeeTech.ROBOTIC_EFFICIENCY_BEE);
         MobTech.preSetup(plugin, BeeTech.ROBOTIC_CLONING_BEE);
         MobTech.preSetup(plugin, BeeTech.ROBOTIC_ACCELERATION_BEE);
+
+        MobTech.preSetup(plugin, BeeTech.MUTATION_INTELLIGENCE_BEE);
+        MobTech.preSetup(plugin, BeeTech.MUTATION_LUCK_BEE);
+        MobTech.preSetup(plugin, BeeTech.MUTATION_BERSERK_BEE);
 
     }
 
