@@ -39,7 +39,7 @@ public class Bee {
     public static final MobTechDTO MUTATION_LUCK_BEE =
             new MobTechDTO("BIOTECH_LUCK_BEE",
                     "Abelha Mutante Sortuda",
-                    "259001a851bb1b9e9c05de5d5c68b1ea0dc8bd86babf188e0aded8f912c07d0d",
+                    "929fa8cd84ac125021d6201a148a9e862c0b772c48477b06c19145c4a673aa24",
                     MobTechType.LUCK);
 
     public static final MobTechDTO ROBOTIC_CLONING_BEE =

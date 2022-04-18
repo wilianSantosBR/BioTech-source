@@ -167,7 +167,7 @@ public class Components {
 
 
     public static final SlimefunItemStack SINGLE_COMPRESSED_MAGMA_CREAM = new SlimefunItemStack("SINGLE_COMPRESSED_MAGMA_CREAM",
-            Material.SNOWBALL, "&eSingle Compressed Magma Cream", "");
+            Material.MAGMA_CREAM, "&eSingle Compressed Magma Cream", "");
     public static final ItemStack[] RECIPE_SINGLE_COMPRESSED_MAGMA_CREAM = {
             new ItemStack(Material.MAGMA_CREAM), new ItemStack(Material.MAGMA_CREAM), new ItemStack(Material.MAGMA_CREAM),
             new ItemStack(Material.MAGMA_CREAM), new ItemStack(Material.MAGMA_CREAM), new ItemStack(Material.MAGMA_CREAM),
@@ -175,7 +175,7 @@ public class Components {
     };
 
     public static final SlimefunItemStack DOUBLE_COMPRESSED_MAGMA_CREAM = new SlimefunItemStack("DOUBLE_COMPRESSED_MAGMA_CREAM",
-            Material.SNOWBALL, "&eDouble Compressed Magma Cream", "");
+            Material.MAGMA_CREAM, "&eDouble Compressed Magma Cream", "");
     public static final ItemStack[] RECIPE_DOUBLE_COMPRESSED_MAGMA_CREAM = {
             Components.SINGLE_COMPRESSED_MAGMA_CREAM, Components.SINGLE_COMPRESSED_MAGMA_CREAM, Components.SINGLE_COMPRESSED_MAGMA_CREAM,
             Components.SINGLE_COMPRESSED_MAGMA_CREAM, Components.SINGLE_COMPRESSED_MAGMA_CREAM, Components.SINGLE_COMPRESSED_MAGMA_CREAM,
@@ -183,7 +183,7 @@ public class Components {
     };
 
     public static final SlimefunItemStack TRIPLE_COMPRESSED_MAGMA_CREAM = new SlimefunItemStack("TRIPLE_COMPRESSED_MAGMA_CREAM",
-            Material.SNOWBALL, "&eTriple Compressed Magma Cream", "");
+            Material.MAGMA_CREAM, "&eTriple Compressed Magma Cream", "");
     public static final ItemStack[] RECIPE_TRIPLE_COMPRESSED_MAGMA_CREAM = {
             Components.DOUBLE_COMPRESSED_MAGMA_CREAM, Components.DOUBLE_COMPRESSED_MAGMA_CREAM, Components.DOUBLE_COMPRESSED_MAGMA_CREAM,
             Components.DOUBLE_COMPRESSED_MAGMA_CREAM, Components.DOUBLE_COMPRESSED_MAGMA_CREAM, Components.DOUBLE_COMPRESSED_MAGMA_CREAM,
@@ -192,13 +192,43 @@ public class Components {
 
     public static void setup(BioTech plugin) {
 
+        //lã
+        registerEnhancedCraft(plugin, Components.SINGLE_COMPRESSED_WOOL, Components.RECIPE_SINGLE_COMPRESSED_WOOL);
+        registerEnhancedCraft(plugin, Components.DOUBLE_COMPRESSED_WOOL, Components.RECIPE_DOUBLE_COMPRESSED_WOOL);
+        registerEnhancedCraft(plugin, Components.TRIPLE_COMPRESSED_WOOL, Components.RECIPE_TRIPLE_COMPRESSED_WOOL);
+
+        //couro
+        registerEnhancedCraft(plugin, Components.SINGLE_COMPRESSED_LEATHER, Components.RECIPE_SINGLE_COMPRESSED_LEATHER);
+        registerEnhancedCraft(plugin, Components.DOUBLE_COMPRESSED_LEATHER, Components.RECIPE_DOUBLE_COMPRESSED_LEATHER);
+        registerEnhancedCraft(plugin, Components.TRIPLE_COMPRESSED_LEATHER, Components.RECIPE_TRIPLE_COMPRESSED_LEATHER);
+
+        //madeira
+        registerEnhancedCraft(plugin, Components.SINGLE_COMPRESSED_OAK_WOOD, Components.RECIPE_SINGLE_COMPRESSED_OAK_WOOD);
+        registerEnhancedCraft(plugin, Components.DOUBLE_COMPRESSED_OAK_WOOD, Components.RECIPE_DOUBLE_COMPRESSED_OAK_WOOD);
+        registerEnhancedCraft(plugin, Components.TRIPLE_COMPRESSED_OAK_WOOD, Components.RECIPE_TRIPLE_COMPRESSED_OAK_WOOD);
+
+
+        //esponja
+        registerEnhancedCraft(plugin, Components.SINGLE_COMPRESSED_SPONGE, Components.RECIPE_SINGLE_COMPRESSED_SPONGE);
+        registerEnhancedCraft(plugin, Components.DOUBLE_COMPRESSED_SPONGE, Components.RECIPE_DOUBLE_COMPRESSED_SPONGE);
+        registerEnhancedCraft(plugin, Components.TRIPLE_COMPRESSED_SPONGE, Components.RECIPE_TRIPLE_COMPRESSED_SPONGE);
+
+        //Bola de Slime
+        registerEnhancedCraft(plugin, Components.SINGLE_COMPRESSED_SLIME_BALL, Components.RECIPE_SINGLE_COMPRESSED_SLIME_BALL);
+        registerEnhancedCraft(plugin, Components.DOUBLE_COMPRESSED_SLIME_BALL, Components.RECIPE_DOUBLE_COMPRESSED_SLIME_BALL);
+        registerEnhancedCraft(plugin, Components.TRIPLE_COMPRESSED_SLIME_BALL, Components.RECIPE_TRIPLE_COMPRESSED_SLIME_BALL);
+
+
+        //Creme de Magma
+        registerEnhancedCraft(plugin, Components.SINGLE_COMPRESSED_MAGMA_CREAM, Components.RECIPE_SINGLE_COMPRESSED_MAGMA_CREAM);
+        registerEnhancedCraft(plugin, Components.DOUBLE_COMPRESSED_MAGMA_CREAM, Components.RECIPE_DOUBLE_COMPRESSED_MAGMA_CREAM);
+        registerEnhancedCraft(plugin, Components.TRIPLE_COMPRESSED_MAGMA_CREAM, Components.RECIPE_TRIPLE_COMPRESSED_MAGMA_CREAM);
+
+        //gemas
         registerEnhancedCraft(plugin, Components.SYNTHETIC_AMETHYST, Components.RECIPE_SYNTHETIC_AMETHYST);
         registerEnhancedCraft(plugin, Components.SYNTHETIC_RUBY, Components.RECIPE_SYNTHETIC_RUBY);
 
 
-        registerEnhancedCraft(plugin, Components.SINGLE_COMPRESSED_WOOL, Components.RECIPE_SINGLE_COMPRESSED_WOOL);
-        registerEnhancedCraft(plugin, Components.DOUBLE_COMPRESSED_WOOL, Components.RECIPE_DOUBLE_COMPRESSED_WOOL);
-        registerEnhancedCraft(plugin, Components.TRIPLE_COMPRESSED_WOOL, Components.RECIPE_TRIPLE_COMPRESSED_WOOL);
 
 
     }
