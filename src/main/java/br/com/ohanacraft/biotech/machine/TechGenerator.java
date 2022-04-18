@@ -15,8 +15,8 @@ public class TechGenerator {
     public static final SlimefunItemStack TECH_GENERATOR = new SlimefunItemStack("BIOTECH_TECH_GENERATOR",
             Material.LOOM, "&aTech &bGenerator", "");
     public static final ItemStack[] RECIPE_TECH_GENERATOR = {
-            Components.TRIPLE_COMPRESSED_LEATHER, Components.TRIPLE_COMPRESSED_WOOL, Components.TRIPLE_COMPRESSED_LEATHER,
-            SlimefunItems.HARDENED_METAL_INGOT, new ItemStack(Material.LOOM), SlimefunItems.HARDENED_METAL_INGOT,
+            Components.TRIPLE_COMPRESSED_SPONGE, SlimefunItems.ELECTRIC_MOTOR, Components.TRIPLE_COMPRESSED_SPONGE,
+            SlimefunItems.REINFORCED_ALLOY_INGOT, new ItemStack(Material.LOOM), SlimefunItems.REINFORCED_ALLOY_INGOT,
             Components.TRIPLE_COMPRESSED_OAK_WOOD, SlimefunItems.ELECTRIC_MOTOR, Components.TRIPLE_COMPRESSED_OAK_WOOD
     };
 
