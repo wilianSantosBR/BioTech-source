@@ -1,6 +1,10 @@
 package br.com.ohanacraft.biotech;
 
+import br.com.ohanacraft.biotech.dto.MobTechDTO;
+import br.com.ohanacraft.biotech.dto.MobTechDTO.MobTechType;
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun4.core.attributes.Radioactivity;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -103,5 +107,56 @@ public class BioTech extends JavaPlugin implements SlimefunAddon {
                 return newName + "_0";
         }
     }
+
+    public static String buildLoreRadioactivityType(MobTechType mobTechType) {
+        Radioactivity radioactivity;
+        switch (mobTechType) {
+            case INTELLIGENCE:
+            case BERSERK:
+            case LUCK:
+                radioactivity = Radioactivity.VERY_DEADLY;
+                break;
+            case CLONING:
+            case ACCELERATION:
+            case EFFICIENCY:
+                radioactivity = Radioactivity.HIGH;
+                break;
+            case SIMPLE:
+            default:
+                radioactivity = Radioactivity.LOW;
+        }
+        return radioactivity.getLore();
+    }
+
+    public static String buildLoreType(MobTechType mobTechType, Integer tier) {
+        switch (mobTechType) {
+            case BERSERK:
+            case ACCELERATION:
+                return ChatColor.YELLOW + String.valueOf(tier * 2) + "x "
+                        + ChatColor.GRAY + "Velocidade de processamento";
+            case LUCK:
+            case CLONING:
+                return ChatColor.YELLOW + String.valueOf(tier * 2) + "x "
+                        + ChatColor.GRAY + "Quantidade da produção";
+            case INTELLIGENCE:
+            case EFFICIENCY:
+                return ChatColor.YELLOW + String.valueOf(tier * 2) + "x "
+                        + ChatColor.GRAY + "Economia de energia";
+            case SIMPLE:
+            default:
+                return ChatColor.GRAY + "Aumenta Velocidade de processamento";
+        }
+    }
+
+    public static SlimefunItemStack buildItemFromMobTechDTO(MobTechDTO mobTechDTO, Integer tier) {
+        return new SlimefunItemStack(buildIdTier(mobTechDTO.getId(), tier),
+                mobTechDTO.getTexture(),
+                buildNameTier(mobTechDTO.getName(), tier),
+                "",
+                buildLoreRadioactivityType(mobTechDTO.getMobTechType()),
+                buildLoreType(mobTechDTO.getMobTechType(), tier),
+                "");
+    }
+
 
 }
