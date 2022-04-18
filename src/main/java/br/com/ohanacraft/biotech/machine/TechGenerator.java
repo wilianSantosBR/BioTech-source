@@ -2,16 +2,16 @@ package br.com.ohanacraft.biotech.machine;
 
 import br.com.ohanacraft.biotech.BioTech;
 import br.com.ohanacraft.biotech.Categories;
+import br.com.ohanacraft.biotech.addons.supremeExpansion.util.Energy;
 import br.com.ohanacraft.biotech.resource.Components;
 import br.com.ohanacraft.biotech.resource.MobTech;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.core.attributes.Radioactive;
-import io.github.thebusybiscuit.slimefun4.core.attributes.Radioactivity;
-import io.github.thebusybiscuit.slimefun4.core.attributes.RecipeDisplayItem;
+import io.github.thebusybiscuit.slimefun4.core.attributes.*;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
+import io.github.thebusybiscuit.slimefun4.utils.LoreBuilder;
 import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
 import me.mrCookieSlime.Slimefun.Objects.SlimefunItem.abstractItems.MachineRecipe;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
@@ -26,7 +26,14 @@ import java.util.List;
 public class TechGenerator extends AMachine implements RecipeDisplayItem, Radioactive {
 
     public static final SlimefunItemStack TECH_GENERATOR = new SlimefunItemStack("BIOTECH_TECH_GENERATOR",
-            Material.LOOM, "&aTech &bGenerator", "", Radioactivity.HIGH.getLore(), "");
+            Material.LOOM, "&aTech &bGenerator", "",
+            "&fUsing power and bees/golem, slowly generates materials.",
+            "",
+            LoreBuilder.radioactive(Radioactivity.HIGH),
+            "",
+            LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE),
+            Energy.energyPowerPerSecond(2000),
+            "");
     public static final ItemStack[] RECIPE_TECH_GENERATOR = {
             Components.SYNTHETIC_AMETHYST, Components.SYNTHETIC_AMETHYST, Components.SYNTHETIC_AMETHYST,
             SlimefunItems.REINFORCED_ALLOY_INGOT, new ItemStack(Material.LOOM), SlimefunItems.REINFORCED_ALLOY_INGOT,
@@ -38,8 +45,11 @@ public class TechGenerator extends AMachine implements RecipeDisplayItem, Radioa
     }
 
     private static void preSetup(BioTech plugin, SlimefunItemStack item, ItemStack[] recipe) {
-        new SlimefunItem(Categories.MACHINES_CATEGORY, item, RecipeType.ENHANCED_CRAFTING_TABLE,
-                recipe).register(plugin);
+        new TechGenerator(Categories.MACHINES_CATEGORY, item, RecipeType.ENHANCED_CRAFTING_TABLE, recipe)
+                .setEnergyCapacity(10000)
+                .setEnergyConsumption(2000)
+                .setProcessingSpeed(1)
+                .register(plugin);
     }
 
     private static final int[] BORDER = new int[] {0,1,2,6,7,8,31,36,37,38,39,40,41,42,43,44};
