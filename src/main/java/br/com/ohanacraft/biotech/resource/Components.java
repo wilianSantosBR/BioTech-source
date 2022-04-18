@@ -10,7 +10,27 @@ import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
 public class Components {
-    
+
+    //amethyst
+
+    public static final SlimefunItemStack SYNTHETIC_AMETHYST = new SlimefunItemStack("SYNTHETIC_AMETHYST",
+            Material.PURPLE_DYE, "&4Synthetic Amethyst", "");
+    public static final ItemStack[] RECIPE_SYNTHETIC_AMETHYST = {
+            SlimefunItems.SYNTHETIC_SAPPHIRE, SlimefunItems.SYNTHETIC_DIAMOND, SlimefunItems.SYNTHETIC_SAPPHIRE,
+            SlimefunItems.SYNTHETIC_DIAMOND, new ItemStack(Material.AMETHYST_SHARD), SlimefunItems.SYNTHETIC_DIAMOND,
+            SlimefunItems.SYNTHETIC_SAPPHIRE, SlimefunItems.SYNTHETIC_DIAMOND, SlimefunItems.SYNTHETIC_SAPPHIRE
+    };
+
+    //rubi
+
+    public static final SlimefunItemStack SYNTHETIC_RUBY = new SlimefunItemStack("SYNTHETIC_RUBY",
+            Material.PINK_DYE, "&4Synthetic Ruby", "");
+    public static final ItemStack[] RECIPE_SYNTHETIC_RUBY = {
+            SlimefunItems.SYNTHETIC_EMERALD, SlimefunItems.SYNTHETIC_DIAMOND, SlimefunItems.SYNTHETIC_EMERALD,
+            SlimefunItems.SYNTHETIC_DIAMOND, Components.SYNTHETIC_AMETHYST, SlimefunItems.SYNTHETIC_DIAMOND,
+            SlimefunItems.SYNTHETIC_EMERALD, SlimefunItems.SYNTHETIC_DIAMOND, SlimefunItems.SYNTHETIC_EMERALD
+    };
+
     //lã
 
     public static final SlimefunItemStack SINGLE_COMPRESSED_WOOL = new SlimefunItemStack("SINGLE_COMPRESSED_WOOL",
@@ -36,7 +56,7 @@ public class Components {
             Components.DOUBLE_COMPRESSED_WOOL, Components.DOUBLE_COMPRESSED_WOOL, Components.DOUBLE_COMPRESSED_WOOL,
             Components.DOUBLE_COMPRESSED_WOOL, Components.DOUBLE_COMPRESSED_WOOL, Components.DOUBLE_COMPRESSED_WOOL
     };
-    
+
     //Couro
 
     public static final SlimefunItemStack SINGLE_COMPRESSED_LEATHER = new SlimefunItemStack("SINGLE_COMPRESSED_LEATHER",
@@ -83,7 +103,7 @@ public class Components {
 
     public static final SlimefunItemStack TRIPLE_COMPRESSED_OAK_WOOD = new SlimefunItemStack("TRIPLE_COMPRESSED_OAK_WOOD",
             Material.OAK_WOOD, "&eTriple Compressed Wood", "");
-    public static final ItemStack[] RECIPE_TRIPLE_COMPRESSED_OAK_WOOD= {
+    public static final ItemStack[] RECIPE_TRIPLE_COMPRESSED_OAK_WOOD = {
             Components.DOUBLE_COMPRESSED_OAK_WOOD, Components.DOUBLE_COMPRESSED_OAK_WOOD, Components.DOUBLE_COMPRESSED_OAK_WOOD,
             Components.DOUBLE_COMPRESSED_OAK_WOOD, Components.DOUBLE_COMPRESSED_OAK_WOOD, Components.DOUBLE_COMPRESSED_OAK_WOOD,
             Components.DOUBLE_COMPRESSED_OAK_WOOD, Components.DOUBLE_COMPRESSED_OAK_WOOD, Components.DOUBLE_COMPRESSED_OAK_WOOD
@@ -109,7 +129,7 @@ public class Components {
 
     public static final SlimefunItemStack TRIPLE_COMPRESSED_SPONGE = new SlimefunItemStack("TRIPLE_COMPRESSED_SPONGE",
             Material.SPONGE, "&eTriple Compressed Sponge", "");
-    public static final ItemStack[] RECIPE_TRIPLE_COMPRESSED_SPONGE= {
+    public static final ItemStack[] RECIPE_TRIPLE_COMPRESSED_SPONGE = {
             Components.DOUBLE_COMPRESSED_SPONGE, Components.DOUBLE_COMPRESSED_SPONGE, Components.DOUBLE_COMPRESSED_SPONGE,
             Components.DOUBLE_COMPRESSED_SPONGE, Components.DOUBLE_COMPRESSED_SPONGE, Components.DOUBLE_COMPRESSED_SPONGE,
             Components.DOUBLE_COMPRESSED_SPONGE, Components.DOUBLE_COMPRESSED_SPONGE, Components.DOUBLE_COMPRESSED_SPONGE
@@ -137,7 +157,7 @@ public class Components {
 
     public static final SlimefunItemStack TRIPLE_COMPRESSED_SLIME_BALL = new SlimefunItemStack("TRIPLE_COMPRESSED_SLIME_BALL",
             Material.SLIME_BALL, "&eTriple Compressed Slime Ball", "");
-    public static final ItemStack[] RECIPE_TRIPLE_COMPRESSED_SLIME_BALL= {
+    public static final ItemStack[] RECIPE_TRIPLE_COMPRESSED_SLIME_BALL = {
             Components.DOUBLE_COMPRESSED_SLIME_BALL, Components.DOUBLE_COMPRESSED_SLIME_BALL, Components.DOUBLE_COMPRESSED_SLIME_BALL,
             Components.DOUBLE_COMPRESSED_SLIME_BALL, Components.DOUBLE_COMPRESSED_SLIME_BALL, Components.DOUBLE_COMPRESSED_SLIME_BALL,
             Components.DOUBLE_COMPRESSED_SLIME_BALL, Components.DOUBLE_COMPRESSED_SLIME_BALL, Components.DOUBLE_COMPRESSED_SLIME_BALL
@@ -164,7 +184,7 @@ public class Components {
 
     public static final SlimefunItemStack TRIPLE_COMPRESSED_MAGMA_CREAM = new SlimefunItemStack("TRIPLE_COMPRESSED_MAGMA_CREAM",
             Material.SNOWBALL, "&eTriple Compressed Magma Cream", "");
-    public static final ItemStack[] RECIPE_TRIPLE_COMPRESSED_MAGMA_CREAM= {
+    public static final ItemStack[] RECIPE_TRIPLE_COMPRESSED_MAGMA_CREAM = {
             Components.DOUBLE_COMPRESSED_MAGMA_CREAM, Components.DOUBLE_COMPRESSED_MAGMA_CREAM, Components.DOUBLE_COMPRESSED_MAGMA_CREAM,
             Components.DOUBLE_COMPRESSED_MAGMA_CREAM, Components.DOUBLE_COMPRESSED_MAGMA_CREAM, Components.DOUBLE_COMPRESSED_MAGMA_CREAM,
             Components.DOUBLE_COMPRESSED_MAGMA_CREAM, Components.DOUBLE_COMPRESSED_MAGMA_CREAM, Components.DOUBLE_COMPRESSED_MAGMA_CREAM
@@ -172,33 +192,16 @@ public class Components {
 
     public static void setup(BioTech plugin) {
 
+        registerEnhancedCraft(plugin, Components.SYNTHETIC_AMETHYST, Components.RECIPE_SYNTHETIC_AMETHYST);
+        registerEnhancedCraft(plugin, Components.SYNTHETIC_RUBY, Components.RECIPE_SYNTHETIC_RUBY);
+
+
         registerEnhancedCraft(plugin, Components.SINGLE_COMPRESSED_WOOL, Components.RECIPE_SINGLE_COMPRESSED_WOOL);
         registerEnhancedCraft(plugin, Components.DOUBLE_COMPRESSED_WOOL, Components.RECIPE_DOUBLE_COMPRESSED_WOOL);
         registerEnhancedCraft(plugin, Components.TRIPLE_COMPRESSED_WOOL, Components.RECIPE_TRIPLE_COMPRESSED_WOOL);
 
 
     }
-
-
-    //amethyst
-
-    public static final SlimefunItemStack SYNTHETIC_AMETHYST = new SlimefunItemStack("SYNTHETIC_AMETHYST",
-            Material.PURPLE_DYE, "&4Synthetic Amethyst", "");
-    public static final ItemStack[] RECIPE_SYNTHETIC_AMETHYST = {
-            SlimefunItems.SYNTHETIC_SAPPHIRE, SlimefunItems.SYNTHETIC_DIAMOND, SlimefunItems.SYNTHETIC_SAPPHIRE,
-            SlimefunItems.SYNTHETIC_DIAMOND, new ItemStack(Material.AMETHYST_SHARD), SlimefunItems.SYNTHETIC_DIAMOND,
-            SlimefunItems.SYNTHETIC_SAPPHIRE, SlimefunItems.SYNTHETIC_DIAMOND, SlimefunItems.SYNTHETIC_SAPPHIRE
-    };
-
-    //rubi
-
-    public static final SlimefunItemStack SYNTHETIC_RUBY = new SlimefunItemStack("SYNTHETIC_RUBY",
-            Material.PINK_DYE, "&4Synthetic Ruby", "");
-    public static final ItemStack[] RECIPE_SYNTHETIC_RUBY = {
-            SlimefunItems.SYNTHETIC_EMERALD, SlimefunItems.SYNTHETIC_DIAMOND, SlimefunItems.SYNTHETIC_EMERALD,
-            SlimefunItems.SYNTHETIC_DIAMOND, Components.SYNTHETIC_AMETHYST, SlimefunItems.SYNTHETIC_DIAMOND,
-            SlimefunItems.SYNTHETIC_EMERALD, SlimefunItems.SYNTHETIC_DIAMOND, SlimefunItems.SYNTHETIC_EMERALD
-    };
 
 
     private static void registerEnhancedCraft(BioTech plugin, SlimefunItemStack itemStack, ItemStack[] recipe) {
