@@ -27,13 +27,13 @@ import org.bukkit.inventory.ItemStack;
 
 public class MobCollectorTech extends SlimefunItem implements Rechargeable, NotPlaceable {
 
-
     public static final SlimefunItemStack MOB_COLLECTOR_I = new SlimefunItemStack("BIOTECH_MOB_COLLECTOR_I",
             Material.IRON_SHOVEL,
             "&6MobTech Collector I",
             "",
             "&fUsed to capture bees and Iron Golen",
             "",
+            LoreBuilder.power(50, "use"),
             LoreBuilder.powerCharged(0, 500)
     );
     public static final ItemStack[] RECIPE_MOB_COLLECTOR_I = new ItemStack[]{
@@ -48,6 +48,7 @@ public class MobCollectorTech extends SlimefunItem implements Rechargeable, NotP
             "",
             "&fUsed to capture bees and Iron Golen",
             "",
+            LoreBuilder.power(50, "use"),
             LoreBuilder.powerCharged(0, 5000)
     );
     public static final ItemStack[] RECIPE_MOB_COLLECTOR_II = new ItemStack[]{
@@ -62,6 +63,7 @@ public class MobCollectorTech extends SlimefunItem implements Rechargeable, NotP
             "",
             "&fUsed to capture bees and Iron Golen",
             "",
+            LoreBuilder.power(50, "use"),
             LoreBuilder.powerCharged(0, 50000)
     );
     public static final ItemStack[] RECIPE_MOB_COLLECTOR_III = new ItemStack[]{
@@ -73,22 +75,36 @@ public class MobCollectorTech extends SlimefunItem implements Rechargeable, NotP
     public static void setup(BioTech plugin) {
 
         new MobCollectorTech(Categories.TOOLS_CATEGORY, MobCollectorTech.MOB_COLLECTOR_I, RecipeType.ENHANCED_CRAFTING_TABLE,
-                MobCollectorTech.RECIPE_MOB_COLLECTOR_I).register(plugin);
+                MobCollectorTech.RECIPE_MOB_COLLECTOR_I).setCharge(50).setMaxCharge(500).register(plugin);
 
         new MobCollectorTech(Categories.TOOLS_CATEGORY, MobCollectorTech.MOB_COLLECTOR_II, RecipeType.ENHANCED_CRAFTING_TABLE,
-                MobCollectorTech.RECIPE_MOB_COLLECTOR_II).register(plugin);
+                MobCollectorTech.RECIPE_MOB_COLLECTOR_II).setCharge(50).setMaxCharge(5000).register(plugin);
 
         new MobCollectorTech(Categories.TOOLS_CATEGORY, MobCollectorTech.MOB_COLLECTOR_III, RecipeType.ENHANCED_CRAFTING_TABLE,
-                MobCollectorTech.RECIPE_MOB_COLLECTOR_III).register(plugin);
+                MobCollectorTech.RECIPE_MOB_COLLECTOR_III).setCharge(50).setMaxCharge(5000).register(plugin);
 
     }
 
-    @Getter
-    @Setter
     int charge;
-    @Getter
-    @Setter
     int maxCharge;
+
+    public final MobCollectorTech setCharge(int value) {
+        this.charge = value;
+        return this;
+    }
+
+    public int getCharge() {
+        return this.charge;
+    }
+
+    public final MobCollectorTech setMaxCharge(int value) {
+        this.maxCharge = value;
+        return this;
+    }
+
+    public int getMaxCharge() {
+        return this.maxCharge;
+    }
 
 
     public MobCollectorTech(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {

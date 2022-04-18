@@ -14,17 +14,17 @@ public class Setup {
 
     public static void setup(@Nonnull BioTech plugin) {
 
-        BeeTech.setup(plugin);
-
         Components.setup(plugin);
 
         MobCollectorTech.setup(plugin);
 
+        BeeTech.setup(plugin);
+
         IronGolemTech.setup(plugin);
 
-        TechEvolution.setup(plugin);
-
         TechGenerator.setup(plugin);
+
+        TechEvolution.setup(plugin);
 
         TechMutation.setup(plugin);
 
