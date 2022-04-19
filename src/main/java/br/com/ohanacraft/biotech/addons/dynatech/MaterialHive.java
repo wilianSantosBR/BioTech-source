@@ -31,12 +31,11 @@ public class MaterialHive extends AMachine implements RecipeDisplayItem, Radioac
 
     private static final int[] INPUT_SLOTS = new int[] {19,20,4};
 
-    public final ItemSetting<List<String>> vanillaItemsAccepted = new ItemSetting<>(this, "vanilla-items-accepted", getDefaultAllowedVanillaItems());
-    public final ItemSetting<List<String>> slimefunItemsAccepted = new ItemSetting<>(this, "slimefun-items-accepted", getDefaultAllowedSlimefunItems());
+    public final List<String> vanillaItemsAccepted = getDefaultAllowedVanillaItems();
+    public final List<String> slimefunItemsAccepted = getDefaultAllowedSlimefunItems();
     
     public MaterialHive(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
         super(itemGroup, item, recipeType, recipe);
-        addItemSetting(vanillaItemsAccepted, slimefunItemsAccepted);
     }
 
     @Override
@@ -70,7 +69,7 @@ public class MaterialHive extends AMachine implements RecipeDisplayItem, Radioac
     }
     
     public void registerDefaultHiveRecipes() {
-        for (String slimefunItem : slimefunItemsAccepted.getValue()) {
+        for (String slimefunItem : slimefunItemsAccepted) {
             SlimefunItem sfItem = SlimefunItem.getById(slimefunItem);
             if (sfItem != null) {
                 ItemStack item = sfItem.getItem().clone();
@@ -79,7 +78,7 @@ public class MaterialHive extends AMachine implements RecipeDisplayItem, Radioac
         
             }
         }
-        for (String material : vanillaItemsAccepted.getValue()) {
+        for (String material : vanillaItemsAccepted) {
             ItemStack item = new ItemStack(Material.matchMaterial(material), 64);
             registerRecipe(new MachineRecipe(1800, new ItemStack[] { item }, new ItemStack[] { new ItemStack(Material.matchMaterial(material)) }));
         }
