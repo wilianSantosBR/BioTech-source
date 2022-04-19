@@ -1,4 +1,4 @@
-package br.com.ohanacraft.biotech.machine;
+package br.com.ohanacraft.biotech.addons.dynatech;
 
 
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
@@ -178,6 +178,7 @@ public abstract class AMachine extends SlimefunItem implements EnergyNetComponen
         });
     }
 
+    //Processing Stuff
     public MachineRecipe getProcessing(Block b) {
         return processing.get(b);
     }
