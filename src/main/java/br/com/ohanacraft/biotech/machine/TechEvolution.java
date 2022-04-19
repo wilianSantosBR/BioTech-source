@@ -32,4 +32,5 @@ public class TechEvolution {
         new SlimefunItem(Categories.MACHINES_CATEGORY, item, RecipeType.ENHANCED_CRAFTING_TABLE,
                 recipe).register(plugin);
     }
+
 }

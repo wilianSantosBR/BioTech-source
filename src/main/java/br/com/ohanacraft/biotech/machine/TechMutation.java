@@ -2,7 +2,11 @@ package br.com.ohanacraft.biotech.machine;
 
 import br.com.ohanacraft.biotech.BioTech;
 import br.com.ohanacraft.biotech.Categories;
+import br.com.ohanacraft.biotech.dto.RecipeTechMutationDTO;
+import br.com.ohanacraft.biotech.resource.BeeTech;
 import br.com.ohanacraft.biotech.resource.Components;
+import br.com.ohanacraft.biotech.resource.IronGolemTech;
+import com.sun.tools.javac.util.List;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
@@ -32,4 +36,13 @@ public class TechMutation {
         new SlimefunItem(Categories.MACHINES_CATEGORY, item, RecipeType.ENHANCED_CRAFTING_TABLE,
                 recipe).register(plugin);
     }
+
+    private static List<RecipeTechMutationDTO> recipes = List.of(
+           new  RecipeTechMutationDTO(BeeTech.SIMPLE_BEE,BeeTech.SIMPLE_BEE,20,BeeTech.MUTATION_BERSERK_BEE),
+           new  RecipeTechMutationDTO(BeeTech.SIMPLE_BEE,BeeTech.SIMPLE_BEE,5,BeeTech.MUTATION_LUCK_BEE),
+           new  RecipeTechMutationDTO(BeeTech.SIMPLE_BEE,BeeTech.SIMPLE_BEE,5,BeeTech.MUTATION_INTELLIGENCE_BEE),
+           new  RecipeTechMutationDTO(IronGolemTech.SIMPLE_GOLEM,IronGolemTech.SIMPLE_GOLEM,20,IronGolemTech.MUTATION_BERSERK_GOLEM),
+           new  RecipeTechMutationDTO(IronGolemTech.SIMPLE_GOLEM,IronGolemTech.SIMPLE_GOLEM,5,IronGolemTech.MUTATION_LUCK_GOLEM),
+           new  RecipeTechMutationDTO(IronGolemTech.SIMPLE_GOLEM,IronGolemTech.SIMPLE_GOLEM,5,IronGolemTech.MUTATION_INTELLIGENCE_GOLEM)
+    );
 }
