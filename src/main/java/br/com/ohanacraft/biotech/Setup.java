@@ -1,11 +1,9 @@
 package br.com.ohanacraft.biotech;
 
 import br.com.ohanacraft.biotech.machine.SetupElectricMachine;
-import br.com.ohanacraft.biotech.machine.TechGenerator;
-import br.com.ohanacraft.biotech.machine.TechMutation;
-import br.com.ohanacraft.biotech.machine.TechRobotic;
 import br.com.ohanacraft.biotech.resource.BeeTech;
 import br.com.ohanacraft.biotech.resource.Components;
+import br.com.ohanacraft.biotech.resource.GenerateCardSimple;
 import br.com.ohanacraft.biotech.resource.IronGolemTech;
 import br.com.ohanacraft.biotech.tools.MobCollectorTech;
 
@@ -28,6 +26,8 @@ public class Setup {
 //        TechRobotic.setup(plugin);
 //
 //        TechMutation.setup(plugin);
+
+        GenerateCardSimple.setup(plugin);
 
         SetupElectricMachine.setup(plugin);
 
