@@ -17,10 +17,10 @@ public class Categories {
             new CustomItemStack(Material.HONEYCOMB_BLOCK, "&4Resource"));
 
     public static ItemGroup TOOLS_CATEGORY = new SubItemGroup(new NamespacedKey(BioTech.inst(), "TOOLS_CATEGORY"), MULTI_CATEGORY,
-            new CustomItemStack(Material.LOOM, "&4Tools"));
+            new CustomItemStack(Material.IRON_SHOVEL, "&4Tools"));
 
     public static ItemGroup TECHMOB_CATEGORY = new SubItemGroup(new NamespacedKey(BioTech.inst(), "TECHMOB_CATEGORY"), MULTI_CATEGORY,
-            new CustomItemStack(Material.HONEYCOMB, "&4TechMod"));
+            new CustomItemStack(Material.HONEYCOMB, "&4TechMob"));
 
     public static ItemGroup MACHINES_CATEGORY = new SubItemGroup(new NamespacedKey(BioTech.inst(), "MACHINES_CATEGORY"), MULTI_CATEGORY,
             new CustomItemStack(Material.LOOM, "&4Machines"));
