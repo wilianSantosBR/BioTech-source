@@ -27,15 +27,15 @@ public class GenerateCardSimple {
      MUSIC_DISC_WAIT        7 azul
 
      */
+
+
     // cards basicos
     public static final SlimefunItemStack BIOTECH_CARD_STONE = new SlimefunItemStack("BIOTECH_CARD_STONE", Material.MUSIC_DISC_STRAD,
             "&bCard de Stone", "", "&fAltera para Produção de Stone",
             "", LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE));
-    public static final ItemStack[] RECIPE_BIOTECH_CARD_STONE = new ItemStack[]{
-            new ItemStack(Material.STONE), new ItemStack(Material.STONE), new ItemStack(Material.STONE),
-            new ItemStack(Material.STONE), BioTechGeradoresDeRecursosItem.OHANA_CENTRO_CARD_SIMPLES, new ItemStack(Material.STONE),
-            new ItemStack(Material.STONE), new ItemStack(Material.STONE), new ItemStack(Material.STONE)
-    };
+
+
+    //TODO Willian remover todas as RECIPE_
 
     public static final SlimefunItemStack BIOTECH_CARD_GRANITE = new SlimefunItemStack("BIOTECH_CARD_GRANITE", Material.MUSIC_DISC_STRAD,
             "&bCard de Granite", "", "&fAltera para Produção de Granite",
@@ -275,9 +275,12 @@ public class GenerateCardSimple {
 
     public static void setup(BioTech plugin) {
 
+
         // setup cards
         BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_STONE,
-                GenerateCardSimple.RECIPE_BIOTECH_CARD_STONE, Material.COBBLESTONE);
+            Material.COBBLESTONE, Material.COBBLESTONE);
+
+        //TODO Willian ajustar preSetup para no local recipe por entrada (material)
 
         BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_GRANITE,
                 GenerateCardSimple.RECIPE_BIOTECH_CARD_GRANITE, Material.GRANITE);
@@ -331,7 +334,7 @@ public class GenerateCardSimple {
                 GenerateCardSimple.RECIPE_BIOTECH_CARD_NETHERITE, Material.NETHERITE_INGOT);
 
         BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_IRON_DUST,
-                GenerateCardSimple.RECIPE_BIOTECH_CARD_IRON_DUST, SlimefunItems.IRON_DUST);
+            SlimefunItems.IRON_DUST, SlimefunItems.IRON_DUST);
 
         BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_LEAD_DUST,
                 GenerateCardSimple.RECIPE_BIOTECH_CARD_LEAD_DUST, SlimefunItems.LEAD_DUST);

@@ -78,23 +78,35 @@ public class BioTechGeradoresDeRecursosMaquina extends SimpleItemContainerMachin
     }
 
 
-    public static void preSetup(BioTech plugin, SlimefunItemStack item, ItemStack[] receita, Material saida) {
-        preSetup(plugin, 2, item, receita, new ItemStack(saida));
+    public static void preSetup(BioTech plugin, SlimefunItemStack item, Material entrada, Material saida) {
+        preSetup(plugin, 1, item, new ItemStack(entrada), new ItemStack(saida));
     }
 
-    public static void preSetup(BioTech plugin, SlimefunItemStack item, ItemStack[] receita, ItemStack saida) {
+    public static void preSetup(BioTech plugin, SlimefunItemStack item, ItemStack entrada, ItemStack saida) {
         new BioTechGeradoresDeRecursosItem(Categories.CARDS_RESOURCE_CATEGORY,
-                item, RecipeType.ENHANCED_CRAFTING_TABLE,receita).register(plugin);
+                item, RecipeType.ENHANCED_CRAFTING_TABLE,new ItemStack[]{
+            new ItemStack(entrada), new ItemStack(entrada), new ItemStack(entrada),
+            new ItemStack(entrada), BioTechGeradoresDeRecursosItem.OHANA_CENTRO_CARD_SIMPLES, new ItemStack(entrada),
+            new ItemStack(entrada), new ItemStack(entrada), new ItemStack(entrada)
+        }).register(plugin);
         BioTechGeradoresDeRecursosMaquina.addReceitasParaProduzir(item, saida);
     }
 
-    public static void preSetup(BioTech plugin, int tierReceita, SlimefunItemStack item, ItemStack[] receita, Material saida) {
-        preSetup(plugin, tierReceita, item, receita, new ItemStack(saida));
+    public static void preSetup(BioTech plugin, int tierReceita, SlimefunItemStack item, Material entrada, Material saida) {
+        preSetup(plugin, tierReceita, item, new ItemStack(entrada), new ItemStack(saida));
     }
 
-    public static void preSetup(BioTech plugin, int tierReceita, SlimefunItemStack item, ItemStack[] receita, ItemStack saida) {
+    public static void preSetup(BioTech plugin, int tierReceita, SlimefunItemStack item, ItemStack entrada, ItemStack saida) {
         new BioTechGeradoresDeRecursosItem(Categories.CARDS_RESOURCE_CATEGORY,
-                item, RecipeType.ENHANCED_CRAFTING_TABLE,receita).register(plugin);
+                item, RecipeType.ENHANCED_CRAFTING_TABLE,new ItemStack[]{
+            new ItemStack(entrada), new ItemStack(entrada), new ItemStack(entrada),
+            new ItemStack(entrada),
+            tierReceita <= 1
+            ? BioTechGeradoresDeRecursosItem.OHANA_CENTRO_CARD_SIMPLES
+            : BioTechGeradoresDeRecursosItem.OHANA_CENTRO_CARD_AVANCADO,
+            new ItemStack(entrada),
+            new ItemStack(entrada), new ItemStack(entrada), new ItemStack(entrada)
+        }).register(plugin);
         BioTechGeradoresDeRecursosMaquina.addReceitasParaProduzir(tierReceita, item, saida);
     }
 
