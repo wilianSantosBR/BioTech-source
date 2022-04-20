@@ -2,9 +2,7 @@ package br.com.ohanacraft.biotech.machine;
 
 import br.com.ohanacraft.biotech.BioTech;
 import br.com.ohanacraft.biotech.Categories;
-import br.com.ohanacraft.ohanacraft.Categories;
-import br.com.ohanacraft.ohanacraft.addons.supremeExpansion.generic.SimpleItemContainerMachine;
-import br.com.ohanacraft.ohanacraft.addons.supremeExpansion.multiBlock.MagicalFabricator;
+import br.com.ohanacraft.biotech.generic.SimpleItemContainerMachine;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
@@ -44,7 +42,7 @@ public class BioTechGeradoresDeRecursosMaquina extends SimpleItemContainerMachin
     private int speed = 1;
 
     public BioTechGeradoresDeRecursosMaquina(SlimefunItemStack item, ItemStack[] recipe) {
-        super(Categories.CUSTOM_OHANA_MACHINES_GENERATOR_CATEGORY, item, RecipeType.ENHANCED_CRAFTING_TABLE, recipe);
+        super(Categories.MACHINES_CATEGORY, item, RecipeType.ENHANCED_CRAFTING_TABLE, recipe);
     }
 
     public static void addReceitasParaProduzir(ItemStack receita, ItemStack item) {
@@ -84,19 +82,19 @@ public class BioTechGeradoresDeRecursosMaquina extends SimpleItemContainerMachin
         preSetup(plugin, 2, item, receita, new ItemStack(saida));
     }
 
-    public static void preSetup(BioTech plugin, int i, SlimefunItemStack item, ItemStack[] receita, ItemStack saida) {
-        new BioTechGeradoresDeRecursosItem(Categories.CUSTOM_OHANA_CARD_GENERATOR_CATEGORY,
-                item, MagicalFabricator.getMachine(),receita).register(plugin);
+    public static void preSetup(BioTech plugin, SlimefunItemStack item, ItemStack[] receita, ItemStack saida) {
+        new BioTechGeradoresDeRecursosItem(Categories.CARDS_RESOURCE_CATEGORY,
+                item, RecipeType.ENHANCED_CRAFTING_TABLE,receita).register(plugin);
         BioTechGeradoresDeRecursosMaquina.addReceitasParaProduzir(item, saida);
     }
 
-    public static void preSetup(OhanaCraft plugin, int tierReceita, SlimefunItemStack item, ItemStack[] receita, Material saida) {
+    public static void preSetup(BioTech plugin, int tierReceita, SlimefunItemStack item, ItemStack[] receita, Material saida) {
         preSetup(plugin, tierReceita, item, receita, new ItemStack(saida));
     }
 
-    public static void preSetup(OhanaCraft plugin, int tierReceita, SlimefunItemStack item, ItemStack[] receita, ItemStack saida) {
-        new BioTechGeradoresDeRecursosItem(Categories.CUSTOM_OHANA_CARD_GENERATOR_CATEGORY,
-                item, MagicalFabricator.getMachine(),receita).register(plugin);
+    public static void preSetup(BioTech plugin, int tierReceita, SlimefunItemStack item, ItemStack[] receita, ItemStack saida) {
+        new BioTechGeradoresDeRecursosItem(Categories.CARDS_RESOURCE_CATEGORY,
+                item, RecipeType.ENHANCED_CRAFTING_TABLE,receita).register(plugin);
         BioTechGeradoresDeRecursosMaquina.addReceitasParaProduzir(tierReceita, item, saida);
     }
 

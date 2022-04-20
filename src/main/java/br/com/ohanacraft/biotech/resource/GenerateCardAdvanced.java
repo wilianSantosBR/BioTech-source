@@ -91,7 +91,7 @@ public class GenerateCardAdvanced {
             "", LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE));
     public static final ItemStack[] RECIPE_OHANA_CARD_STEEL = new ItemStack[]{
             OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_IRON, InfinityExpansionMaterials.MACHINE_PLATE, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_IRON,
-            OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_CARBON, OhanaGeradoresDeRecursosItem.OHANA_CENTRO_CARD_SIMPLES, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_CARBON,
+            GenerateCardAdvanced.OHANA_CARD_CARBON, OhanaGeradoresDeRecursosItem.OHANA_CENTRO_CARD_SIMPLES, GenerateCardAdvanced.OHANA_CARD_CARBON,
             OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_IRON_DUST, InfinityExpansionMaterials.MACHINE_PLATE, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_IRON_DUST
     };
 
@@ -108,7 +108,7 @@ public class GenerateCardAdvanced {
             "&bUpgrade Machine Ferrosilicon", "", "&fAltera para Produção de Ferrosilicon",
             "", LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE));
     public static final ItemStack[] RECIPE_OHANA_CARD_FERROSILICON = new ItemStack[]{
-            OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_SILICON, InfinityExpansionMaterials.QUARTZ_SINGULARITY, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_SILICON,
+            GenerateCardAdvanced.OHANA_CARD_SILICON, InfinityExpansionMaterials.QUARTZ_SINGULARITY, GenerateCardAdvanced.OHANA_CARD_SILICON,
             OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_IRON_DUST, OhanaGeradoresDeRecursosItem.OHANA_CENTRO_CARD_SIMPLES, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_IRON_DUST,
             OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_IRON, InfinityExpansionMaterials.IRON_SINGULARITY, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_IRON
     };
@@ -118,7 +118,7 @@ public class GenerateCardAdvanced {
             "", LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE));
     public static final ItemStack[] RECIPE_OHANA_CARD_DAMASCUS = new ItemStack[]{
             OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_IRON, InfinityExpansionMaterials.MACHINE_PLATE, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_IRON,
-            OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_CARBON, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_STEEL, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_CARBON,
+            GenerateCardAdvanced.OHANA_CARD_CARBON, GenerateCardAdvanced.OHANA_CARD_STEEL, GenerateCardAdvanced.OHANA_CARD_CARBON,
             OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_IRON_DUST, InfinityExpansionMaterials.MACHINE_PLATE, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_IRON_DUST
     };
 
@@ -127,7 +127,7 @@ public class GenerateCardAdvanced {
             "", LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE));
     public static final ItemStack[] RECIPE_OHANA_CARD_COBALT = new ItemStack[]{
             OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_IRON, InfinityExpansionMaterials.MACHINE_PLATE, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_IRON,
-            OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_COPPER_DUST, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_NICKEL, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_COPPER_DUST,
+            OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_COPPER_DUST, GenerateCardAdvanced.OHANA_CARD_NICKEL, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_COPPER_DUST,
             OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_IRON_DUST, InfinityExpansionMaterials.MACHINE_PLATE, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_IRON_DUST
     };
 
@@ -146,7 +146,7 @@ public class GenerateCardAdvanced {
             "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE));
     public static final ItemStack[] RECIPE_OHANA_CARD_ALUMINUM_BRONZE_INGOT = new ItemStack[]{
             OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_ALUMINUM_DUST, InfinityExpansionMaterials.MACHINE_PLATE, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_ALUMINUM_DUST,
-            OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_BRONZE_INGOT, OhanaGeradoresDeRecursosItem.OHANA_CENTRO_CARD_AVANCADO, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_BRONZE_INGOT,
+            GenerateCardAdvanced.OHANA_CARD_BRONZE_INGOT, OhanaGeradoresDeRecursosItem.OHANA_CENTRO_CARD_AVANCADO, GenerateCardAdvanced.OHANA_CARD_BRONZE_INGOT,
             OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_ALUMINUM_DUST, InfinityExpansionMaterials.MACHINE_PLATE, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_ALUMINUM_DUST
     };
 
@@ -155,7 +155,7 @@ public class GenerateCardAdvanced {
             "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE));
     public static final ItemStack[] RECIPE_OHANA_CARD_ALUMINUM_BRASS_INGOT = new ItemStack[]{
             OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_ALUMINUM_DUST, InfinityExpansionMaterials.MACHINE_PLATE, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_ALUMINUM_DUST,
-            OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_BRASS_INGOT, OhanaGeradoresDeRecursosItem.OHANA_CENTRO_CARD_AVANCADO, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_BRASS_INGOT,
+            GenerateCardAdvanced.OHANA_CARD_BRASS_INGOT, OhanaGeradoresDeRecursosItem.OHANA_CENTRO_CARD_AVANCADO, GenerateCardAdvanced.OHANA_CARD_BRASS_INGOT,
             OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_ALUMINUM_DUST, InfinityExpansionMaterials.MACHINE_PLATE, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_ALUMINUM_DUST
     };
 
@@ -163,9 +163,9 @@ public class GenerateCardAdvanced {
             "&bUpgrade Machine Corinthian Bronze Ingot", "", "&fAltera para Produção de Corinthian Bronze Ingot", "&4Apenas Maquina Média ou Avançada",
             "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE));
     public static final ItemStack[] RECIPE_OHANA_CARD_CORINTHIAN_BRONZE_INGOT = new ItemStack[]{
-            OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_SILVER_DUST, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_ALUMINUM_BRONZE_INGOT, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_SILVER_DUST,
+            OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_SILVER_DUST, GenerateCardAdvanced.OHANA_CARD_ALUMINUM_BRONZE_INGOT, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_SILVER_DUST,
             OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_GOLD_DUST, OhanaGeradoresDeRecursosItem.OHANA_CENTRO_CARD_AVANCADO, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_GOLD_DUST,
-            OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_COPPER_DUST, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_ALUMINUM_BRONZE_INGOT, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_COPPER_DUST
+            OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_COPPER_DUST, GenerateCardAdvanced.OHANA_CARD_ALUMINUM_BRONZE_INGOT, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_COPPER_DUST
     };
 
     public static final SlimefunItemStack OHANA_CARD_GOLD24K = new SlimefunItemStack("OHANA_CARD_GOLD24K", Material.MUSIC_DISC_CHIRP,
@@ -181,18 +181,18 @@ public class GenerateCardAdvanced {
             "&bUpgrade Machine Compressed Carbon", "", "&fAltera para Produção de Compressed Carbon",
             "", LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE));
     public static final ItemStack[] RECIPE_OHANA_CARD_CARBON_PRESS = new ItemStack[]{
-            OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_COAL, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_CARBON, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_COAL,
-            OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_CARBON, OhanaGeradoresDeRecursosItem.CORE_ADVANCED_MACHINE_CASE, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_CARBON,
-            OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_COAL, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_CARBON, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_COAL
+            OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_COAL, GenerateCardAdvanced.OHANA_CARD_CARBON, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_COAL,
+            GenerateCardAdvanced.OHANA_CARD_CARBON, OhanaGeradoresDeRecursosItem.CORE_ADVANCED_MACHINE_CASE, GenerateCardAdvanced.OHANA_CARD_CARBON,
+            OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_COAL, GenerateCardAdvanced.OHANA_CARD_CARBON, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_COAL
     };
 
     public static final SlimefunItemStack OHANA_CARD_HARDENED_METAL_INGOT = new SlimefunItemStack("OHANA_CARD_HARDENED_METAL_INGOT", Material.MUSIC_DISC_CHIRP,
             "&bUpgrade Machine Hardened Metal Ingot", "", "&fAltera para Produção de Hardened Metal Ingot", "&4Apenas Maquina Média ou Avançada",
             "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE));
     public static final ItemStack[] RECIPE_OHANA_CARD_HARDENED_METAL_INGOT = new ItemStack[]{
-            OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_DAMASCUS, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_CARBON_PRESS, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_DAMASCUS,
-            OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_DURALUMIN_INGOT, OhanaGeradoresDeRecursosItem.OHANA_CENTRO_CARD_AVANCADO, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_DURALUMIN_INGOT,
-            OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_ALUMINUM_BRONZE_INGOT, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_CARBON_PRESS, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_ALUMINUM_BRONZE_INGOT
+            GenerateCardAdvanced.OHANA_CARD_DAMASCUS, GenerateCardAdvanced.OHANA_CARD_CARBON_PRESS, GenerateCardAdvanced.OHANA_CARD_DAMASCUS,
+            GenerateCardAdvanced.OHANA_CARD_DURALUMIN_INGOT, OhanaGeradoresDeRecursosItem.OHANA_CENTRO_CARD_AVANCADO, GenerateCardAdvanced.OHANA_CARD_DURALUMIN_INGOT,
+            GenerateCardAdvanced.OHANA_CARD_ALUMINUM_BRONZE_INGOT, GenerateCardAdvanced.OHANA_CARD_CARBON_PRESS, GenerateCardAdvanced.OHANA_CARD_ALUMINUM_BRONZE_INGOT
     };
 
     public static final SlimefunItemStack OHANA_CARD_REDSTONE_ALLOY = new SlimefunItemStack("OHANA_CARD_REDSTONE_ALLOY", Material.MUSIC_DISC_CHIRP,
@@ -200,8 +200,8 @@ public class GenerateCardAdvanced {
             "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE));
     public static final ItemStack[] RECIPE_OHANA_CARD_REDSTONE_ALLOY = new ItemStack[]{
             OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_REDSTONE, InfinityExpansionMaterials.REDSTONE_SINGULARITY, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_REDSTONE,
-            OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_FERROSILICON, OhanaGeradoresDeRecursosItem.OHANA_CENTRO_CARD_AVANCADO, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_FERROSILICON,
-            OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_HARDENED_METAL_INGOT, InfinityExpansionMaterials.REDSTONE_SINGULARITY, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_HARDENED_METAL_INGOT
+            GenerateCardAdvanced.OHANA_CARD_FERROSILICON, OhanaGeradoresDeRecursosItem.OHANA_CENTRO_CARD_AVANCADO, GenerateCardAdvanced.OHANA_CARD_FERROSILICON,
+            GenerateCardAdvanced.OHANA_CARD_HARDENED_METAL_INGOT, InfinityExpansionMaterials.REDSTONE_SINGULARITY, GenerateCardAdvanced.OHANA_CARD_HARDENED_METAL_INGOT
     };
 
     public static final SlimefunItemStack OHANA_CARD_BATTERY = new SlimefunItemStack("OHANA_CARD_BATTERY", Material.MUSIC_DISC_CHIRP,
@@ -210,7 +210,7 @@ public class GenerateCardAdvanced {
     public static final ItemStack[] RECIPE_OHANA_CARD_BATTERY = new ItemStack[]{
             OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_REDSTONE, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_REDSTONE, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_REDSTONE,
             OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_ZINC_DUST, OhanaGeradoresDeRecursosItem.OHANA_CENTRO_CARD_SIMPLES, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_COPPER_DUST,
-            OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_ZINC_DUST, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_SULFATE, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_COPPER_DUST
+            OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_ZINC_DUST, GenerateCardAdvanced.OHANA_CARD_SULFATE, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_COPPER_DUST
     };
 
     public static final SlimefunItemStack OHANA_CARD_MAGNET = new SlimefunItemStack("OHANA_CARD_MAGNET", Material.MUSIC_DISC_CHIRP,
@@ -218,7 +218,7 @@ public class GenerateCardAdvanced {
             "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE));
     public static final ItemStack[] RECIPE_OHANA_CARD_MAGNET = new ItemStack[]{
             InfinityExpansionMaterials.MACHINE_PLATE, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_IRON_DUST, InfinityExpansionMaterials.MACHINE_PLATE,
-            OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_NICKEL, OhanaGeradoresDeRecursosItem.OHANA_CENTRO_CARD_SIMPLES, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_COBALT,
+            GenerateCardAdvanced.OHANA_CARD_NICKEL, OhanaGeradoresDeRecursosItem.OHANA_CENTRO_CARD_SIMPLES, GenerateCardAdvanced.OHANA_CARD_COBALT,
             InfinityExpansionMaterials.MACHINE_PLATE, OhanaGeradoresDeRecursosCardSimples.OHANA_CARD_ALUMINUM_DUST, InfinityExpansionMaterials.MACHINE_PLATE
     };
 
@@ -226,9 +226,9 @@ public class GenerateCardAdvanced {
             "&bUpgrade Machine Electro Magnet", "", "&fAltera para Produção de Electro Magnet", "&4Apenas Maquina Média ou Avançada",
             "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE));
     public static final ItemStack[] RECIPE_OHANA_CARD_ELECTRO_MAGNET = new ItemStack[]{
-            InfinityExpansionMaterials.MACHINE_CORE, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_MAGNET, InfinityExpansionMaterials.MACHINE_CORE,
-            OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_NICKEL, OhanaGeradoresDeRecursosItem.OHANA_CENTRO_CARD_AVANCADO, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_COBALT,
-            InfinityExpansionMaterials.MACHINE_CORE, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_BATTERY, InfinityExpansionMaterials.MACHINE_CORE
+            InfinityExpansionMaterials.MACHINE_CORE, GenerateCardAdvanced.OHANA_CARD_MAGNET, InfinityExpansionMaterials.MACHINE_CORE,
+            GenerateCardAdvanced.OHANA_CARD_NICKEL, OhanaGeradoresDeRecursosItem.OHANA_CENTRO_CARD_AVANCADO, GenerateCardAdvanced.OHANA_CARD_COBALT,
+            InfinityExpansionMaterials.MACHINE_CORE, GenerateCardAdvanced.OHANA_CARD_BATTERY, InfinityExpansionMaterials.MACHINE_CORE
     };
 
 
@@ -237,108 +237,84 @@ public class GenerateCardAdvanced {
             "&bUpgrade Machine Reinforced Alloy Ingot", "", "&fAltera para Produção de Reinforced Alloy Ingot", "&4Apenas Maquina Avançada",
             "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE));
     public static final ItemStack[] RECIPE_OHANA_CARD_REINFORCED_ALLOY_INGOT = new ItemStack[]{
-            OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_DAMASCUS, InfinityExpansionMaterials.MACHINE_CORE, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_SOLDER_INGOT,
-            OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_HARDENED_METAL_INGOT, OhanaGeradoresDeRecursosItem.OHANA_CENTRO_CARD_AVANCADO, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_BILLON_INGOT,
-            OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_CORINTHIAN_BRONZE_INGOT, InfinityExpansionMaterials.MACHINE_CORE, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_GOLD24K
+            GenerateCardAdvanced.OHANA_CARD_DAMASCUS, InfinityExpansionMaterials.MACHINE_CORE, GenerateCardAdvanced.OHANA_CARD_SOLDER_INGOT,
+            GenerateCardAdvanced.OHANA_CARD_HARDENED_METAL_INGOT, OhanaGeradoresDeRecursosItem.OHANA_CENTRO_CARD_AVANCADO, GenerateCardAdvanced.OHANA_CARD_BILLON_INGOT,
+            GenerateCardAdvanced.OHANA_CARD_CORINTHIAN_BRONZE_INGOT, InfinityExpansionMaterials.MACHINE_CORE, GenerateCardAdvanced.OHANA_CARD_GOLD24K
     };
 
-    public static final SlimefunItemStack OHANA_CARD_ESSENCE_OHANA = new SlimefunItemStack("OHANA_CARD_ESSENCE_OHANA", Material.MUSIC_DISC_STAL,
-            "&bUpgrade Machine Essence Ohana", "", "&fAltera para Produção de Essence Ohana", "&4Apenas Maquina Avançada",
-            "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE));
-    public static final ItemStack[] RECIPE_OHANA_CARD_ESSENCE_OHANA = new ItemStack[]{
-            OhanaRecursosVariados.OHANA_BLOCK_OHANA, Components.BLEND_MACHINE, OhanaRecursosVariados.OHANA_BLOCK_OHANA,
-            InfinityExpansionMaterials.MACHINE_CORE, OhanaGeradoresDeRecursosItem.OHANA_CENTRO_CARD_AVANCADO, InfinityExpansionMaterials.MACHINE_CORE,
-            OhanaRecursosVariados.OHANA_BLOCK_OHANA, Components.BLEND_MACHINE, OhanaRecursosVariados.OHANA_BLOCK_OHANA
-    };
+    public static void setup(BioTech plugin) {
 
-    public static final SlimefunItemStack OHANA_CARD_VOID_BIT = new SlimefunItemStack("OHANA_CARD_VOID_BIT", Material.MUSIC_DISC_STAL,
-            "&bUpgrade Machine Void Bit", "", "&fAltera para Produção de Void Bit", "&4Apenas Maquina Avançada",
-            "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE));
-    public static final ItemStack[] RECIPE_OHANA_CARD_VOID_BIT = new ItemStack[]{
-            InfinityExpansionMaterials.VOID_INGOT, InfinityExpansionMaterials.INFINITE_INGOT, InfinityExpansionMaterials.VOID_INGOT,
-            InfinityExpansionMaterials.MACHINE_CORE, OhanaGeradoresDeRecursosItem.OHANA_CENTRO_CARD_AVANCADO, InfinityExpansionMaterials.MACHINE_CORE,
-            InfinityExpansionMaterials.VOID_INGOT, InfinityExpansionMaterials.INFINITE_INGOT, InfinityExpansionMaterials.VOID_INGOT
-    };
+        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardAdvanced.OHANA_CARD_SOLDER_INGOT,
+                GenerateCardAdvanced.RECIPE_OHANA_CARD_SOLDER_INGOT, SlimefunItems.SOLDER_INGOT);
 
-    public static void setup(OhanaCraft plugin) {
+        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardAdvanced.OHANA_CARD_BILLON_INGOT,
+                GenerateCardAdvanced.RECIPE_OHANA_CARD_BILLON_INGOT, SlimefunItems.BILLON_INGOT);
 
-        OhanaGeradoresDeRecursosMaquina.preSetup(plugin, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_SOLDER_INGOT,
-                OhanaGeradoresDeRecursosCardAvancado.RECIPE_OHANA_CARD_SOLDER_INGOT, SlimefunItems.SOLDER_INGOT);
+        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardAdvanced.OHANA_CARD_BRONZE_INGOT,
+                GenerateCardAdvanced.RECIPE_OHANA_CARD_BRONZE_INGOT, SlimefunItems.BRONZE_INGOT);
 
-        OhanaGeradoresDeRecursosMaquina.preSetup(plugin, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_BILLON_INGOT,
-                OhanaGeradoresDeRecursosCardAvancado.RECIPE_OHANA_CARD_BILLON_INGOT, SlimefunItems.BILLON_INGOT);
+        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardAdvanced.OHANA_CARD_BRASS_INGOT,
+                GenerateCardAdvanced.RECIPE_OHANA_CARD_BRASS_INGOT, SlimefunItems.BRASS_INGOT);
 
-        OhanaGeradoresDeRecursosMaquina.preSetup(plugin, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_BRONZE_INGOT,
-                OhanaGeradoresDeRecursosCardAvancado.RECIPE_OHANA_CARD_BRONZE_INGOT, SlimefunItems.BRONZE_INGOT);
+        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardAdvanced.OHANA_CARD_SULFATE,
+                GenerateCardAdvanced.RECIPE_OHANA_CARD_SULFATE, SlimefunItems.SULFATE);
 
-        OhanaGeradoresDeRecursosMaquina.preSetup(plugin, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_BRASS_INGOT,
-                OhanaGeradoresDeRecursosCardAvancado.RECIPE_OHANA_CARD_BRASS_INGOT, SlimefunItems.BRASS_INGOT);
+        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardAdvanced.OHANA_CARD_CARBON,
+                GenerateCardAdvanced.RECIPE_OHANA_CARD_CARBON, SlimefunItems.CARBON);
 
-        OhanaGeradoresDeRecursosMaquina.preSetup(plugin, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_SULFATE,
-                OhanaGeradoresDeRecursosCardAvancado.RECIPE_OHANA_CARD_SULFATE, SlimefunItems.SULFATE);
+        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardAdvanced.OHANA_CARD_SILICON,
+                GenerateCardAdvanced.RECIPE_OHANA_CARD_SILICON, SlimefunItems.SILICON);
 
-        OhanaGeradoresDeRecursosMaquina.preSetup(plugin, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_CARBON,
-                OhanaGeradoresDeRecursosCardAvancado.RECIPE_OHANA_CARD_CARBON, SlimefunItems.CARBON);
+        BioTechGeradoresDeRecursosMaquina.preSetup(plugin,  GenerateCardAdvanced.OHANA_CARD_STEEL,
+                GenerateCardAdvanced.RECIPE_OHANA_CARD_STEEL, SlimefunItems.STEEL_INGOT);
 
-        OhanaGeradoresDeRecursosMaquina.preSetup(plugin, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_SILICON,
-                OhanaGeradoresDeRecursosCardAvancado.RECIPE_OHANA_CARD_SILICON, SlimefunItems.SILICON);
+        BioTechGeradoresDeRecursosMaquina.preSetup(plugin,  GenerateCardAdvanced.OHANA_CARD_NICKEL,
+                GenerateCardAdvanced.RECIPE_OHANA_CARD_NICKEL, SlimefunItems.NICKEL_INGOT);
 
-        OhanaGeradoresDeRecursosMaquina.preSetup(plugin,  OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_STEEL,
-                OhanaGeradoresDeRecursosCardAvancado.RECIPE_OHANA_CARD_STEEL, SlimefunItems.STEEL_INGOT);
+        BioTechGeradoresDeRecursosMaquina.preSetup(plugin,  GenerateCardAdvanced.OHANA_CARD_FERROSILICON,
+                GenerateCardAdvanced.RECIPE_OHANA_CARD_FERROSILICON, SlimefunItems.FERROSILICON);
 
-        OhanaGeradoresDeRecursosMaquina.preSetup(plugin,  OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_NICKEL,
-                OhanaGeradoresDeRecursosCardAvancado.RECIPE_OHANA_CARD_NICKEL, SlimefunItems.NICKEL_INGOT);
+        BioTechGeradoresDeRecursosMaquina.preSetup(plugin,  GenerateCardAdvanced.OHANA_CARD_DAMASCUS,
+                GenerateCardAdvanced.RECIPE_OHANA_CARD_DAMASCUS, SlimefunItems.DAMASCUS_STEEL_INGOT);
 
-        OhanaGeradoresDeRecursosMaquina.preSetup(plugin,  OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_FERROSILICON,
-                OhanaGeradoresDeRecursosCardAvancado.RECIPE_OHANA_CARD_FERROSILICON, SlimefunItems.FERROSILICON);
+        BioTechGeradoresDeRecursosMaquina.preSetup(plugin,  GenerateCardAdvanced.OHANA_CARD_COBALT,
+                GenerateCardAdvanced.RECIPE_OHANA_CARD_COBALT, SlimefunItems.COBALT_INGOT);
 
-        OhanaGeradoresDeRecursosMaquina.preSetup(plugin,  OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_DAMASCUS,
-                OhanaGeradoresDeRecursosCardAvancado.RECIPE_OHANA_CARD_DAMASCUS, SlimefunItems.DAMASCUS_STEEL_INGOT);
+        BioTechGeradoresDeRecursosMaquina.preSetup(plugin,  GenerateCardAdvanced.OHANA_CARD_DURALUMIN_INGOT,
+                GenerateCardAdvanced.RECIPE_OHANA_CARD_DURALUMIN_INGOT, SlimefunItems.DURALUMIN_INGOT);
 
-        OhanaGeradoresDeRecursosMaquina.preSetup(plugin,  OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_COBALT,
-                OhanaGeradoresDeRecursosCardAvancado.RECIPE_OHANA_CARD_COBALT, SlimefunItems.COBALT_INGOT);
+        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, 2, GenerateCardAdvanced.OHANA_CARD_ALUMINUM_BRONZE_INGOT,
+                GenerateCardAdvanced.RECIPE_OHANA_CARD_ALUMINUM_BRONZE_INGOT, SlimefunItems.ALUMINUM_BRONZE_INGOT);
 
-        OhanaGeradoresDeRecursosMaquina.preSetup(plugin,  OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_DURALUMIN_INGOT,
-                OhanaGeradoresDeRecursosCardAvancado.RECIPE_OHANA_CARD_DURALUMIN_INGOT, SlimefunItems.DURALUMIN_INGOT);
+        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, 2, GenerateCardAdvanced.OHANA_CARD_ALUMINUM_BRASS_INGOT,
+                GenerateCardAdvanced.RECIPE_OHANA_CARD_ALUMINUM_BRASS_INGOT, SlimefunItems.ALUMINUM_BRASS_INGOT);
 
-        OhanaGeradoresDeRecursosMaquina.preSetup(plugin, 2, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_ALUMINUM_BRONZE_INGOT,
-                OhanaGeradoresDeRecursosCardAvancado.RECIPE_OHANA_CARD_ALUMINUM_BRONZE_INGOT, SlimefunItems.ALUMINUM_BRONZE_INGOT);
+        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, 2, GenerateCardAdvanced.OHANA_CARD_CORINTHIAN_BRONZE_INGOT,
+                GenerateCardAdvanced.RECIPE_OHANA_CARD_CORINTHIAN_BRONZE_INGOT, SlimefunItems.CORINTHIAN_BRONZE_INGOT);
 
-        OhanaGeradoresDeRecursosMaquina.preSetup(plugin, 2, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_ALUMINUM_BRASS_INGOT,
-                OhanaGeradoresDeRecursosCardAvancado.RECIPE_OHANA_CARD_ALUMINUM_BRASS_INGOT, SlimefunItems.ALUMINUM_BRASS_INGOT);
+        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, 2, GenerateCardAdvanced.OHANA_CARD_GOLD24K,
+                GenerateCardAdvanced.RECIPE_OHANA_CARD_GOLD24K, SlimefunItems.GOLD_24K);
 
-        OhanaGeradoresDeRecursosMaquina.preSetup(plugin, 2, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_CORINTHIAN_BRONZE_INGOT,
-                OhanaGeradoresDeRecursosCardAvancado.RECIPE_OHANA_CARD_CORINTHIAN_BRONZE_INGOT, SlimefunItems.CORINTHIAN_BRONZE_INGOT);
+        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, 2, GenerateCardAdvanced.OHANA_CARD_CARBON_PRESS,
+                GenerateCardAdvanced.RECIPE_OHANA_CARD_CARBON_PRESS, SlimefunItems.CARBON_PRESS);
 
-        OhanaGeradoresDeRecursosMaquina.preSetup(plugin, 2, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_GOLD24K,
-                OhanaGeradoresDeRecursosCardAvancado.RECIPE_OHANA_CARD_GOLD24K, SlimefunItems.GOLD_24K);
+        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, 2, GenerateCardAdvanced.OHANA_CARD_REDSTONE_ALLOY,
+                GenerateCardAdvanced.RECIPE_OHANA_CARD_REDSTONE_ALLOY, SlimefunItems.REDSTONE_ALLOY);
 
-        OhanaGeradoresDeRecursosMaquina.preSetup(plugin, 2, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_CARBON_PRESS,
-                OhanaGeradoresDeRecursosCardAvancado.RECIPE_OHANA_CARD_CARBON_PRESS, SlimefunItems.CARBON_PRESS);
+        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, 2, GenerateCardAdvanced.OHANA_CARD_HARDENED_METAL_INGOT,
+                GenerateCardAdvanced.RECIPE_OHANA_CARD_HARDENED_METAL_INGOT, SlimefunItems.HARDENED_METAL_INGOT);
 
-        OhanaGeradoresDeRecursosMaquina.preSetup(plugin, 2, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_REDSTONE_ALLOY,
-                OhanaGeradoresDeRecursosCardAvancado.RECIPE_OHANA_CARD_REDSTONE_ALLOY, SlimefunItems.REDSTONE_ALLOY);
+        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, 2, GenerateCardAdvanced.OHANA_CARD_BATTERY,
+                GenerateCardAdvanced.RECIPE_OHANA_CARD_BATTERY, SlimefunItems.BATTERY);
 
-        OhanaGeradoresDeRecursosMaquina.preSetup(plugin, 2, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_HARDENED_METAL_INGOT,
-                OhanaGeradoresDeRecursosCardAvancado.RECIPE_OHANA_CARD_HARDENED_METAL_INGOT, SlimefunItems.HARDENED_METAL_INGOT);
+        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, 2, GenerateCardAdvanced.OHANA_CARD_MAGNET,
+                GenerateCardAdvanced.RECIPE_OHANA_CARD_MAGNET, SlimefunItems.MAGNET);
 
-        OhanaGeradoresDeRecursosMaquina.preSetup(plugin, 2, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_BATTERY,
-                OhanaGeradoresDeRecursosCardAvancado.RECIPE_OHANA_CARD_BATTERY, SlimefunItems.BATTERY);
+        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, 2, GenerateCardAdvanced.OHANA_CARD_ELECTRO_MAGNET,
+                GenerateCardAdvanced.RECIPE_OHANA_CARD_ELECTRO_MAGNET, SlimefunItems.ELECTRO_MAGNET);
 
-        OhanaGeradoresDeRecursosMaquina.preSetup(plugin, 2, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_MAGNET,
-                OhanaGeradoresDeRecursosCardAvancado.RECIPE_OHANA_CARD_MAGNET, SlimefunItems.MAGNET);
-
-        OhanaGeradoresDeRecursosMaquina.preSetup(plugin, 2, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_ELECTRO_MAGNET,
-                OhanaGeradoresDeRecursosCardAvancado.RECIPE_OHANA_CARD_ELECTRO_MAGNET, SlimefunItems.ELECTRO_MAGNET);
-
-        OhanaGeradoresDeRecursosMaquina.preSetup(plugin, 3, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_REINFORCED_ALLOY_INGOT,
-                OhanaGeradoresDeRecursosCardAvancado.RECIPE_OHANA_CARD_REINFORCED_ALLOY_INGOT, SlimefunItems.REINFORCED_ALLOY_INGOT);
-
-        OhanaGeradoresDeRecursosMaquina.preSetup(plugin, 3, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_ESSENCE_OHANA,
-                OhanaGeradoresDeRecursosCardAvancado.RECIPE_OHANA_CARD_ESSENCE_OHANA, OhanaRecursosVariados.OHANA_ESSENCE_OHANA);
-
-        OhanaGeradoresDeRecursosMaquina.preSetup(plugin, 3, OhanaGeradoresDeRecursosCardAvancado.OHANA_CARD_VOID_BIT,
-                OhanaGeradoresDeRecursosCardAvancado.RECIPE_OHANA_CARD_VOID_BIT, InfinityExpansionMaterials.VOID_BIT);
+        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, 3, GenerateCardAdvanced.OHANA_CARD_REINFORCED_ALLOY_INGOT,
+                GenerateCardAdvanced.RECIPE_OHANA_CARD_REINFORCED_ALLOY_INGOT, SlimefunItems.REINFORCED_ALLOY_INGOT);
 
     }
 }
