@@ -23,11 +23,11 @@ public class Setup {
 
         IronGolemTech.setup(plugin);
 
-        TechGenerator.setup(plugin);
-
-        TechRobotic.setup(plugin);
-
-        TechMutation.setup(plugin);
+//        TechGenerator.setup(plugin);
+//
+//        TechRobotic.setup(plugin);
+//
+//        TechMutation.setup(plugin);
 
         SetupElectricMachine.setup(plugin);
 
