@@ -1,8 +1,8 @@
 name: BioTech
 author: RelativoBR e Wilian
-description: SlimeFun custom BioTech com novas maquina e itens
+description: SlimeFun custom BioTech new machine and resources
 main: br.com.ohanacraft.biotech.BioTech
 website: https://loja.ohanacraft.com.br/
-depend: [Slimefun]
+depend: [Slimefun, SupremeExpansion]
 version: ${project.version}
 api-version: 1.18

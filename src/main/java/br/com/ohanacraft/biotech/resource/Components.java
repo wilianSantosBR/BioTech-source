@@ -2,7 +2,7 @@ package br.com.ohanacraft.biotech.resource;
 
 import br.com.ohanacraft.biotech.BioTech;
 import br.com.ohanacraft.biotech.Categories;
-import br.com.ohanacraft.biotech.addons.supremeExpansion.util.ItemNotPlaceable;
+import br.com.ohanacraft.biotech.util.ItemNotPlaceable;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
@@ -230,8 +230,6 @@ public class Components {
         //gemas
         registerEnhancedCraft(plugin, Components.SYNTHETIC_AMETHYST, Components.RECIPE_SYNTHETIC_AMETHYST);
         registerEnhancedCraft(plugin, Components.SYNTHETIC_RUBY, Components.RECIPE_SYNTHETIC_RUBY);
-
-
 
 
     }

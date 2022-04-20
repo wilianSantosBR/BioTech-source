@@ -1,6 +1,6 @@
-package br.com.ohanacraft.biotech.addons.supremeExpansion.generic;
+package br.com.ohanacraft.biotech.generic;
 
-import br.com.ohanacraft.biotech.addons.supremeExpansion.util.SimpleItemRecipe;
+import br.com.ohanacraft.biotech.util.SimpleItemRecipe;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;

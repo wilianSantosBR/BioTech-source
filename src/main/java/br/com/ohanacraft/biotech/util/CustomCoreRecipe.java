@@ -1,4 +1,4 @@
-package br.com.ohanacraft.biotech.addons.supremeExpansion.util;
+package br.com.ohanacraft.biotech.util;
 
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import lombok.AllArgsConstructor;

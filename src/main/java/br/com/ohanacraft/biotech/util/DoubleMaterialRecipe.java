@@ -1,22 +1,23 @@
-package br.com.ohanacraft.biotech.addons.supremeExpansion.util;
+package br.com.ohanacraft.biotech.util;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public final class DoubleItemRecipe {
+public final class DoubleMaterialRecipe {
 
 
-    private ItemStack material;
-    private ItemStack mainItem;
-    private ItemStack secondItem;
+    private Material material;
+    private Material mainItem;
+    private Material secondItem;
 
 
-    public DoubleItemRecipe(ItemStack material, ItemStack mainItem) {
+    public DoubleMaterialRecipe(Material material, Material mainItem) {
         this.material = material;
         this.mainItem = mainItem;
         this.secondItem = mainItem;
@@ -25,15 +26,15 @@ public final class DoubleItemRecipe {
 
     public ItemStack[] getInput(){
         return new ItemStack[]{
-                this.material
+                new ItemStack(this.material)
         };
     }
 
 
     public ItemStack[] getOutput(){
         return new ItemStack[]{
-                this.mainItem,
-                this.secondItem
+                new ItemStack(this.mainItem),
+                new ItemStack(this.secondItem)
         };
     }
 

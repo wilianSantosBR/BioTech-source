@@ -1,30 +1,31 @@
-package br.com.ohanacraft.biotech.addons.supremeExpansion.util;
+package br.com.ohanacraft.biotech.util;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public final class SimpleItemRecipe {
+public final class SimpleMaterialRecipe {
 
 
-    private ItemStack material;
-    private ItemStack mainItem;
+    private Material material;
+    private Material mainItem;
 
 
     public ItemStack[] getInput(){
         return new ItemStack[]{
-                this.material
+                new ItemStack(this.material)
         };
     }
 
 
     public ItemStack[] getOutput(){
         return new ItemStack[]{
-                this.mainItem
+                new ItemStack(this.mainItem)
         };
     }
 

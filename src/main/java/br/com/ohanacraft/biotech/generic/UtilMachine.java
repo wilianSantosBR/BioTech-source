@@ -1,4 +1,4 @@
-package br.com.ohanacraft.biotech.addons.supremeExpansion.generic;
+package br.com.ohanacraft.biotech.generic;
 
 import org.bukkit.inventory.ItemStack;
 

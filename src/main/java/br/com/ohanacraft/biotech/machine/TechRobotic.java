@@ -10,11 +10,11 @@ import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
-public class TechEvolution {
+public class TechRobotic {
 
-    public static final SlimefunItemStack TECH_EVOLUTION = new SlimefunItemStack("BIOTECH_TECH_EVOLUTION",
-            Material.POLISHED_BLACKSTONE, "&aTech &bEvolution", "");
-    public static final ItemStack[] RECIPE_TECH_EVOLUTION = {
+    public static final SlimefunItemStack TECH_ROBOTIC = new SlimefunItemStack("BIOTECH_TECH_ROBOTIC",
+            Material.POLISHED_BLACKSTONE, "&aTech &bRobotic", "");
+    public static final ItemStack[] RECIPE_TECH_ROBOTIC = {
             Components.TRIPLE_COMPRESSED_LEATHER, Components.TRIPLE_COMPRESSED_WOOL, Components.TRIPLE_COMPRESSED_LEATHER,
             SlimefunItems.HARDENED_METAL_INGOT, Components.SYNTHETIC_RUBY, SlimefunItems.HARDENED_METAL_INGOT,
             Components.TRIPLE_COMPRESSED_OAK_WOOD, SlimefunItems.ELECTRIC_MOTOR, Components.TRIPLE_COMPRESSED_OAK_WOOD
@@ -23,7 +23,7 @@ public class TechEvolution {
 
     public static void setup(BioTech plugin) {
 
-        preSetup(plugin, TechEvolution.TECH_EVOLUTION,TechEvolution.RECIPE_TECH_EVOLUTION);
+        preSetup(plugin, TechRobotic.TECH_ROBOTIC, TechRobotic.RECIPE_TECH_ROBOTIC);
 
 
     }

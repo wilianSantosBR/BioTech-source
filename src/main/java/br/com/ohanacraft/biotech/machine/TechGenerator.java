@@ -2,9 +2,9 @@ package br.com.ohanacraft.biotech.machine;
 
 import br.com.ohanacraft.biotech.BioTech;
 import br.com.ohanacraft.biotech.Categories;
-import br.com.ohanacraft.biotech.addons.dynatech.MaterialHive;
-import br.com.ohanacraft.biotech.addons.supremeExpansion.util.Energy;
+import br.com.ohanacraft.biotech.util.Energy;
 import br.com.ohanacraft.biotech.resource.Components;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.*;
@@ -35,10 +35,7 @@ public class TechGenerator {
     }
 
     private static void preSetup(BioTech plugin, SlimefunItemStack item, ItemStack[] recipe) {
-        new MaterialHive(Categories.MACHINES_CATEGORY, item, RecipeType.ENHANCED_CRAFTING_TABLE, recipe)
-                .setEnergyCapacity(10000)
-                .setEnergyConsumption(2000)
-                .setProcessingSpeed(1)
+        new SlimefunItem(Categories.MACHINES_CATEGORY, item, RecipeType.ENHANCED_CRAFTING_TABLE, recipe)
                 .register(plugin);
     }
 
