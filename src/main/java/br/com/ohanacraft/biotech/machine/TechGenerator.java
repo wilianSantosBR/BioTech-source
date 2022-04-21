@@ -2,6 +2,7 @@ package br.com.ohanacraft.biotech.machine;
 
 import br.com.ohanacraft.biotech.BioTech;
 import br.com.ohanacraft.biotech.Categories;
+import br.com.ohanacraft.biotech.dto.InterfaceMachineDTO;
 import br.com.ohanacraft.biotech.generic.SimpleItemContainerMachine;
 import br.com.ohanacraft.biotech.resource.Components;
 import br.com.ohanacraft.biotech.util.Energy;
@@ -137,52 +138,40 @@ public class TechGenerator extends SimpleItemContainerMachine {
     TechGenerator.addReceitasParaProduzir(item, output);
   }
 
-  public static final int[] BORDA_ENTRADA = {
-      0, 1, 2, 3, 4, 5, 6, 7, 8,
-      9, 17,
-      18, 19, 20, 21, 23, 24, 25, 26,
-  };
-  public static final int[] ENTRADA = {
-      10, 11, 12, 13, 14, 15, 16,
-
-  };
-  public static final int[] BORDA_SAIDA = {
-      27, 28, 29, 30, 31, 32, 33, 34, 35,
-      36, 44,
-      45, 46, 47, 48, 49, 50, 51, 52, 53,
-  };
-  public static final int[] SAIDA = {
-      37, 38, 39, 40, 41, 42, 43,
-  };
-  public static final int SITUACAO = 22;
-
   @Override
   public int[] getInputSlots() {
-    return ENTRADA;
+    return InterfaceMachineDTO.TECH_GENERATOR_INPUT_SLOTS;
   }
 
   @Override
   public int[] getOutputSlots() {
-    return SAIDA;
+    return InterfaceMachineDTO.TECH_GENERATOR_OUTPUT_SLOTS;
   }
 
   @Override
   protected void constructMenu(BlockMenuPreset preset) {
 
-    for (int i : BORDA_ENTRADA) {
-      preset.addItem(i, new CustomItemStack(Material.LIME_STAINED_GLASS_PANE,
+    for (int i : InterfaceMachineDTO.TECH_GENERATOR_BORDER) {
+      preset.addItem(i, new CustomItemStack(Material.GRAY_STAINED_GLASS_PANE,
           " ", new String[0]), ChestMenuUtils.getEmptyClickHandler());
     }
 
-    for (int i : BORDA_SAIDA) {
+    for (int i : InterfaceMachineDTO.TECH_GENERATOR_BORDER_IN) {
+      preset.addItem(i, new CustomItemStack(Material.BLUE_STAINED_GLASS_PANE,
+          " ", new String[0]), ChestMenuUtils.getEmptyClickHandler());
+    }
+
+    for (int i : InterfaceMachineDTO.TECH_GENERATOR_BORDER_OUT) {
       preset.addItem(i, new CustomItemStack(Material.ORANGE_STAINED_GLASS_PANE,
           " ", new String[0]), ChestMenuUtils.getEmptyClickHandler());
     }
 
-    preset.addItem(SITUACAO, new CustomItemStack(Material.BLACK_STAINED_GLASS_PANE,
-        " ", new String[0]), ChestMenuUtils.getEmptyClickHandler());
+    for (int i : InterfaceMachineDTO.TECH_GENERATOR_PROGRESS_BAR_SLOT) {
+      preset.addItem(i, new CustomItemStack(Material.BLACK_STAINED_GLASS_PANE,
+          " ", new String[0]), ChestMenuUtils.getEmptyClickHandler());
+    }
 
-    for (int i : SAIDA) {
+    for (int i : InterfaceMachineDTO.TECH_GENERATOR_OUTPUT_SLOTS) {
       preset.addMenuClickHandler(i, new ChestMenu.AdvancedMenuClickHandler() {
         @Override
         public boolean onClick(Player p, int slot, ItemStack cursor, ClickAction action) {
@@ -278,11 +267,15 @@ public class TechGenerator extends SimpleItemContainerMachine {
   }
 
   private static void invalidSituacao(BlockMenu menu, String txt) {
-    menu.replaceExistingItem(SITUACAO, new CustomItemStack(Material.RED_STAINED_GLASS_PANE, txt));
+    for (int i : InterfaceMachineDTO.TECH_GENERATOR_PROGRESS_BAR_SLOT) {
+      menu.replaceExistingItem(i, new CustomItemStack(Material.RED_STAINED_GLASS_PANE, txt));
+    }
   }
 
   private static void invalidSituacao(BlockMenu menu, Material material, String txt) {
-    menu.replaceExistingItem(SITUACAO, new CustomItemStack(material, txt));
+    for (int i : InterfaceMachineDTO.TECH_GENERATOR_PROGRESS_BAR_SLOT) {
+      menu.replaceExistingItem(i, new CustomItemStack(material, txt));
+    }
   }
 
   public int getProgressTime(Block b) {
@@ -300,8 +293,11 @@ public class TechGenerator extends SimpleItemContainerMachine {
           time = 0;
         }
         progressTime.put(b, time);
-        ChestMenuUtils.updateProgressbar(inv, SITUACAO, Math.round(ticksLeft / this.getSpeed()),
-            Math.round(ticksTotal / this.getSpeed()), result);
+        //todo ajustar para progresso parcial nos 3 slots
+        for (int i : InterfaceMachineDTO.TECH_GENERATOR_PROGRESS_BAR_SLOT) {
+          ChestMenuUtils.updateProgressbar(inv, i, Math.round(ticksLeft / this.getSpeed()),
+              Math.round(ticksTotal / this.getSpeed()), result);
+        }
       } else {
         invalidSituacao(inv, "&cSem energia para maquina");
       }
@@ -311,35 +307,15 @@ public class TechGenerator extends SimpleItemContainerMachine {
   }
 
   private ItemStack validRecipeItem(BlockMenu inv) {
-    int[] inputSlots = this.getInputSlots();
-
     // percore as possíveis receitas
     for (SimpleRecipe produce : this.getReceitasParaProduzir()) {
-
-      final ItemStack[] recipeInput = produce.getRecipe();
-      int foundSize = 0;
-      List<Integer> foundSlot = new ArrayList<>();
-
-      // percorre os itens de entrada da receita
-      for (ItemStack itemStack : recipeInput) {
-
-        // percorre os slots
-        for (int inputSlot : inputSlots) {
-
-          // ignora slots que já estão em uso na receita
-          if (!foundSlot.contains(inputSlot)
-              && SlimefunUtils.isItemSimilar(inv.getItemInSlot(inputSlot), itemStack, false,
-              true)) {
-            foundSize++;
-            foundSlot.add(inputSlot);
-            break;
-          }
-        }
-      }
-
-      if (foundSize == recipeInput.length) {
+      if (SlimefunUtils.isItemSimilar(inv.getItemInSlot(10),
+          produce.getRecipe()[0],
+          false,
+          true)) {
         return produce.getItem();
       }
+
     }
     return null;
   }

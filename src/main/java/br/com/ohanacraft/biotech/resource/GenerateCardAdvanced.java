@@ -13,9 +13,11 @@ public class GenerateCardAdvanced {
 
   /**
    * tipos card avançado
-   * <p>
-   * MUSIC_DISC_BLOCKS      8 laranja MUSIC_DISC_CHIRP       9 vemelho MUSIC_DISC_MALL        10
-   * roxo MUSIC_DISC_STAL        11 preto
+   *
+   * MUSIC_DISC_BLOCKS      8 laranja
+   * MUSIC_DISC_CHIRP       9 vemelho
+   * MUSIC_DISC_MALL        10 roxo
+   * MUSIC_DISC_STAL        11 preto
    */
 
   public static final SlimefunItemStack BIOTECH_CARD_SOLDER_INGOT = new SlimefunItemStack(

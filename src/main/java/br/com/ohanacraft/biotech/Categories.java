@@ -26,8 +26,7 @@ public class Categories {
             new CustomItemStack(Material.LOOM, "&4Machines"));
 
     public static ItemGroup CARDS_RESOURCE_CATEGORY = new SubItemGroup(new NamespacedKey(BioTech.inst(), "CARDS_RESOURCE_CATEGORY"), MULTI_CATEGORY,
-            new CustomItemStack(Material.LOOM, "&4Resource Cards"));
-
+            new CustomItemStack(Material.MUSIC_DISC_PIGSTEP, "&4Resource Cards"));
 
 
 }
