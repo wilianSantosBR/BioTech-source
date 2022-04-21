@@ -222,7 +222,7 @@ public class GenerateCardAdvanced {
         SlimefunItems.GOLD_24K, SlimefunItems.GOLD_24K);
 
     TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_CARBON_PRESS,
-        SlimefunItems.CARBON_PRESS, SlimefunItems.CARBON_PRESS);
+        SlimefunItems.COMPRESSED_CARBON, SlimefunItems.COMPRESSED_CARBON);
 
     TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_REDSTONE_ALLOY,
         SlimefunItems.REDSTONE_ALLOY, SlimefunItems.REDSTONE_ALLOY);

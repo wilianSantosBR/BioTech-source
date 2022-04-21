@@ -16,7 +16,7 @@ public class TechRobotic {
             Material.POLISHED_BLACKSTONE, "&aTech &bRobotic", "");
     public static final ItemStack[] RECIPE_TECH_ROBOTIC = {
             Components.TRIPLE_COMPRESSED_LEATHER, Components.TRIPLE_COMPRESSED_WOOL, Components.TRIPLE_COMPRESSED_LEATHER,
-            SlimefunItems.HARDENED_METAL_INGOT, Components.SYNTHETIC_RUBY, SlimefunItems.HARDENED_METAL_INGOT,
+            SlimefunItems.HARDENED_METAL_INGOT, Components.BIOTECH_SYNTHETIC_RUBY, SlimefunItems.HARDENED_METAL_INGOT,
             Components.TRIPLE_COMPRESSED_OAK_WOOD, SlimefunItems.ELECTRIC_MOTOR, Components.TRIPLE_COMPRESSED_OAK_WOOD
     };
 

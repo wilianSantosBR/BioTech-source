@@ -15,8 +15,6 @@ import io.github.thebusybiscuit.slimefun4.core.handlers.EntityInteractHandler;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.protection.Interaction;
 import io.github.thebusybiscuit.slimefun4.utils.LoreBuilder;
-import lombok.Getter;
-import lombok.Setter;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.entity.Bee;
@@ -52,7 +50,7 @@ public class MobCollectorTech extends SlimefunItem implements Rechargeable, NotP
             LoreBuilder.powerCharged(0, 5000)
     );
     public static final ItemStack[] RECIPE_MOB_COLLECTOR_II = new ItemStack[]{
-            Components.TRIPLE_COMPRESSED_WOOL, Components.SYNTHETIC_RUBY, Components.TRIPLE_COMPRESSED_WOOL,
+            Components.TRIPLE_COMPRESSED_WOOL, Components.BIOTECH_SYNTHETIC_RUBY, Components.TRIPLE_COMPRESSED_WOOL,
             Components.TRIPLE_COMPRESSED_LEATHER, MobCollectorTech.MOB_COLLECTOR_I, Components.TRIPLE_COMPRESSED_LEATHER,
             Components.TRIPLE_COMPRESSED_WOOL, MobCollectorTech.MOB_COLLECTOR_I, Components.TRIPLE_COMPRESSED_WOOL
     };
@@ -134,6 +132,7 @@ public class MobCollectorTech extends SlimefunItem implements Rechargeable, NotP
                 removeItemCharge(item, getCharge());
                 p.playSound(p.getLocation(), Sound.BLOCK_ANVIL_FALL, 1, 1);
             }
+
         };
 
     }

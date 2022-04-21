@@ -4,6 +4,7 @@ import br.com.ohanacraft.biotech.BioTech;
 import br.com.ohanacraft.biotech.Categories;
 import br.com.ohanacraft.biotech.dto.MobTechDTO;
 import br.com.ohanacraft.biotech.dto.MobTechDTO.MobTechType;
+import br.com.ohanacraft.biotech.tools.MobCollectorTech;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -22,7 +23,7 @@ public class MobTech extends SlimefunItem implements Radioactive, NotPlaceable {
     public static void preSetup(BioTech plugin, MobTechDTO item) {
         if (MobTechType.SIMPLE == item.getMobTechType()) {
             new MobTech(Categories.RESOURCE_CATEGORY, BioTech.buildItemFromMobTechDTO(item, 0),
-                    RecipeType.NULL, new ItemStack[]{})
+                    RecipeType.NULL, new ItemStack[]{MobCollectorTech.MOB_COLLECTOR_I})
                     .setMobTechType(item.getMobTechType())
                     .setMobTechTier(0)
                     .register(plugin);

@@ -20,12 +20,6 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
 import io.github.thebusybiscuit.slimefun4.utils.LoreBuilder;
 import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-import javax.annotation.Nonnull;
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.ChestMenu;
 import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.ClickAction;
@@ -38,6 +32,13 @@ import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
+
+import javax.annotation.Nonnull;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 public class TechGenerator extends SimpleItemContainerMachine {
 
@@ -52,7 +53,7 @@ public class TechGenerator extends SimpleItemContainerMachine {
       Energy.energyPowerPerSecond(2000),
       "");
   public static final ItemStack[] RECIPE_TECH_GENERATOR = {
-      Components.SYNTHETIC_AMETHYST, Components.SYNTHETIC_AMETHYST, Components.SYNTHETIC_AMETHYST,
+      Components.BIOTECH_SYNTHETIC_AMETHYST, Components.BIOTECH_SYNTHETIC_AMETHYST, Components.BIOTECH_SYNTHETIC_AMETHYST,
       SlimefunItems.REINFORCED_ALLOY_INGOT, new ItemStack(Material.LOOM),
       SlimefunItems.REINFORCED_ALLOY_INGOT,
       Components.TRIPLE_COMPRESSED_OAK_WOOD, SlimefunItems.ELECTRIC_MOTOR,
@@ -113,7 +114,7 @@ public class TechGenerator extends SimpleItemContainerMachine {
     new ItemNotPlaceable(Categories.CARDS_RESOURCE_CATEGORY,
         item, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
         new ItemStack(input), new ItemStack(input), new ItemStack(input),
-        new ItemStack(input), Components.OHANA_CENTRO_CARD_SIMPLES, new ItemStack(input),
+        new ItemStack(input), Components.BIOTECH_CENTER_CARD_SIMPLE, new ItemStack(input),
         new ItemStack(input), new ItemStack(input), new ItemStack(input)
     }).register(plugin);
     TechGenerator.addReceitasParaProduzir(item, output);
@@ -131,8 +132,8 @@ public class TechGenerator extends SimpleItemContainerMachine {
         new ItemStack(input), new ItemStack(input), new ItemStack(input),
         new ItemStack(input),
         tierCard <= 1
-            ? Components.OHANA_CENTRO_CARD_SIMPLES
-            : Components.OHANA_CENTRO_CARD_AVANCADO,
+            ? Components.BIOTECH_CENTER_CARD_SIMPLE
+            : Components.BIOTECH_CENTER_CARD_ADVANCED,
         new ItemStack(input),
         new ItemStack(input), new ItemStack(input), new ItemStack(input)
     }).register(plugin);
@@ -237,7 +238,9 @@ public class TechGenerator extends SimpleItemContainerMachine {
       if (this.getProgressTime(b) <= 0) {
 
         //CRIAÇÃO DO ITEM
-        inv.pushItem(itemProduzindo.clone(), this.getOutputSlots());
+        ItemStack itemStack = itemProduzindo.clone();
+        itemStack.setAmount(64);
+        inv.pushItem( itemStack, this.getOutputSlots());
 
         //TÉRMINO PRODUÇÃO
         processing.put(b, null);
@@ -300,25 +303,25 @@ public class TechGenerator extends SimpleItemContainerMachine {
         if (b1 != null) {
           SlimefunItem mob1 = SlimefunItem.getByItem(b1);
           if (mob1 instanceof MobTech) {
-            time -= (((MobTech) mob1).getMobTechTier()+1) * b1.getAmount();
+            time -= Math.round(((((MobTech) mob1).getMobTechTier()+1) * b1.getAmount())/32);
           }
         }
         if (b2 != null) {
           SlimefunItem mob2 = SlimefunItem.getByItem(b2);
           if (mob2 instanceof MobTech) {
-            time -= (((MobTech) mob2).getMobTechTier()+1) * b2.getAmount();
+            time -= Math.round(((((MobTech) mob2).getMobTechTier()+1) * b2.getAmount())/32);
           }
         }
         if (b3 != null) {
           SlimefunItem mob3 = SlimefunItem.getByItem(b3);
           if (mob3 instanceof MobTech) {
-            time -= (((MobTech) mob3).getMobTechTier()+1) * b3.getAmount();
+            time -= Math.round(((((MobTech) mob3).getMobTechTier()+1) * b3.getAmount())/32);
           }
         }
         if (b4 != null) {
           SlimefunItem mob4 = SlimefunItem.getByItem(b4);
           if (mob4 instanceof MobTech) {
-            time -= (((MobTech) mob4).getMobTechTier()+1) * b4.getAmount();
+            time -= Math.round(((((MobTech) mob4).getMobTechTier()+1) * b4.getAmount())/32);
           }
         }
 
@@ -357,24 +360,13 @@ public class TechGenerator extends SimpleItemContainerMachine {
   @Nonnull
   @Override
   public List<ItemStack> getDisplayRecipes() {
-    final CustomItemStack empty = new CustomItemStack(Material.WHITE_STAINED_GLASS_PANE, " ");
-    final CustomItemStack separator = new CustomItemStack(Material.BLACK_STAINED_GLASS_PANE, " ");
     List<ItemStack> displayRecipes = new ArrayList();
     this.getReceitasParaExibir().forEach(recipe -> {
-      final int tamanho = recipe.getRecipe().length;
-      if (tamanho == 1) {
-        displayRecipes.add(recipe.getRecipe()[0]);
-        displayRecipes.add(recipe.getItem());
-      } else if (tamanho >= 2) {
-        displayRecipes.add(recipe.getRecipe()[0]);
-        displayRecipes.add(recipe.getItem());
-        for (int i = 1; i < tamanho; i++) {
-          displayRecipes.add(recipe.getRecipe()[i]);
-          displayRecipes.add(empty);
-        }
-      }
-      displayRecipes.add(separator);
-      displayRecipes.add(separator);
+      ItemStack itemStack = recipe.getItem().clone();
+      itemStack.setAmount(64);
+      displayRecipes.add(recipe.getRecipe()[0]);
+        displayRecipes.add(itemStack);
+
     });
     return displayRecipes;
   }

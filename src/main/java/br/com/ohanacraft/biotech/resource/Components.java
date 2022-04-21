@@ -177,45 +177,45 @@ public class Components {
 
     //amethyst
 
-    public static final SlimefunItemStack SYNTHETIC_AMETHYST = new SlimefunItemStack("SYNTHETIC_AMETHYST",
+    public static final SlimefunItemStack BIOTECH_SYNTHETIC_AMETHYST = new SlimefunItemStack("BIOTECH_SYNTHETIC_AMETHYST",
             Material.PURPLE_DYE, "&4Synthetic Amethyst", "");
-    private static final ItemStack[] RECIPE_SYNTHETIC_AMETHYST = {
-            SlimefunItems.SYNTHETIC_SAPPHIRE, SlimefunItems.SYNTHETIC_DIAMOND, SlimefunItems.SYNTHETIC_SAPPHIRE,
-            SlimefunItems.SYNTHETIC_DIAMOND, new ItemStack(Material.AMETHYST_SHARD), SlimefunItems.SYNTHETIC_DIAMOND,
-            SlimefunItems.SYNTHETIC_SAPPHIRE, SlimefunItems.SYNTHETIC_DIAMOND, SlimefunItems.SYNTHETIC_SAPPHIRE
+    private static final ItemStack[] RECIPE_BIOTECH_SYNTHETIC_AMETHYST = {
+            SlimefunItems.SYNTHETIC_SAPPHIRE, SlimefunItems.MAGIC_LUMP_3, SlimefunItems.SYNTHETIC_SAPPHIRE,
+            SlimefunItems.MAGIC_LUMP_3, new ItemStack(Material.AMETHYST_SHARD), SlimefunItems.MAGIC_LUMP_3,
+            SlimefunItems.SYNTHETIC_SAPPHIRE, SlimefunItems.MAGIC_LUMP_3, SlimefunItems.SYNTHETIC_SAPPHIRE
     };
 
     //rubi
 
-    public static final SlimefunItemStack SYNTHETIC_RUBY = new SlimefunItemStack("SYNTHETIC_RUBY",
+    public static final SlimefunItemStack BIOTECH_SYNTHETIC_RUBY = new SlimefunItemStack("BIOTECH_SYNTHETIC_RUBY",
             Material.PINK_DYE, "&4Synthetic Ruby", "");
-    private static final ItemStack[] RECIPE_SYNTHETIC_RUBY = {
+    private static final ItemStack[] RECIPE_BIOTECH_SYNTHETIC_RUBY = {
             SlimefunItems.SYNTHETIC_EMERALD, SlimefunItems.SYNTHETIC_DIAMOND, SlimefunItems.SYNTHETIC_EMERALD,
-            SlimefunItems.SYNTHETIC_DIAMOND, Components.SYNTHETIC_AMETHYST, SlimefunItems.SYNTHETIC_DIAMOND,
+            SlimefunItems.SYNTHETIC_DIAMOND, Components.BIOTECH_SYNTHETIC_AMETHYST, SlimefunItems.SYNTHETIC_DIAMOND,
             SlimefunItems.SYNTHETIC_EMERALD, SlimefunItems.SYNTHETIC_DIAMOND, SlimefunItems.SYNTHETIC_EMERALD
     };
 
 
 
     // componente
-    public static final SlimefunItemStack OHANA_CENTRO_CARD_SIMPLES = new SlimefunItemStack("OHANA_CENTRO_CARD_SIMPLES",
+    public static final SlimefunItemStack BIOTECH_CENTER_CARD_SIMPLE = new SlimefunItemStack("BIOTECH_CENTER_CARD_SIMPLE",
         Material.MUSIC_DISC_11,
         "&BComponente Básico para Card", "", "&fComponente para Maquina de produzir itens",
         "", LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE));
-    private static final ItemStack[] RECIPE_OHANA_CENTRO_CARD_SIMPLES = new ItemStack[]{
+    private static final ItemStack[] RECIPE_BIOTECH_CENTER_CARD_SIMPLE = new ItemStack[]{
         SlimefunItems.BASIC_CIRCUIT_BOARD, SlimefunItems.ELECTRO_MAGNET, SlimefunItems.BASIC_CIRCUIT_BOARD,
-        SlimefunItems.BASIC_CIRCUIT_BOARD, SlimefunItems.ELECTRIC_MOTOR, SlimefunItems.BASIC_CIRCUIT_BOARD,
+        SlimefunItems.BASIC_CIRCUIT_BOARD, Components.BIOTECH_SYNTHETIC_AMETHYST, SlimefunItems.BASIC_CIRCUIT_BOARD,
         SlimefunItems.BASIC_CIRCUIT_BOARD, SlimefunItems.ELECTRO_MAGNET, SlimefunItems.BASIC_CIRCUIT_BOARD
     };
 
-    public static final SlimefunItemStack OHANA_CENTRO_CARD_AVANCADO = new SlimefunItemStack("OHANA_CENTRO_CARD_AVANCADO",
+    public static final SlimefunItemStack BIOTECH_CENTER_CARD_ADVANCED = new SlimefunItemStack("BIOTECH_CENTER_CARD_ADVANCED",
         Material.MUSIC_DISC_PIGSTEP,
         "&BComponente Avançado para Card", "", "&fComponente para Maquina de produzir itens",
         "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE));
-    private static final ItemStack[] RECIPE_OHANA_CENTRO_CARD_AVANCADO = new ItemStack[]{
-        SlimefunItems.ADVANCED_CIRCUIT_BOARD, OHANA_CENTRO_CARD_SIMPLES, SlimefunItems.ADVANCED_CIRCUIT_BOARD,
-        OHANA_CENTRO_CARD_SIMPLES, Components.SYNTHETIC_RUBY, OHANA_CENTRO_CARD_SIMPLES,
-        SlimefunItems.ELECTRO_MAGNET, OHANA_CENTRO_CARD_SIMPLES, SlimefunItems.ELECTRO_MAGNET
+    private static final ItemStack[] RECIPE_BIOTECH_CENTER_CARD_ADVANCED = new ItemStack[]{
+        SlimefunItems.ADVANCED_CIRCUIT_BOARD, BIOTECH_CENTER_CARD_SIMPLE, SlimefunItems.ADVANCED_CIRCUIT_BOARD,
+            BIOTECH_CENTER_CARD_SIMPLE, Components.BIOTECH_SYNTHETIC_RUBY, BIOTECH_CENTER_CARD_SIMPLE,
+        SlimefunItems.ELECTRO_MAGNET, BIOTECH_CENTER_CARD_SIMPLE, SlimefunItems.ELECTRO_MAGNET
     };
 
     public static void setup(BioTech plugin) {
@@ -253,12 +253,12 @@ public class Components {
         registerEnhancedCraft(plugin, Components.TRIPLE_COMPRESSED_MAGMA_CREAM, Components.RECIPE_TRIPLE_COMPRESSED_MAGMA_CREAM);
 
         //gemas
-        registerEnhancedCraft(plugin, Components.SYNTHETIC_AMETHYST, Components.RECIPE_SYNTHETIC_AMETHYST);
-        registerEnhancedCraft(plugin, Components.SYNTHETIC_RUBY, Components.RECIPE_SYNTHETIC_RUBY);
+        registerEnhancedCraft(plugin, Components.BIOTECH_SYNTHETIC_AMETHYST, Components.RECIPE_BIOTECH_SYNTHETIC_AMETHYST);
+        registerEnhancedCraft(plugin, Components.BIOTECH_SYNTHETIC_RUBY, Components.RECIPE_BIOTECH_SYNTHETIC_RUBY);
         
         //discos
-        registerEnhancedCraft(plugin, Components.OHANA_CENTRO_CARD_SIMPLES, Components.RECIPE_OHANA_CENTRO_CARD_SIMPLES);
-        registerEnhancedCraft(plugin, Components.OHANA_CENTRO_CARD_AVANCADO, Components.RECIPE_OHANA_CENTRO_CARD_AVANCADO);
+        registerEnhancedCraft(plugin, Components.BIOTECH_CENTER_CARD_SIMPLE, Components.RECIPE_BIOTECH_CENTER_CARD_SIMPLE);
+        registerEnhancedCraft(plugin, Components.BIOTECH_CENTER_CARD_ADVANCED, Components.RECIPE_BIOTECH_CENTER_CARD_ADVANCED);
 
 
     }
