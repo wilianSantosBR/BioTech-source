@@ -5,6 +5,7 @@ import br.com.ohanacraft.biotech.Categories;
 import br.com.ohanacraft.biotech.dto.InterfaceMachineDTO;
 import br.com.ohanacraft.biotech.generic.SimpleItemContainerMachine;
 import br.com.ohanacraft.biotech.resource.Components;
+import br.com.ohanacraft.biotech.resource.MobTech;
 import br.com.ohanacraft.biotech.util.Energy;
 import br.com.ohanacraft.biotech.util.ItemNotPlaceable;
 import br.com.ohanacraft.biotech.util.SimpleRecipe;
@@ -288,11 +289,44 @@ public class TechGenerator extends SimpleItemContainerMachine {
     if (ticksLeft > 0) {
       // verifica se há energia
       if (this.takeCharge(b.getLocation())) {
+
         int time = ticksLeft - this.getSpeed();
+
+        ItemStack b1 = inv.getItemInSlot(getInputSlots()[1]);
+        ItemStack b2 = inv.getItemInSlot(getInputSlots()[2]);
+        ItemStack b3 = inv.getItemInSlot(getInputSlots()[3]);
+        ItemStack b4 = inv.getItemInSlot(getInputSlots()[4]);
+
+        if (b1 != null) {
+          SlimefunItem mob1 = SlimefunItem.getByItem(b1);
+          if (mob1 instanceof MobTech) {
+            time -= (((MobTech) mob1).getMobTechTier()+1) * b1.getAmount();
+          }
+        }
+        if (b2 != null) {
+          SlimefunItem mob2 = SlimefunItem.getByItem(b2);
+          if (mob2 instanceof MobTech) {
+            time -= (((MobTech) mob2).getMobTechTier()+1) * b2.getAmount();
+          }
+        }
+        if (b3 != null) {
+          SlimefunItem mob3 = SlimefunItem.getByItem(b3);
+          if (mob3 instanceof MobTech) {
+            time -= (((MobTech) mob3).getMobTechTier()+1) * b3.getAmount();
+          }
+        }
+        if (b4 != null) {
+          SlimefunItem mob4 = SlimefunItem.getByItem(b4);
+          if (mob4 instanceof MobTech) {
+            time -= (((MobTech) mob4).getMobTechTier()+1) * b4.getAmount();
+          }
+        }
+
         if (time < 0) {
           time = 0;
         }
         progressTime.put(b, time);
+
         //todo ajustar para progresso parcial nos 3 slots
         for (int i : InterfaceMachineDTO.TECH_GENERATOR_PROGRESS_BAR_SLOT) {
           ChestMenuUtils.updateProgressbar(inv, i, Math.round(ticksLeft / this.getSpeed()),
@@ -309,7 +343,7 @@ public class TechGenerator extends SimpleItemContainerMachine {
   private ItemStack validRecipeItem(BlockMenu inv) {
     // percore as possíveis receitas
     for (SimpleRecipe produce : this.getReceitasParaProduzir()) {
-      if (SlimefunUtils.isItemSimilar(inv.getItemInSlot(10),
+      if (SlimefunUtils.isItemSimilar(inv.getItemInSlot(getInputSlots()[0]),
           produce.getRecipe()[0],
           false,
           true)) {
