@@ -2,23 +2,17 @@ package br.com.ohanacraft.biotech.util;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.bukkit.inventory.ItemStack;
 
-@Data
+@Setter
+@Getter
 @AllArgsConstructor
-@NoArgsConstructor
 public final class SimpleRecipe {
 
     private ItemStack item;
     private ItemStack[] recipe;
-
-    public ItemStack getItem(){
-        return this.item;
-    }
-
-    public ItemStack[] getRecipe(){
-        return recipe;
-    }
 
 }

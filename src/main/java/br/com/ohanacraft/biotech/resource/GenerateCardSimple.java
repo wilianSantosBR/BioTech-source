@@ -1,7 +1,7 @@
 package br.com.ohanacraft.biotech.resource;
 
 import br.com.ohanacraft.biotech.BioTech;
-import br.com.ohanacraft.biotech.machine.BioTechGeradoresDeRecursosMaquina;
+import br.com.ohanacraft.biotech.machine.TechGenerator;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.core.attributes.MachineTier;
 import io.github.thebusybiscuit.slimefun4.core.attributes.MachineType;
@@ -168,87 +168,87 @@ public class GenerateCardSimple {
 
 
         // setup cards
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_STONE,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_STONE,
             Material.STONE, Material.COBBLESTONE);
 
         //TODO Willian ajustar preSetup para no local recipe por entrada (material)
 
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_GRANITE,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_GRANITE,
                 Material.POLISHED_GRANITE, Material.GRANITE);
 
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_DIORITE,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_DIORITE,
                 Material.POLISHED_DIORITE, Material.DIORITE);
 
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_ANDESITE,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_ANDESITE,
                 Material.POLISHED_ANDESITE, Material.ANDESITE);
 
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_GRAVEL,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_GRAVEL,
                 Material.GRAVEL, Material.GRAVEL);
 
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_SAND,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_SAND,
                 Material.SANDSTONE, Material.SAND);
 
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_ENDSTONE,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_ENDSTONE,
                 Material.END_STONE_BRICKS, Material.END_STONE);
 
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_CLAY,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_CLAY,
                 Material.CLAY, Material.CLAY);
 
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_SNOW,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_SNOW,
                 Material.SNOW_BLOCK, Material.SNOW_BLOCK);
 
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_COAL,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_COAL,
                 Material.COAL_BLOCK, Material.COAL);
 
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_IRON,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_IRON,
                 Material.IRON_BLOCK, Material.IRON_INGOT);
 
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_GOLD,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_GOLD,
                 Material.GOLD_BLOCK, Material.GOLD_INGOT);
 
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_QUARTZ,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_QUARTZ,
                 Material.QUARTZ_BLOCK, Material.QUARTZ);
 
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_LAPIS,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_LAPIS,
                 Material.LAPIS_LAZULI, Material.LAPIS_LAZULI);
 
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_REDSTONE,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_REDSTONE,
                 Material.REDSTONE_BLOCK, Material.REDSTONE);
 
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_DIAMOND,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_DIAMOND,
                 Material.DIAMOND_BLOCK, Material.DIAMOND);
 
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_EMERALD,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_EMERALD,
                 Material.EMERALD_BLOCK, Material.EMERALD);
 
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_NETHERITE,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_NETHERITE,
                 Material.NETHERITE_BLOCK, Material.NETHERITE_INGOT);
 
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_IRON_DUST,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_IRON_DUST,
             SlimefunItems.IRON_DUST, SlimefunItems.IRON_DUST);
 
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_LEAD_DUST,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_LEAD_DUST,
                 SlimefunItems.LEAD_DUST, SlimefunItems.LEAD_DUST);
 
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_GOLD_DUST,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_GOLD_DUST,
                 SlimefunItems.GOLD_DUST, SlimefunItems.GOLD_DUST);
 
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_COPPER_DUST,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_COPPER_DUST,
                 SlimefunItems.COPPER_DUST, SlimefunItems.COPPER_DUST);
 
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_MAGNESIUM_DUST,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_MAGNESIUM_DUST,
                 SlimefunItems.MAGNESIUM_DUST, SlimefunItems.MAGNESIUM_DUST);
 
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_ALUMINUM_DUST,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_ALUMINUM_DUST,
                 SlimefunItems.ALUMINUM_DUST, SlimefunItems.ALUMINUM_DUST);
 
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_SILVER_DUST,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_SILVER_DUST,
                 SlimefunItems.SILVER_DUST, SlimefunItems.SILVER_DUST);
 
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_TIN_DUST,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_TIN_DUST,
                 SlimefunItems.TIN_DUST, SlimefunItems.TIN_DUST);
 
-        BioTechGeradoresDeRecursosMaquina.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_ZINC_DUST,
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_ZINC_DUST,
                 SlimefunItems.ZINC_DUST, SlimefunItems.ZINC_DUST);
 
     }
