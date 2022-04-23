@@ -73,7 +73,7 @@ public class TechGenerator extends SimpleItemContainerMachine {
     new TechGenerator(TechGenerator.TECH_GENERATOR, TechGenerator.RECIPE_TECH_GENERATOR)
         .setTimeProcess(1800)
         .setMachineIdentifier(TechGenerator.TECH_GENERATOR.getItemId())
-        .setCapacity(2000)
+        .setCapacity(5000)
         .setEnergyConsumption(2000)
         .register(plugin);
 
@@ -542,7 +542,7 @@ public class TechGenerator extends SimpleItemContainerMachine {
         }
       }
     }
-    return Math.max(consumption, 0);
+    return Math.max(consumption, 1);
   }
 
   private ItemStack validRecipeItem(BlockMenu inv) {
