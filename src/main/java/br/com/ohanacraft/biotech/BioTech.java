@@ -173,9 +173,11 @@ public class BioTech extends JavaPlugin implements SlimefunAddon {
         switch (mobTechType) {
             case MUTATION_BERSERK:
             case ROBOTIC_ACCELERATION:
+                return ChatColor.YELLOW + "(" + String.valueOf(tier + 1) + "x amount stack / 32) speed "
+                    + ChatColor.GRAY + " value process";
             case MUTATION_INTELLIGENCE:
             case ROBOTIC_EFFICIENCY:
-                return ChatColor.YELLOW + "(" + String.valueOf(tier + 1) + " x amount stack / 32) J/s "
+                return ChatColor.YELLOW + "(" + String.valueOf(tier + 1) + " amount stack) J/s "
                     + ChatColor.GRAY + " value process";
             case MUTATION_LUCK:
             case ROBOTIC_CLONING:

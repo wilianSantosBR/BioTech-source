@@ -401,7 +401,8 @@ public class TechGenerator extends SimpleItemContainerMachine {
               Math.round(ticksTotal / this.getSpeed()), result);
         }
       } else {
-        invalidSituacao(inv, "&cSem energia para maquina");
+        final int consumption = checkDownConsumption(this.getEnergyConsumption(), inv);
+        invalidSituacao(inv, "&cSem energia na maquina (" + consumption + " j/s)");
       }
     } else {
       invalidSituacao(inv, "&cFalha no tempo da maquina");
@@ -495,11 +496,11 @@ public class TechGenerator extends SimpleItemContainerMachine {
         final MobTech mob11 = (MobTech) mob1;
         if(mob11.getMobTechType() == MobTechType.ROBOTIC_EFFICIENCY
           || mob11.getMobTechType() == MobTechType.MUTATION_INTELLIGENCE) {
-          consumption -= Math.round(((mob11.getMobTechTier() + 1) * b1.getAmount()) / 32);
+          consumption -= (mob11.getMobTechTier() + 1) * b1.getAmount();
         }
         if(mob11.getMobTechType() == MobTechType.ROBOTIC_ACCELERATION
             || mob11.getMobTechType() == MobTechType.MUTATION_BERSERK) {
-          consumption += Math.round(((mob11.getMobTechTier() + 1) * b1.getAmount()) / 32);
+          consumption += (mob11.getMobTechTier() + 1) * b1.getAmount();
         }
       }
     }
@@ -509,11 +510,11 @@ public class TechGenerator extends SimpleItemContainerMachine {
         final MobTech mob22 = (MobTech) mob2;
         if (mob22.getMobTechType() == MobTechType.ROBOTIC_EFFICIENCY
             || mob22.getMobTechType() == MobTechType.MUTATION_INTELLIGENCE) {
-          consumption -= Math.round(((mob22.getMobTechTier() + 1) * b2.getAmount()) / 32);
+          consumption -= (mob22.getMobTechTier() + 1) * b2.getAmount();
         }
         if(mob22.getMobTechType() == MobTechType.ROBOTIC_ACCELERATION
             || mob22.getMobTechType() == MobTechType.MUTATION_BERSERK) {
-          consumption += Math.round(((mob22.getMobTechTier() + 1) * b1.getAmount()) / 32);
+          consumption += (mob22.getMobTechTier() + 1) * b1.getAmount();
         }
       }
     }
@@ -523,11 +524,11 @@ public class TechGenerator extends SimpleItemContainerMachine {
         final MobTech mob33 = (MobTech) mob3;
         if(mob33.getMobTechType() == MobTechType.ROBOTIC_EFFICIENCY
             || mob33.getMobTechType() == MobTechType.MUTATION_INTELLIGENCE) {
-          consumption -= Math.round(((mob33.getMobTechTier() + 1) * b3.getAmount()) / 32);
+          consumption -= (mob33.getMobTechTier() + 1) * b3.getAmount();
         }
         if(mob33.getMobTechType() == MobTechType.ROBOTIC_ACCELERATION
             || mob33.getMobTechType() == MobTechType.MUTATION_BERSERK) {
-          consumption += Math.round(((mob33.getMobTechTier() + 1) * b1.getAmount()) / 32);
+          consumption += (mob33.getMobTechTier() + 1) * b1.getAmount();
         }
       }
     }
@@ -537,11 +538,11 @@ public class TechGenerator extends SimpleItemContainerMachine {
         final MobTech mob44 = (MobTech) mob4;
         if(mob44.getMobTechType() == MobTechType.ROBOTIC_EFFICIENCY
             || mob44.getMobTechType() == MobTechType.MUTATION_INTELLIGENCE) {
-          consumption -= Math.round(((mob44.getMobTechTier() + 1) * b4.getAmount()) / 32);
+          consumption -= (mob44.getMobTechTier() + 1) * b4.getAmount();
         }
         if(mob44.getMobTechType() == MobTechType.ROBOTIC_ACCELERATION
             || mob44.getMobTechType() == MobTechType.MUTATION_BERSERK) {
-          consumption += Math.round(((mob44.getMobTechTier() + 1) * b1.getAmount()) / 32);
+          consumption += (mob44.getMobTechTier() + 1) * b1.getAmount();
         }
       }
     }
