@@ -11,12 +11,12 @@ public class MobTechDTO {
 
     public static enum MobTechType {
         SIMPLE,
-        INTELLIGENCE,
-        LUCK,
-        BERSERK,
-        EFFICIENCY,
-        CLONING,
-        ACCELERATION,
+        ROBOTIC_EFFICIENCY,
+        ROBOTIC_CLONING,
+        ROBOTIC_ACCELERATION,
+        MUTATION_INTELLIGENCE,
+        MUTATION_LUCK,
+        MUTATION_BERSERK,
     }
 
     String id;

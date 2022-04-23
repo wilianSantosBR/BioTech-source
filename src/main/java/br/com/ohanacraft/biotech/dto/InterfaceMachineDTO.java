@@ -9,8 +9,8 @@ public class InterfaceMachineDTO {
     //36, 37, 38, 39, 40, 41, 42, 43, 44,
     //45, 46, 47, 48, 49, 50, 51, 52, 53,
 
-    //techevolution
-    public static final int[] TECH_EVOLUTION_BORDER = new int[] {
+    //techrobotic
+    public static final int[] TECH_ROBOTIC_BORDER = new int[] {
                          3,  4,  5,  6,  7,  8,
                         12,  13, 14, 15, 16, 17,
                         21,     23, 24, 25, 26,
@@ -18,27 +18,28 @@ public class InterfaceMachineDTO {
             36, 37, 38, 39,     41,
             45, 46, 47, 48, 49, 50
     };
-    public static final int[] TECH_EVOLUTION_BORDER_IN = new int[] {
+    public static final int[] TECH_ROBOTIC_BORDER_IN = new int[] {
             0,   1,  2,
             9,      11,
             18, 19, 20
     };
-    public static final int[] TECH_EVOLUTION_BORDER_OUT = new int[] {
+    public static final int[] TECH_ROBOTIC_BORDER_OUT = new int[] {
             33, 34, 35,
             42,     44,
             51, 52, 53
     };
-    public static final int[] TECH_EVOLUTION_PROGRESS_BAR_SLOT = new int[] {
+    public static final int[] TECH_ROBOTIC_PROGRESS_BAR_SLOT = new int[] {
             22,
             31,
             40
     };
-    public static final int[] TECH_EVOLUTION_INPUT_SLOTS = new int[] {
+    public static final int[] TECH_ROBOTIC_INPUT_SLOTS = new int[] {
             10
     };
-    public static final int[] TECH_EVOLUTION_OUTPUT_SLOTS = new int[] {
+    public static final int[] TECH_ROBOTIC_OUTPUT_SLOTS = new int[] {
             43
     };
+
 
     //techgerator
     public static final int[] TECH_GENERATOR_BORDER = new int[] {

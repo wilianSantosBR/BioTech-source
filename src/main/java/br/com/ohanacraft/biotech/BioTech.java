@@ -115,14 +115,14 @@ public class BioTech extends JavaPlugin implements SlimefunAddon {
     public static String buildLoreRadioactivityType(MobTechType mobTechType) {
         Radioactivity radioactivity;
         switch (mobTechType) {
-            case INTELLIGENCE:
-            case BERSERK:
-            case LUCK:
+            case MUTATION_INTELLIGENCE:
+            case MUTATION_BERSERK:
+            case MUTATION_LUCK:
                 radioactivity = Radioactivity.VERY_DEADLY;
                 break;
-            case CLONING:
-            case ACCELERATION:
-            case EFFICIENCY:
+            case ROBOTIC_CLONING:
+            case ROBOTIC_ACCELERATION:
+            case ROBOTIC_EFFICIENCY:
                 radioactivity = Radioactivity.HIGH;
                 break;
             case SIMPLE:
@@ -134,16 +134,16 @@ public class BioTech extends JavaPlugin implements SlimefunAddon {
 
     public static String buildLoreType(MobTechType mobTechType, Integer tier) {
         switch (mobTechType) {
-            case BERSERK:
-            case ACCELERATION:
+            case MUTATION_BERSERK:
+            case ROBOTIC_ACCELERATION:
                 return ChatColor.YELLOW + String.valueOf(tier + 1) + "x "
                         + ChatColor.GRAY + "Velocidade de processamento";
-            case LUCK:
-            case CLONING:
+            case MUTATION_LUCK:
+            case ROBOTIC_CLONING:
                 return ChatColor.YELLOW + String.valueOf(tier + 1) + "x "
                         + ChatColor.GRAY + "Quantidade da produção";
-            case INTELLIGENCE:
-            case EFFICIENCY:
+            case MUTATION_INTELLIGENCE:
+            case ROBOTIC_EFFICIENCY:
                 return ChatColor.YELLOW + String.valueOf(tier + 1) + "x "
                         + ChatColor.GRAY + "Economia de energia";
             case SIMPLE:
