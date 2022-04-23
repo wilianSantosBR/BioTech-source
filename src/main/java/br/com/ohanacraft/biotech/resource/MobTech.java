@@ -60,7 +60,7 @@ public class MobTech extends SlimefunItem implements Radioactive, NotPlaceable {
     for (int i = 2; i <= 9; i++) {
       TechRobotic.addRecipe(BioTech.buildItemFromMobTechDTO(item, (i - 1)),
           BioTech.buildItemFromMobTechDTO(item, i));
-      new MobTech(Categories.TECHMOB_CATEGORY, slimefunItemStack,
+      new MobTech(Categories.TECHMOB_CATEGORY, BioTech.buildItemFromMobTechDTO(item, i),
           RecipeType.NULL, new ItemStack[]{})
           .setMobTechType(item.getMobTechType())
           .setMobTechTier(i)
