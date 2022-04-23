@@ -2,7 +2,7 @@ package br.com.ohanacraft.biotech.machine;
 
 import br.com.ohanacraft.biotech.generic.MediumContainerMachine;
 import br.com.ohanacraft.biotech.addons.supremeexpansion.Cetrus;
-import br.com.ohanacraft.biotech.addons.supremeexpansion.Components;
+import br.com.ohanacraft.biotech.addons.supremeexpansion.SupremeComponents;
 import br.com.ohanacraft.biotech.util.Energy;
 import br.com.ohanacraft.biotech.util.SimpleRecipe;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
@@ -28,11 +28,11 @@ public class ElectricCrafterMachine extends MediumContainerMachine {
       Energy.energyPowerPerSecond(20));
 
   public static final ItemStack[] RECIPE_ELECTRIC_CRAFTER_MACHINE = new ItemStack[]{
-      Components.STAINLESS_MACHINE, SlimefunItems.VANILLA_AUTO_CRAFTER,
-      Components.STAINLESS_MACHINE,
-      Components.INDUCTOR_MACHINE, Components.ADAMANTIUM_PLATE, Components.INDUCTOR_MACHINE,
-      Components.ADAMANTIUM_PLATE, SlimefunItems.ENHANCED_AUTO_CRAFTER,
-      Components.ADAMANTIUM_PLATE};
+      SupremeComponents.STAINLESS_MACHINE, SlimefunItems.VANILLA_AUTO_CRAFTER,
+      SupremeComponents.STAINLESS_MACHINE,
+      SupremeComponents.INDUCTOR_MACHINE, SupremeComponents.ADAMANTIUM_PLATE, SupremeComponents.INDUCTOR_MACHINE,
+      SupremeComponents.ADAMANTIUM_PLATE, SlimefunItems.ENHANCED_AUTO_CRAFTER,
+      SupremeComponents.ADAMANTIUM_PLATE};
 
   public static final SlimefunItemStack ELECTRIC_CRAFTER_MACHINE_II = new SlimefunItemStack(
       "ELECTRIC_CRAFTER_MACHINE_II",
@@ -42,10 +42,10 @@ public class ElectricCrafterMachine extends MediumContainerMachine {
       Energy.energyPowerPerSecond(100));
 
   public static final ItemStack[] RECIPE_ELECTRIC_CRAFTER_MACHINE_II = new ItemStack[]{
-      Components.CONVEYANCE_MACHINE, Components.BLEND_MACHINE, Components.CONVEYANCE_MACHINE,
-      Components.INDUCTOR_MACHINE, ElectricCrafterMachine.ELECTRIC_CRAFTER_MACHINE,
-      Components.INDUCTOR_MACHINE,
-      Components.CRYSTALLIZER_MACHINE, Cetrus.CETRUS_IGNIS, Components.CRYSTALLIZER_MACHINE};
+      SupremeComponents.CONVEYANCE_MACHINE, SupremeComponents.BLEND_MACHINE, SupremeComponents.CONVEYANCE_MACHINE,
+      SupremeComponents.INDUCTOR_MACHINE, ElectricCrafterMachine.ELECTRIC_CRAFTER_MACHINE,
+      SupremeComponents.INDUCTOR_MACHINE,
+      SupremeComponents.CRYSTALLIZER_MACHINE, Cetrus.CETRUS_IGNIS, SupremeComponents.CRYSTALLIZER_MACHINE};
 
   public static final SlimefunItemStack ELECTRIC_CRAFTER_MACHINE_III = new SlimefunItemStack(
       "ELECTRIC_CRAFTER_MACHINE_III",
@@ -55,9 +55,9 @@ public class ElectricCrafterMachine extends MediumContainerMachine {
       Energy.energyPowerPerSecond(300));
 
   public static final ItemStack[] RECIPE_ELECTRIC_CRAFTER_MACHINE_III = new ItemStack[]{
-      Components.THORNERITE, Cetrus.CETRUS_LUX, Components.THORNERITE,
-      Components.SUPREME, ElectricCrafterMachine.ELECTRIC_CRAFTER_MACHINE_II, Components.SUPREME,
-      Components.CRYSTALLIZER_MACHINE, Cetrus.CETRUS_LUMIUM, Components.CRYSTALLIZER_MACHINE};
+      SupremeComponents.THORNERITE, Cetrus.CETRUS_LUX, SupremeComponents.THORNERITE,
+      SupremeComponents.SUPREME, ElectricCrafterMachine.ELECTRIC_CRAFTER_MACHINE_II, SupremeComponents.SUPREME,
+      SupremeComponents.CRYSTALLIZER_MACHINE, Cetrus.CETRUS_LUMIUM, SupremeComponents.CRYSTALLIZER_MACHINE};
   public static final SimpleRecipe RECIPE_BATTERY = new SimpleRecipe(
       new SlimefunItemStack(SlimefunItems.BATTERY, 1),
       new ItemStack[]{

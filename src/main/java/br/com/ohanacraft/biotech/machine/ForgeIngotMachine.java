@@ -2,7 +2,7 @@ package br.com.ohanacraft.biotech.machine;
 
 import br.com.ohanacraft.biotech.generic.SimpleItemContainerMachine;
 import br.com.ohanacraft.biotech.addons.supremeexpansion.Cetrus;
-import br.com.ohanacraft.biotech.addons.supremeexpansion.Components;
+import br.com.ohanacraft.biotech.addons.supremeexpansion.SupremeComponents;
 import br.com.ohanacraft.biotech.util.SimpleItemRecipe;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -25,9 +25,9 @@ public class ForgeIngotMachine extends SimpleItemContainerMachine {
       LoreBuilder.powerBuffer(1000), LoreBuilder.powerPerSecond(20));
 
   public static final ItemStack[] RECIPE_FORGE_INGOT_MACHINE = new ItemStack[]{
-      Components.STAINLESS_MACHINE, new ItemStack(Material.BLAST_FURNACE),
-      Components.STAINLESS_MACHINE,
-      Components.INDUCTOR_MACHINE, Components.CRYSTALLIZER_MACHINE, Components.INDUCTOR_MACHINE,
+      SupremeComponents.STAINLESS_MACHINE, new ItemStack(Material.BLAST_FURNACE),
+      SupremeComponents.STAINLESS_MACHINE,
+      SupremeComponents.INDUCTOR_MACHINE, SupremeComponents.CRYSTALLIZER_MACHINE, SupremeComponents.INDUCTOR_MACHINE,
       SlimefunItems.ELECTRIC_INGOT_FACTORY_3, SlimefunItems.ELECTRIC_SMELTERY_2,
       SlimefunItems.CARBON_PRESS_3};
 
@@ -38,10 +38,10 @@ public class ForgeIngotMachine extends SimpleItemContainerMachine {
       LoreBuilder.powerBuffer(5000), LoreBuilder.powerPerSecond(100));
 
   public static final ItemStack[] RECIPE_FORGE_INGOT_MACHINE_II = new ItemStack[]{
-      Components.CONVEYANCE_MACHINE, Cetrus.CETRUS_IGNIS, Components.CONVEYANCE_MACHINE,
-      Components.INDUCTOR_MACHINE, ForgeIngotMachine.FORGE_INGOT_MACHINE,
-      Components.INDUCTOR_MACHINE,
-      Components.THORNERITE, Cetrus.CETRUS_LUMIUM, Components.THORNERITE};
+      SupremeComponents.CONVEYANCE_MACHINE, Cetrus.CETRUS_IGNIS, SupremeComponents.CONVEYANCE_MACHINE,
+      SupremeComponents.INDUCTOR_MACHINE, ForgeIngotMachine.FORGE_INGOT_MACHINE,
+      SupremeComponents.INDUCTOR_MACHINE,
+      SupremeComponents.THORNERITE, Cetrus.CETRUS_LUMIUM, SupremeComponents.THORNERITE};
 
   public static final SlimefunItemStack FORGE_INGOT_MACHINE_III = new SlimefunItemStack(
       "FORGE_INGOT_MACHINE_III", Material.BLAST_FURNACE,
@@ -50,9 +50,9 @@ public class ForgeIngotMachine extends SimpleItemContainerMachine {
       LoreBuilder.powerBuffer(15000), LoreBuilder.powerPerSecond(300));
 
   public static final ItemStack[] RECIPE_FORGE_INGOT_MACHINE_III = new ItemStack[]{
-      Components.THORNERITE, Cetrus.CETRUS_LUX, Components.THORNERITE,
-      Components.SUPREME, ForgeIngotMachine.FORGE_INGOT_MACHINE_II, Components.SUPREME,
-      Components.CRYSTALLIZER_MACHINE, Cetrus.CETRUS_LUMIUM, Components.CRYSTALLIZER_MACHINE};
+      SupremeComponents.THORNERITE, Cetrus.CETRUS_LUX, SupremeComponents.THORNERITE,
+      SupremeComponents.SUPREME, ForgeIngotMachine.FORGE_INGOT_MACHINE_II, SupremeComponents.SUPREME,
+      SupremeComponents.CRYSTALLIZER_MACHINE, Cetrus.CETRUS_LUMIUM, SupremeComponents.CRYSTALLIZER_MACHINE};
   public static final SimpleItemRecipe RECIPE_FORGE_INGOT_LEAD = new SimpleItemRecipe(
       new SlimefunItemStack(SlimefunItems.LEAD_DUST, 32),
       new SlimefunItemStack(SlimefunItems.LEAD_INGOT, 32));

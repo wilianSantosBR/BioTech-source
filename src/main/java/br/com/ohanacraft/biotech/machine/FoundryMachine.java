@@ -8,7 +8,7 @@ import br.com.ohanacraft.biotech.addons.supremeexpansion.CoreLife;
 import br.com.ohanacraft.biotech.addons.supremeexpansion.SupremeCore;
 import br.com.ohanacraft.biotech.addons.supremeexpansion.Attribute;
 import br.com.ohanacraft.biotech.addons.supremeexpansion.Cetrus;
-import br.com.ohanacraft.biotech.addons.supremeexpansion.Components;
+import br.com.ohanacraft.biotech.addons.supremeexpansion.SupremeComponents;
 import br.com.ohanacraft.biotech.generic.MediumContainerMachine;
 import br.com.ohanacraft.biotech.util.Energy;
 import br.com.ohanacraft.biotech.util.SimpleRecipe;
@@ -38,7 +38,7 @@ public class FoundryMachine extends MediumContainerMachine {
   public static final ItemStack[] RECIPE_FOUNDRY_MACHINE = new ItemStack[]{
       SlimefunItems.ELECTRIC_INGOT_FACTORY_3, SlimefunItems.ELECTRIC_INGOT_FACTORY_3,
       SlimefunItems.ELECTRIC_INGOT_FACTORY_3,
-      SlimefunItems.ELECTRIC_INGOT_FACTORY_3, Components.CRYSTALLIZER_MACHINE,
+      SlimefunItems.ELECTRIC_INGOT_FACTORY_3, SupremeComponents.CRYSTALLIZER_MACHINE,
       SlimefunItems.ELECTRIC_INGOT_FACTORY_3,
       SlimefunItems.ELECTRIC_SMELTERY_2, SlimefunItems.ELECTRIC_SMELTERY_2,
       SlimefunItems.ELECTRIC_SMELTERY_2};
@@ -51,7 +51,7 @@ public class FoundryMachine extends MediumContainerMachine {
       Energy.energyPowerPerSecond(5000));
 
   public static final ItemStack[] RECIPE_FOUNDRY_MACHINE_II = new ItemStack[]{
-      Components.BLEND_MACHINE, Cetrus.CETRUS_AQUA, Components.BLEND_MACHINE,
+      SupremeComponents.BLEND_MACHINE, Cetrus.CETRUS_AQUA, SupremeComponents.BLEND_MACHINE,
       Cetrus.CETRUS_VENTUS, FoundryMachine.FOUNDRY_MACHINE, Cetrus.CETRUS_LUX,
       SupremeCore.CORE_OF_ALLOY, Cetrus.CETRUS_IGNIS, SupremeCore.CORE_OF_ALLOY};
 
@@ -63,9 +63,9 @@ public class FoundryMachine extends MediumContainerMachine {
       Energy.energyPowerPerSecond(15000));
 
   public static final ItemStack[] RECIPE_FOUNDRY_MACHINE_III = new ItemStack[]{
-      Components.THORNERITE, Attribute.ATTRIBUTE_FORTUNE, Components.THORNERITE,
-      Components.SUPREME, FoundryMachine.FOUNDRY_MACHINE_II, Components.SUPREME,
-      Components.CRYSTALLIZER_MACHINE, Cetrus.CETRUS_LUMIUM, Components.CRYSTALLIZER_MACHINE};
+      SupremeComponents.THORNERITE, Attribute.ATTRIBUTE_FORTUNE, SupremeComponents.THORNERITE,
+      SupremeComponents.SUPREME, FoundryMachine.FOUNDRY_MACHINE_II, SupremeComponents.SUPREME,
+      SupremeComponents.CRYSTALLIZER_MACHINE, Cetrus.CETRUS_LUMIUM, SupremeComponents.CRYSTALLIZER_MACHINE};
   public static final SimpleRecipe RECIPE_BLISTERING_INGOT_3 = new SimpleRecipe(
       new SlimefunItemStack(SlimefunItems.BLISTERING_INGOT_3, 64),
       new ItemStack[]{

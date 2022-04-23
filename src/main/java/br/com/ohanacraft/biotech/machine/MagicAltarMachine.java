@@ -2,7 +2,7 @@ package br.com.ohanacraft.biotech.machine;
 
 import br.com.ohanacraft.biotech.generic.MediumContainerMachine;
 import br.com.ohanacraft.biotech.addons.supremeexpansion.Cetrus;
-import br.com.ohanacraft.biotech.addons.supremeexpansion.Components;
+import br.com.ohanacraft.biotech.addons.supremeexpansion.SupremeComponents;
 import br.com.ohanacraft.biotech.util.Energy;
 import br.com.ohanacraft.biotech.util.SimpleRecipe;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
@@ -28,10 +28,10 @@ public class MagicAltarMachine extends MediumContainerMachine {
       Energy.energyPowerPerSecond(20));
 
   public static final ItemStack[] RECIPE_MAGIC_ALTAR_MACHINE = new ItemStack[]{
-      SlimefunItems.ANCIENT_PEDESTAL, Components.CRYSTALLIZER_MACHINE,
+      SlimefunItems.ANCIENT_PEDESTAL, SupremeComponents.CRYSTALLIZER_MACHINE,
       SlimefunItems.ANCIENT_PEDESTAL,
-      Components.CONVEYANCE_MACHINE, SlimefunItems.ANCIENT_ALTAR, Components.CONVEYANCE_MACHINE,
-      SlimefunItems.ANCIENT_PEDESTAL, Components.INDUCTOR_MACHINE, SlimefunItems.ANCIENT_PEDESTAL};
+      SupremeComponents.CONVEYANCE_MACHINE, SlimefunItems.ANCIENT_ALTAR, SupremeComponents.CONVEYANCE_MACHINE,
+      SlimefunItems.ANCIENT_PEDESTAL, SupremeComponents.INDUCTOR_MACHINE, SlimefunItems.ANCIENT_PEDESTAL};
 
   public static final SlimefunItemStack MAGIC_ALTAR_MACHINE_II = new SlimefunItemStack(
       "MAGIC_ALTAR_MACHINE_II",
@@ -41,9 +41,9 @@ public class MagicAltarMachine extends MediumContainerMachine {
       Energy.energyPowerPerSecond(100));
 
   public static final ItemStack[] RECIPE_MAGIC_ALTAR_MACHINE_II = new ItemStack[]{
-      Components.THORNERITE, Cetrus.CETRUS_AQUA, Components.THORNERITE,
+      SupremeComponents.THORNERITE, Cetrus.CETRUS_AQUA, SupremeComponents.THORNERITE,
       Cetrus.CETRUS_VENTUS, MagicAltarMachine.MAGIC_ALTAR_MACHINE, Cetrus.CETRUS_LUX,
-      Components.THORNERITE, Cetrus.CETRUS_IGNIS, Components.THORNERITE};
+      SupremeComponents.THORNERITE, Cetrus.CETRUS_IGNIS, SupremeComponents.THORNERITE};
 
   public static final SlimefunItemStack MAGIC_ALTAR_MACHINE_III = new SlimefunItemStack(
       "MAGIC_ALTAR_MACHINE_III",
@@ -53,9 +53,9 @@ public class MagicAltarMachine extends MediumContainerMachine {
       Energy.energyPowerPerSecond(300));
 
   public static final ItemStack[] RECIPE_MAGIC_ALTAR_MACHINE_III = new ItemStack[]{
-      Components.THORNERITE, Cetrus.CETRUS_LUMIUM, Components.THORNERITE,
-      Components.SUPREME, MagicAltarMachine.MAGIC_ALTAR_MACHINE_II, Components.SUPREME,
-      Components.CRYSTALLIZER_MACHINE, Cetrus.CETRUS_LUMIUM, Components.CRYSTALLIZER_MACHINE};
+      SupremeComponents.THORNERITE, Cetrus.CETRUS_LUMIUM, SupremeComponents.THORNERITE,
+      SupremeComponents.SUPREME, MagicAltarMachine.MAGIC_ALTAR_MACHINE_II, SupremeComponents.SUPREME,
+      SupremeComponents.CRYSTALLIZER_MACHINE, Cetrus.CETRUS_LUMIUM, SupremeComponents.CRYSTALLIZER_MACHINE};
   public static final SimpleRecipe RECIPE_RUNE_AIR = new SimpleRecipe(
       new SlimefunItemStack(SlimefunItems.AIR_RUNE, 4),
       new ItemStack[]{

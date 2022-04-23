@@ -2,6 +2,7 @@ package br.com.ohanacraft.biotech.machine;
 
 import br.com.ohanacraft.biotech.BioTech;
 import br.com.ohanacraft.biotech.Categories;
+import br.com.ohanacraft.biotech.addons.supremeexpansion.SupremeComponents;
 import br.com.ohanacraft.biotech.dto.InterfaceMachineDTO;
 import br.com.ohanacraft.biotech.generic.SimpleItemContainerMachine;
 import br.com.ohanacraft.biotech.resource.Components;
@@ -48,9 +49,9 @@ public class TechRobotic extends SimpleItemContainerMachine {
         Energy.energyPowerPerSecond(500),
         "");
     public static final ItemStack[] RECIPE_TECH_ROBOTIC = {
-            Components.TRIPLE_COMPRESSED_LEATHER, Components.TRIPLE_COMPRESSED_WOOL, Components.TRIPLE_COMPRESSED_LEATHER,
-            SlimefunItems.HARDENED_METAL_INGOT, Components.BIOTECH_SYNTHETIC_RUBY, SlimefunItems.HARDENED_METAL_INGOT,
-            Components.TRIPLE_COMPRESSED_OAK_WOOD, SlimefunItems.ELECTRIC_MOTOR, Components.TRIPLE_COMPRESSED_OAK_WOOD
+            SupremeComponents.INDUCTOR_MACHINE, Components.BIOTECH_SYNTHETIC_RUBY, SupremeComponents.INDUCTOR_MACHINE,
+            SlimefunItems.REINFORCED_PLATE, SlimefunItems.ELECTRIC_MOTOR, SlimefunItems.REINFORCED_PLATE,
+            SupremeComponents.STAINLESS_MACHINE, Components.BIOTECH_SYNTHETIC_RUBY, SupremeComponents.STAINLESS_MACHINE
     };
 
 

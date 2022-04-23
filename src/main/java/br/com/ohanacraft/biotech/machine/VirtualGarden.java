@@ -1,7 +1,7 @@
 package br.com.ohanacraft.biotech.machine;
 
 import br.com.ohanacraft.biotech.addons.supremeexpansion.Cetrus;
-import br.com.ohanacraft.biotech.addons.supremeexpansion.Components;
+import br.com.ohanacraft.biotech.addons.supremeexpansion.SupremeComponents;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -46,11 +46,11 @@ public class VirtualGarden extends AContainer implements NotHopperable, RecipeDi
       LoreBuilder.powerBuffer(1000), LoreBuilder.powerPerSecond(20));
 
   public static final ItemStack[] RECIPE_VIRTUAL_GARDEN_MACHINE = new ItemStack[]{
-      Components.STAINLESS_MACHINE, new ItemStack(Material.STRIPPED_WARPED_HYPHAE),
-      Components.STAINLESS_MACHINE,
-      Components.INDUCTOR_MACHINE, Components.CRYSTALLIZER_MACHINE, Components.INDUCTOR_MACHINE,
-      Components.ADAMANTIUM_PLATE, SlimefunItems.PROGRAMMABLE_ANDROID_FARMER,
-      Components.ADAMANTIUM_PLATE};
+      SupremeComponents.STAINLESS_MACHINE, new ItemStack(Material.STRIPPED_WARPED_HYPHAE),
+      SupremeComponents.STAINLESS_MACHINE,
+      SupremeComponents.INDUCTOR_MACHINE, SupremeComponents.CRYSTALLIZER_MACHINE, SupremeComponents.INDUCTOR_MACHINE,
+      SupremeComponents.ADAMANTIUM_PLATE, SlimefunItems.PROGRAMMABLE_ANDROID_FARMER,
+      SupremeComponents.ADAMANTIUM_PLATE};
 
   public static final SlimefunItemStack VIRTUAL_GARDEN_MACHINE_II = new SlimefunItemStack(
       "VIRTUAL_GARDEN_II", Material.STRIPPED_WARPED_HYPHAE,
@@ -59,10 +59,10 @@ public class VirtualGarden extends AContainer implements NotHopperable, RecipeDi
       LoreBuilder.powerBuffer(5000), LoreBuilder.powerPerSecond(100));
 
   public static final ItemStack[] RECIPE_VIRTUAL_GARDEN_MACHINE_II = new ItemStack[]{
-      Components.CONVEYANCE_MACHINE, Cetrus.CETRUS_LUMIUM, Components.CONVEYANCE_MACHINE,
-      Components.INDUCTOR_MACHINE, VirtualGarden.VIRTUAL_GARDEN_MACHINE,
-      Components.INDUCTOR_MACHINE,
-      Components.THORNERITE, Cetrus.CETRUS_AQUA, Components.THORNERITE};
+      SupremeComponents.CONVEYANCE_MACHINE, Cetrus.CETRUS_LUMIUM, SupremeComponents.CONVEYANCE_MACHINE,
+      SupremeComponents.INDUCTOR_MACHINE, VirtualGarden.VIRTUAL_GARDEN_MACHINE,
+      SupremeComponents.INDUCTOR_MACHINE,
+      SupremeComponents.THORNERITE, Cetrus.CETRUS_AQUA, SupremeComponents.THORNERITE};
 
   public static final SlimefunItemStack VIRTUAL_GARDEN_MACHINE_III = new SlimefunItemStack(
       "VIRTUAL_GARDEN_III", Material.STRIPPED_WARPED_HYPHAE,
@@ -71,9 +71,9 @@ public class VirtualGarden extends AContainer implements NotHopperable, RecipeDi
       LoreBuilder.powerBuffer(15000), LoreBuilder.powerPerSecond(300));
 
   public static final ItemStack[] RECIPE_VIRTUAL_GARDEN_MACHINE_III = new ItemStack[]{
-      Components.THORNERITE, Cetrus.CETRUS_LUX, Components.THORNERITE,
-      Components.SUPREME, VirtualGarden.VIRTUAL_GARDEN_MACHINE_II, Components.SUPREME,
-      Components.CRYSTALLIZER_MACHINE, Cetrus.CETRUS_LUMIUM, Components.CRYSTALLIZER_MACHINE};
+      SupremeComponents.THORNERITE, Cetrus.CETRUS_LUX, SupremeComponents.THORNERITE,
+      SupremeComponents.SUPREME, VirtualGarden.VIRTUAL_GARDEN_MACHINE_II, SupremeComponents.SUPREME,
+      SupremeComponents.CRYSTALLIZER_MACHINE, Cetrus.CETRUS_LUMIUM, SupremeComponents.CRYSTALLIZER_MACHINE};
   public static Map<Block, MachineRecipe> processing = new HashMap<>();
   public static Map<Block, Integer> progress = new HashMap<>();
   private final Set<VirtualGardenMachineRecipe> virtualGardenMachineRecipes = new HashSet();

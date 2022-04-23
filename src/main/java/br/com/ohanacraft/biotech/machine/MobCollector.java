@@ -1,7 +1,7 @@
 package br.com.ohanacraft.biotech.machine;
 
 import br.com.ohanacraft.biotech.addons.supremeexpansion.Cetrus;
-import br.com.ohanacraft.biotech.addons.supremeexpansion.Components;
+import br.com.ohanacraft.biotech.addons.supremeexpansion.SupremeComponents;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -68,11 +68,11 @@ public class MobCollector extends AContainer implements RecipeDisplayItem {
       LoreBuilder.powerBuffer(1000), LoreBuilder.powerPerSecond(20));
 
   public static final ItemStack[] RECIPE_MOB_COLLECTOR_MACHINE = new ItemStack[]{
-      Components.STAINLESS_MACHINE, new ItemStack(Material.RESPAWN_ANCHOR),
-      Components.STAINLESS_MACHINE,
-      Components.INDUCTOR_MACHINE, Components.CRYSTALLIZER_MACHINE, Components.INDUCTOR_MACHINE,
-      Components.ADAMANTIUM_PLATE, SlimefunItems.PROGRAMMABLE_ANDROID_BUTCHER,
-      Components.ADAMANTIUM_PLATE};
+      SupremeComponents.STAINLESS_MACHINE, new ItemStack(Material.RESPAWN_ANCHOR),
+      SupremeComponents.STAINLESS_MACHINE,
+      SupremeComponents.INDUCTOR_MACHINE, SupremeComponents.CRYSTALLIZER_MACHINE, SupremeComponents.INDUCTOR_MACHINE,
+      SupremeComponents.ADAMANTIUM_PLATE, SlimefunItems.PROGRAMMABLE_ANDROID_BUTCHER,
+      SupremeComponents.ADAMANTIUM_PLATE};
 
   public static final SlimefunItemStack MOB_COLLECTOR_MACHINE_II = new SlimefunItemStack(
       "MOB_COLLECTOR_II", Material.RESPAWN_ANCHOR,
@@ -82,10 +82,10 @@ public class MobCollector extends AContainer implements RecipeDisplayItem {
       LoreBuilder.powerBuffer(5000), LoreBuilder.powerPerSecond(100));
 
   public static final ItemStack[] RECIPE_MOB_COLLECTOR_MACHINE_II = new ItemStack[]{
-      Components.CONVEYANCE_MACHINE, Cetrus.CETRUS_LUMIUM, Components.CONVEYANCE_MACHINE,
-      Components.INDUCTOR_MACHINE, MobCollector.MOB_COLLECTOR_MACHINE,
-      Components.INDUCTOR_MACHINE,
-      Components.THORNERITE, Cetrus.CETRUS_IGNIS, Components.THORNERITE};
+      SupremeComponents.CONVEYANCE_MACHINE, Cetrus.CETRUS_LUMIUM, SupremeComponents.CONVEYANCE_MACHINE,
+      SupremeComponents.INDUCTOR_MACHINE, MobCollector.MOB_COLLECTOR_MACHINE,
+      SupremeComponents.INDUCTOR_MACHINE,
+      SupremeComponents.THORNERITE, Cetrus.CETRUS_IGNIS, SupremeComponents.THORNERITE};
 
   public static final SlimefunItemStack MOB_COLLECTOR_MACHINE_III = new SlimefunItemStack(
       "MOB_COLLECTOR_III", Material.RESPAWN_ANCHOR,
@@ -95,9 +95,9 @@ public class MobCollector extends AContainer implements RecipeDisplayItem {
       LoreBuilder.powerBuffer(15000), LoreBuilder.powerPerSecond(300));
 
   public static final ItemStack[] RECIPE_MOB_COLLECTOR_MACHINE_III = new ItemStack[]{
-      Components.THORNERITE, Cetrus.CETRUS_LUX, Components.THORNERITE,
-      Components.SUPREME, MobCollector.MOB_COLLECTOR_MACHINE_II, Components.SUPREME,
-      Components.CRYSTALLIZER_MACHINE, Cetrus.CETRUS_LUMIUM, Components.CRYSTALLIZER_MACHINE};
+      SupremeComponents.THORNERITE, Cetrus.CETRUS_LUX, SupremeComponents.THORNERITE,
+      SupremeComponents.SUPREME, MobCollector.MOB_COLLECTOR_MACHINE_II, SupremeComponents.SUPREME,
+      SupremeComponents.CRYSTALLIZER_MACHINE, Cetrus.CETRUS_LUMIUM, SupremeComponents.CRYSTALLIZER_MACHINE};
 
   private final Set<MobCollectorMachineRecipe> mobCollectorMachineRecipes = new HashSet();
   private int mobRange = 4;

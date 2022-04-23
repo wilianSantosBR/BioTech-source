@@ -2,7 +2,7 @@ package br.com.ohanacraft.biotech.machine;
 
 import br.com.ohanacraft.biotech.generic.UtilMachine;
 import br.com.ohanacraft.biotech.addons.supremeexpansion.Cetrus;
-import br.com.ohanacraft.biotech.addons.supremeexpansion.Components;
+import br.com.ohanacraft.biotech.addons.supremeexpansion.SupremeComponents;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -15,7 +15,6 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.inventory.InvUtils;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
 import io.github.thebusybiscuit.slimefun4.utils.LoreBuilder;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -50,11 +49,11 @@ public class VirtualAquarium extends AContainer implements RecipeDisplayItem {
       LoreBuilder.powerBuffer(1000), LoreBuilder.powerPerSecond(20));
 
   public static final ItemStack[] RECIPE_VIRTUAL_AQUARIUM_MACHINE = new ItemStack[]{
-      Components.STAINLESS_MACHINE, new ItemStack(Material.FISHING_ROD),
-      Components.STAINLESS_MACHINE,
-      Components.INDUCTOR_MACHINE, Components.CRYSTALLIZER_MACHINE, Components.INDUCTOR_MACHINE,
-      Components.ADAMANTIUM_PLATE, SlimefunItems.PROGRAMMABLE_ANDROID_FISHERMAN,
-      Components.ADAMANTIUM_PLATE};
+      SupremeComponents.STAINLESS_MACHINE, new ItemStack(Material.FISHING_ROD),
+      SupremeComponents.STAINLESS_MACHINE,
+      SupremeComponents.INDUCTOR_MACHINE, SupremeComponents.CRYSTALLIZER_MACHINE, SupremeComponents.INDUCTOR_MACHINE,
+      SupremeComponents.ADAMANTIUM_PLATE, SlimefunItems.PROGRAMMABLE_ANDROID_FISHERMAN,
+      SupremeComponents.ADAMANTIUM_PLATE};
 
   public static final SlimefunItemStack VIRTUAL_AQUARIUM_MACHINE_II = new SlimefunItemStack(
       "VIRTUAL_AQUARIUM_II", Material.DARK_PRISMARINE,
@@ -64,10 +63,10 @@ public class VirtualAquarium extends AContainer implements RecipeDisplayItem {
       LoreBuilder.powerBuffer(5000), LoreBuilder.powerPerSecond(100));
 
   public static final ItemStack[] RECIPE_VIRTUAL_AQUARIUM_MACHINE_II = new ItemStack[]{
-      Components.CONVEYANCE_MACHINE, Cetrus.CETRUS_LUMIUM, Components.CONVEYANCE_MACHINE,
-      Components.INDUCTOR_MACHINE, VirtualAquarium.VIRTUAL_AQUARIUM_MACHINE,
-      Components.INDUCTOR_MACHINE,
-      Components.THORNERITE, Cetrus.CETRUS_IGNIS, Components.THORNERITE};
+      SupremeComponents.CONVEYANCE_MACHINE, Cetrus.CETRUS_LUMIUM, SupremeComponents.CONVEYANCE_MACHINE,
+      SupremeComponents.INDUCTOR_MACHINE, VirtualAquarium.VIRTUAL_AQUARIUM_MACHINE,
+      SupremeComponents.INDUCTOR_MACHINE,
+      SupremeComponents.THORNERITE, Cetrus.CETRUS_IGNIS, SupremeComponents.THORNERITE};
 
   public static final SlimefunItemStack VIRTUAL_AQUARIUM_MACHINE_III = new SlimefunItemStack(
       "VIRTUAL_AQUARIUM_III", Material.DARK_PRISMARINE,
@@ -77,9 +76,9 @@ public class VirtualAquarium extends AContainer implements RecipeDisplayItem {
       LoreBuilder.powerBuffer(15000), LoreBuilder.powerPerSecond(300));
 
   public static final ItemStack[] RECIPE_VIRTUAL_AQUARIUM_MACHINE_III = new ItemStack[]{
-      Components.THORNERITE, Cetrus.CETRUS_LUX, Components.THORNERITE,
-      Components.SUPREME, VirtualAquarium.VIRTUAL_AQUARIUM_MACHINE_II, Components.SUPREME,
-      Components.CRYSTALLIZER_MACHINE, Cetrus.CETRUS_LUMIUM, Components.CRYSTALLIZER_MACHINE};
+      SupremeComponents.THORNERITE, Cetrus.CETRUS_LUX, SupremeComponents.THORNERITE,
+      SupremeComponents.SUPREME, VirtualAquarium.VIRTUAL_AQUARIUM_MACHINE_II, SupremeComponents.SUPREME,
+      SupremeComponents.CRYSTALLIZER_MACHINE, Cetrus.CETRUS_LUMIUM, SupremeComponents.CRYSTALLIZER_MACHINE};
 
 
   public static Map<Block, MachineRecipe> processing = new HashMap<>();
