@@ -278,15 +278,19 @@ public class TechGenerator extends SimpleItemContainerMachine {
       SlimefunItem mob1 = SlimefunItem.getByItem(b1);
       if (mob1 instanceof MobTech) {
         final MobTech mob11 = (MobTech) mob1;
-        if(mob11.getMobTechType() == MobTechType.ROBOTIC_CLONING) {
+        if(mob11.getMobTechType() == MobTechType.ROBOTIC_CLONING
+            || mob11.getMobTechType() == MobTechType.MUTATION_LUCK) {
           int amount = b1.getAmount() * mob11.getMobTechTier();
           if(amount > 64 || amount <= 0) amount = 64;
           itemStack.setAmount(amount);
           inv.pushItem(itemStack, this.getOutputSlots());
-          if(mob11.getMobTechTier() > 5){
+          if(mob11.getMobTechTier() >= 4){
             inv.pushItem(itemStack, this.getOutputSlots());
           }
-          if(mob11.getMobTechTier() > 7){
+          if(mob11.getMobTechTier() >= 6){
+            inv.pushItem(itemStack, this.getOutputSlots());
+          }
+          if(mob11.getMobTechTier() >= 8){
             inv.pushItem(itemStack, this.getOutputSlots());
           }
         }
@@ -296,15 +300,19 @@ public class TechGenerator extends SimpleItemContainerMachine {
       SlimefunItem mob2 = SlimefunItem.getByItem(b2);
       if (mob2 instanceof MobTech) {
         final MobTech mob22 = (MobTech) mob2;
-        if (mob22.getMobTechType() == MobTechType.ROBOTIC_CLONING) {
+        if (mob22.getMobTechType() == MobTechType.ROBOTIC_CLONING
+            || mob22.getMobTechType() == MobTechType.MUTATION_LUCK) {
           int amount = b1.getAmount() * mob22.getMobTechTier();
           if(amount > 64 || amount <= 0) amount = 64;
           itemStack.setAmount(amount);
           inv.pushItem(itemStack, this.getOutputSlots());
-          if(mob22.getMobTechTier() > 5){
+          if(mob22.getMobTechTier() >= 4){
             inv.pushItem(itemStack, this.getOutputSlots());
           }
-          if(mob22.getMobTechTier() > 7){
+          if(mob22.getMobTechTier() >= 6){
+            inv.pushItem(itemStack, this.getOutputSlots());
+          }
+          if(mob22.getMobTechTier() >= 8){
             inv.pushItem(itemStack, this.getOutputSlots());
           }
         }
@@ -314,15 +322,19 @@ public class TechGenerator extends SimpleItemContainerMachine {
       SlimefunItem mob3 = SlimefunItem.getByItem(b3);
       if (mob3 instanceof MobTech) {
         final MobTech mob33 = (MobTech) mob3;
-        if(mob33.getMobTechType() == MobTechType.ROBOTIC_CLONING) {
+        if(mob33.getMobTechType() == MobTechType.ROBOTIC_CLONING
+            || mob33.getMobTechType() == MobTechType.MUTATION_LUCK) {
           int amount = b1.getAmount() * mob33.getMobTechTier();
           if(amount > 64 || amount <= 0) amount = 64;
           itemStack.setAmount(amount);
           inv.pushItem(itemStack, this.getOutputSlots());
-          if(mob33.getMobTechTier() > 5){
+          if(mob33.getMobTechTier() >= 4){
             inv.pushItem(itemStack, this.getOutputSlots());
           }
-          if(mob33.getMobTechTier() > 7){
+          if(mob33.getMobTechTier() >= 6){
+            inv.pushItem(itemStack, this.getOutputSlots());
+          }
+          if(mob33.getMobTechTier() >= 8){
             inv.pushItem(itemStack, this.getOutputSlots());
           }
         }
@@ -332,7 +344,8 @@ public class TechGenerator extends SimpleItemContainerMachine {
       SlimefunItem mob4 = SlimefunItem.getByItem(b4);
       if (mob4 instanceof MobTech) {
         final MobTech mob44 = (MobTech) mob4;
-        if(mob44.getMobTechType() == MobTechType.ROBOTIC_CLONING) {
+        if(mob44.getMobTechType() == MobTechType.ROBOTIC_CLONING
+          || mob44.getMobTechType() == MobTechType.MUTATION_LUCK) {
           int amount = b1.getAmount() * mob44.getMobTechTier();
           if(amount > 64 || amount <= 0) amount = 64;
           itemStack.setAmount(amount);
@@ -398,7 +411,7 @@ public class TechGenerator extends SimpleItemContainerMachine {
   private int checkUpTime(int time, BlockMenu inv) {
 
     // tempo padrão
-    time =- this.getSpeed();
+    time = time - this.getSpeed();
 
     ItemStack b1 = inv.getItemInSlot(getInputSlots()[1]);
     ItemStack b2 = inv.getItemInSlot(getInputSlots()[2]);
@@ -408,7 +421,8 @@ public class TechGenerator extends SimpleItemContainerMachine {
       SlimefunItem mob1 = SlimefunItem.getByItem(b1);
       if (mob1 instanceof MobTech) {
         final MobTech mob11 = (MobTech) mob1;
-        if(mob11.getMobTechType() == MobTechType.ROBOTIC_ACCELERATION) {
+        if(mob11.getMobTechType() == MobTechType.ROBOTIC_ACCELERATION
+          || mob11.getMobTechType() == MobTechType.MUTATION_BERSERK) {
           time -= Math.round(((mob11.getMobTechTier() + 1) * b1.getAmount()) / 32);
         } else {
           time -= Math.round(b1.getAmount()/32);
@@ -419,7 +433,8 @@ public class TechGenerator extends SimpleItemContainerMachine {
       SlimefunItem mob2 = SlimefunItem.getByItem(b2);
       if (mob2 instanceof MobTech) {
         final MobTech mob22 = (MobTech) mob2;
-        if (mob22.getMobTechType() == MobTechType.ROBOTIC_ACCELERATION) {
+        if (mob22.getMobTechType() == MobTechType.ROBOTIC_ACCELERATION
+          || mob22.getMobTechType() == MobTechType.MUTATION_BERSERK) {
           time -= Math.round(((mob22.getMobTechTier() + 1) * b2.getAmount()) / 32);
         } else {
           time -= Math.round(b1.getAmount()/32);
@@ -430,7 +445,8 @@ public class TechGenerator extends SimpleItemContainerMachine {
       SlimefunItem mob3 = SlimefunItem.getByItem(b3);
       if (mob3 instanceof MobTech) {
         final MobTech mob33 = (MobTech) mob3;
-        if(mob33.getMobTechType() == MobTechType.ROBOTIC_ACCELERATION) {
+        if(mob33.getMobTechType() == MobTechType.ROBOTIC_ACCELERATION
+            || mob33.getMobTechType() == MobTechType.MUTATION_BERSERK) {
           time -= Math.round(((mob33.getMobTechTier() + 1) * b3.getAmount()) / 32);
         } else {
           time -= Math.round(b1.getAmount()/32);
@@ -441,7 +457,8 @@ public class TechGenerator extends SimpleItemContainerMachine {
       SlimefunItem mob4 = SlimefunItem.getByItem(b4);
       if (mob4 instanceof MobTech) {
         final MobTech mob44 = (MobTech) mob4;
-        if(mob44.getMobTechType() == MobTechType.ROBOTIC_ACCELERATION) {
+        if(mob44.getMobTechType() == MobTechType.ROBOTIC_ACCELERATION
+            || mob44.getMobTechType() == MobTechType.MUTATION_BERSERK) {
           time -= Math.round(((mob44.getMobTechTier() + 1) * b4.getAmount()) / 32);
         } else {
           time -= Math.round(b1.getAmount()/32);
@@ -476,10 +493,12 @@ public class TechGenerator extends SimpleItemContainerMachine {
       SlimefunItem mob1 = SlimefunItem.getByItem(b1);
       if (mob1 instanceof MobTech) {
         final MobTech mob11 = (MobTech) mob1;
-        if(mob11.getMobTechType() == MobTechType.ROBOTIC_EFFICIENCY) {
+        if(mob11.getMobTechType() == MobTechType.ROBOTIC_EFFICIENCY
+          || mob11.getMobTechType() == MobTechType.MUTATION_INTELLIGENCE) {
           consumption -= Math.round(((mob11.getMobTechTier() + 1) * b1.getAmount()) / 32);
         }
-        if(mob11.getMobTechType() == MobTechType.ROBOTIC_ACCELERATION) {
+        if(mob11.getMobTechType() == MobTechType.ROBOTIC_ACCELERATION
+            || mob11.getMobTechType() == MobTechType.MUTATION_BERSERK) {
           consumption += Math.round(((mob11.getMobTechTier() + 1) * b1.getAmount()) / 32);
         }
       }
@@ -488,10 +507,12 @@ public class TechGenerator extends SimpleItemContainerMachine {
       SlimefunItem mob2 = SlimefunItem.getByItem(b2);
       if (mob2 instanceof MobTech) {
         final MobTech mob22 = (MobTech) mob2;
-        if (mob22.getMobTechType() == MobTechType.ROBOTIC_EFFICIENCY) {
+        if (mob22.getMobTechType() == MobTechType.ROBOTIC_EFFICIENCY
+            || mob22.getMobTechType() == MobTechType.MUTATION_INTELLIGENCE) {
           consumption -= Math.round(((mob22.getMobTechTier() + 1) * b2.getAmount()) / 32);
         }
-        if(mob22.getMobTechType() == MobTechType.ROBOTIC_ACCELERATION) {
+        if(mob22.getMobTechType() == MobTechType.ROBOTIC_ACCELERATION
+            || mob22.getMobTechType() == MobTechType.MUTATION_BERSERK) {
           consumption += Math.round(((mob22.getMobTechTier() + 1) * b1.getAmount()) / 32);
         }
       }
@@ -500,10 +521,12 @@ public class TechGenerator extends SimpleItemContainerMachine {
       SlimefunItem mob3 = SlimefunItem.getByItem(b3);
       if (mob3 instanceof MobTech) {
         final MobTech mob33 = (MobTech) mob3;
-        if(mob33.getMobTechType() == MobTechType.ROBOTIC_EFFICIENCY) {
+        if(mob33.getMobTechType() == MobTechType.ROBOTIC_EFFICIENCY
+            || mob33.getMobTechType() == MobTechType.MUTATION_INTELLIGENCE) {
           consumption -= Math.round(((mob33.getMobTechTier() + 1) * b3.getAmount()) / 32);
         }
-        if(mob33.getMobTechType() == MobTechType.ROBOTIC_ACCELERATION) {
+        if(mob33.getMobTechType() == MobTechType.ROBOTIC_ACCELERATION
+            || mob33.getMobTechType() == MobTechType.MUTATION_BERSERK) {
           consumption += Math.round(((mob33.getMobTechTier() + 1) * b1.getAmount()) / 32);
         }
       }
@@ -512,10 +535,12 @@ public class TechGenerator extends SimpleItemContainerMachine {
       SlimefunItem mob4 = SlimefunItem.getByItem(b4);
       if (mob4 instanceof MobTech) {
         final MobTech mob44 = (MobTech) mob4;
-        if(mob44.getMobTechType() == MobTechType.ROBOTIC_EFFICIENCY) {
+        if(mob44.getMobTechType() == MobTechType.ROBOTIC_EFFICIENCY
+            || mob44.getMobTechType() == MobTechType.MUTATION_INTELLIGENCE) {
           consumption -= Math.round(((mob44.getMobTechTier() + 1) * b4.getAmount()) / 32);
         }
-        if(mob44.getMobTechType() == MobTechType.ROBOTIC_ACCELERATION) {
+        if(mob44.getMobTechType() == MobTechType.ROBOTIC_ACCELERATION
+            || mob44.getMobTechType() == MobTechType.MUTATION_BERSERK) {
           consumption += Math.round(((mob44.getMobTechTier() + 1) * b1.getAmount()) / 32);
         }
       }

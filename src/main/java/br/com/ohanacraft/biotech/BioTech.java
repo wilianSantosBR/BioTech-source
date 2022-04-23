@@ -137,18 +137,54 @@ public class BioTech extends JavaPlugin implements SlimefunAddon {
             case MUTATION_BERSERK:
             case ROBOTIC_ACCELERATION:
                 return ChatColor.YELLOW + String.valueOf(tier + 1) + "x "
-                        + ChatColor.GRAY + "Velocidade de processamento";
+                        + ChatColor.GRAY + "increase speed and increase energy";
             case MUTATION_LUCK:
             case ROBOTIC_CLONING:
-                return ChatColor.YELLOW + String.valueOf(tier + 1) + "x "
-                        + ChatColor.GRAY + "Quantidade da produção";
+                return buildLoreTypeLuckAndCloning(tier);
             case MUTATION_INTELLIGENCE:
             case ROBOTIC_EFFICIENCY:
                 return ChatColor.YELLOW + String.valueOf(tier + 1) + "x "
-                        + ChatColor.GRAY + "Economia de energia";
+                        + ChatColor.GRAY + " decrease energy";
             case SIMPLE:
             default:
                 return ChatColor.GRAY + "Aumenta Velocidade de processamento";
+        }
+    }
+
+    private static String buildLoreTypeLuckAndCloning(Integer tier){
+
+        if (tier >= 1) {
+            return ChatColor.YELLOW + "2x "
+                + ChatColor.GRAY + "Stack clone";
+        } else if (tier >= 4) {
+            return ChatColor.YELLOW + "3x "
+                + ChatColor.GRAY + "Stack clone";
+        } else if(tier >= 6){
+            return ChatColor.YELLOW + "4x "
+                + ChatColor.GRAY + "Stack clone";
+        } else if(tier >= 8){
+            return ChatColor.YELLOW + "5x "
+                + ChatColor.GRAY + "Stack clone";
+        }
+        return "";
+    }
+
+    private static String buildLoreTypeAmount(MobTechType mobTechType, Integer tier){
+        switch (mobTechType) {
+            case MUTATION_BERSERK:
+            case ROBOTIC_ACCELERATION:
+            case MUTATION_INTELLIGENCE:
+            case ROBOTIC_EFFICIENCY:
+                return ChatColor.YELLOW + "(" + String.valueOf(tier + 1) + " x amount stack / 32) J/s "
+                    + ChatColor.GRAY + " value process";
+            case MUTATION_LUCK:
+            case ROBOTIC_CLONING:
+                return ChatColor.YELLOW + "(" + String.valueOf(tier + 1) + "x amount stack)"
+                    + ChatColor.GRAY + " value process (limit 64x)";
+            case SIMPLE:
+            default:
+                return ChatColor.YELLOW + "1x amount stack"
+                    + ChatColor.GRAY + " value process";
         }
     }
 
@@ -159,6 +195,7 @@ public class BioTech extends JavaPlugin implements SlimefunAddon {
                 "",
                 buildLoreRadioactivityType(mobTechDTO.getMobTechType()),
                 buildLoreType(mobTechDTO.getMobTechType(), tier),
+                buildLoreTypeAmount(mobTechDTO.getMobTechType(), tier),
                 "");
     }
 

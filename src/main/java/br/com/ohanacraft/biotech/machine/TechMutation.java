@@ -19,9 +19,9 @@ public class TechMutation {
     public static final SlimefunItemStack TECH_MUTATION = new SlimefunItemStack("BIOTECH_TECH_MUTATION",
             Material.SLIME_BLOCK, "&aTech &bMutation", "");
     public static final ItemStack[] RECIPE_TECH_MUTATION = {
-            Components.TRIPLE_COMPRESSED_SLIME_BALL, Components.TRIPLE_COMPRESSED_MAGMA_CREAM, Components.TRIPLE_COMPRESSED_SLIME_BALL,
-            SlimefunItems.HARDENED_METAL_INGOT, Components.BIOTECH_SYNTHETIC_RUBY, SlimefunItems.HARDENED_METAL_INGOT,
-            Components.TRIPLE_COMPRESSED_OAK_WOOD, SlimefunItems.ELECTRIC_MOTOR, Components.TRIPLE_COMPRESSED_OAK_WOOD
+        Components.TRIPLE_COMPRESSED_SLIME_BALL, Components.BIOTECH_SYNTHETIC_RUBY, Components.TRIPLE_COMPRESSED_MAGMA_CREAM,
+        SlimefunItems.REINFORCED_PLATE, SlimefunItems.ELECTRIC_MOTOR, SlimefunItems.REINFORCED_PLATE,
+        Components.TRIPLE_COMPRESSED_SPONGE, Components.BIOTECH_SYNTHETIC_RUBY, Components.TRIPLE_COMPRESSED_LEATHER
     };
 
 
