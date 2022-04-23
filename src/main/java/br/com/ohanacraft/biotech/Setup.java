@@ -34,7 +34,7 @@ public class Setup {
 
     TechRobotic.setup(plugin);
 
-    TechMutation.setup(plugin);
+//    TechMutation.setup(plugin);
 
   }
 
