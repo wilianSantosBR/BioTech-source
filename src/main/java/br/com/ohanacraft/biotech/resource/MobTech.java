@@ -4,6 +4,7 @@ import br.com.ohanacraft.biotech.BioTech;
 import br.com.ohanacraft.biotech.Categories;
 import br.com.ohanacraft.biotech.dto.MobTechDTO;
 import br.com.ohanacraft.biotech.dto.MobTechDTO.MobTechType;
+import br.com.ohanacraft.biotech.machine.TechMutation;
 import br.com.ohanacraft.biotech.machine.TechRobotic;
 import br.com.ohanacraft.biotech.tools.MobCollectorTech;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
@@ -93,16 +94,34 @@ public class MobTech extends SlimefunItem implements Radioactive, NotPlaceable {
     return null;
   }
 
-  //todo falta fazer
   private static void buildMutation(BioTech plugin, MobTechDTO item) {
-    for (int i = 1; i <= 9; i++) {
-      new MobTech(Categories.TECHMOB_CATEGORY, BioTech.buildItemFromMobTechDTO(
-          item, i),
-          RecipeType.NULL, new ItemStack[]{})
-          .setMobTechType(item.getMobTechType())
-          .setMobTechTier(i)
-          .register(plugin);
+
+    SlimefunItemStack slimefunItemStack = BioTech.buildItemFromMobTechDTO(item, 1);
+    new MobTech(Categories.TECHMOB_CATEGORY, slimefunItemStack,
+        RecipeType.NULL, new ItemStack[]{})
+        .setMobTechType(item.getMobTechType())
+        .setMobTechTier(1)
+        .register(plugin);
+
+    SlimefunItemStack simpleInput = null;
+
+    if(item.getId().contains("_BEE")){
+      simpleInput = BioTech.buildItemFromMobTechDTO(BeeTech.SIMPLE_BEE, 0);
+    } else if(item.getId().contains("_GOLEM")){
+      simpleInput = BioTech.buildItemFromMobTechDTO(IronGolemTech.SIMPLE_GOLEM, 0);
     }
+
+    TechMutation.addRecipe(simpleInput, simpleInput,
+        (MobTechType.MUTATION_BERSERK == item.getMobTechType()) ? 20 : 5,
+        BioTech.buildItemFromMobTechDTO(item, 1));
+
+    for (int i = 2; i <= 9; i++) {
+      final SlimefunItemStack inputTier = BioTech.buildItemFromMobTechDTO(item, (i - 1));
+      TechMutation.addRecipe(inputTier, inputTier,
+            (MobTechType.MUTATION_BERSERK == item.getMobTechType()) ? 20 : 5,
+            BioTech.buildItemFromMobTechDTO(item, i));
+    }
+
   }
 
   private Integer mobTechTier;

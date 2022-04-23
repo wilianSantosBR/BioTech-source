@@ -192,18 +192,7 @@ public class TechRobotic extends SimpleItemContainerMachine {
                 // realiza consulmo de energia e ticks
             } else {
 
-                // verifica está com mesmo data card
-                if (SlimefunUtils.isItemSimilar(itemNaReceita, itemProduzindo, false, false)) {
-
-                    this.processTicks(b, inv, itemProduzindo);
-
-                } else {
-
-                    //TÉRMINO PRODUÇÃO
-                    processing.put(b, null);
-                    progressTime.put(b, 0);
-                    invalidProgressBar(inv, Material.BLACK_STAINED_GLASS_PANE, " ");
-                }
+               this.processTicks(b, inv, itemProduzindo);
 
             }
 
