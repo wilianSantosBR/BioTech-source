@@ -62,7 +62,7 @@ public class MobTech extends SlimefunItem implements Radioactive, NotPlaceable {
       TechRobotic.addRecipe(BioTech.buildItemFromMobTechDTO(item, (i - 1)),
           BioTech.buildItemFromMobTechDTO(item, i));
       new MobTech(Categories.TECHMOB_CATEGORY, BioTech.buildItemFromMobTechDTO(item, i),
-          RecipeType.NULL, new ItemStack[]{})
+          RecipeType.NULL, new ItemStack[]{TechRobotic.TECH_ROBOTIC})
           .setMobTechType(item.getMobTechType())
           .setMobTechTier(i)
           .register(plugin);
@@ -98,7 +98,7 @@ public class MobTech extends SlimefunItem implements Radioactive, NotPlaceable {
 
     SlimefunItemStack slimefunItemStack = BioTech.buildItemFromMobTechDTO(item, 1);
     new MobTech(Categories.TECHMOB_CATEGORY, slimefunItemStack,
-        RecipeType.NULL, new ItemStack[]{})
+        RecipeType.NULL, new ItemStack[]{TechMutation.TECH_MUTATION})
         .setMobTechType(item.getMobTechType())
         .setMobTechTier(1)
         .register(plugin);
@@ -114,12 +114,17 @@ public class MobTech extends SlimefunItem implements Radioactive, NotPlaceable {
     TechMutation.addRecipe(simpleInput, simpleInput,
         (MobTechType.MUTATION_BERSERK == item.getMobTechType()) ? 20 : 5,
         BioTech.buildItemFromMobTechDTO(item, 1));
-
     for (int i = 2; i <= 9; i++) {
       final SlimefunItemStack inputTier = BioTech.buildItemFromMobTechDTO(item, (i - 1));
+      final SlimefunItemStack itemStack = BioTech.buildItemFromMobTechDTO(item, i);
       TechMutation.addRecipe(inputTier, inputTier,
-            (MobTechType.MUTATION_BERSERK == item.getMobTechType()) ? 20 : 5,
-            BioTech.buildItemFromMobTechDTO(item, i));
+          (MobTechType.MUTATION_BERSERK == item.getMobTechType()) ? 20 : 5,
+          itemStack);
+      new MobTech(Categories.TECHMOB_CATEGORY, itemStack,
+          RecipeType.NULL, new ItemStack[]{TechMutation.TECH_MUTATION})
+          .setMobTechType(item.getMobTechType())
+          .setMobTechTier(1)
+          .register(plugin);
     }
 
   }

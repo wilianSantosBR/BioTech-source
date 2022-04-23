@@ -193,13 +193,13 @@ public class TechMutation extends SimpleItemContainerMachine {
     }
 
     private static void invalidProgressBar(BlockMenu menu, String txt) {
-        for (int i : InterfaceMachineDTO.TECH_ROBOTIC_PROGRESS_BAR_SLOT) {
+        for (int i : InterfaceMachineDTO.TECH_MUTATION_PROGRESS_BAR_SLOT) {
             menu.replaceExistingItem(i, new CustomItemStack(Material.RED_STAINED_GLASS_PANE, txt));
         }
     }
 
     private static void invalidProgressBar(BlockMenu menu, Material material, String txt) {
-        for (int i : InterfaceMachineDTO.TECH_ROBOTIC_PROGRESS_BAR_SLOT) {
+        for (int i : InterfaceMachineDTO.TECH_MUTATION_PROGRESS_BAR_SLOT) {
             menu.replaceExistingItem(i, new CustomItemStack(material, txt));
         }
     }
@@ -222,7 +222,7 @@ public class TechMutation extends SimpleItemContainerMachine {
                 progressTime.put(b, time);
 
                 //todo ajustar para progresso parcial nos 3 slots
-                for (int i : InterfaceMachineDTO.TECH_ROBOTIC_PROGRESS_BAR_SLOT) {
+                for (int i : InterfaceMachineDTO.TECH_MUTATION_PROGRESS_BAR_SLOT) {
                     ChestMenuUtils.updateProgressbar(inv, i, Math.round(ticksLeft / this.getSpeed()),
                         Math.round(ticksTotal / this.getSpeed()), result);
                 }
@@ -257,12 +257,15 @@ public class TechMutation extends SimpleItemContainerMachine {
     @Nonnull
     @Override
     public List<ItemStack> getDisplayRecipes() {
+        final CustomItemStack separator = new CustomItemStack(Material.BLACK_STAINED_GLASS_PANE, " ");
         List<ItemStack> displayRecipes = new ArrayList();
         this.recipes.forEach(recipe -> {
             displayRecipes.add(recipe.getInput1());
-            displayRecipes.add(new CustomItemStack(Material.NAME_TAG, " " + recipe.getChance() + "% "));
+            displayRecipes.add(new CustomItemStack(Material.NAME_TAG, " " + recipe.getChance() + "% chance"));
             displayRecipes.add(recipe.getInput2());
             displayRecipes.add(recipe.getOutput());
+            displayRecipes.add(separator);
+            displayRecipes.add(separator);
         });
         return displayRecipes;
     }
