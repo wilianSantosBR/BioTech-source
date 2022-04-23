@@ -170,7 +170,7 @@ public class TechMutation extends SimpleItemContainerMachine {
             if (this.getProgressTime(b) <= 0) {
 
                 //CRIAÇÃO DO ITEM
-                if(UtilMachine.getRandomInt() >= itemProduzindo.getChance()){
+                if(UtilMachine.getRandomInt() <= itemProduzindo.getChance()){
                     inv.pushItem(itemProduzindo.getOutput().clone(), this.getOutputSlots());
                     invalidProgressBar(inv, Material.BLACK_STAINED_GLASS_PANE, " Success! ");
                 } else {
