@@ -2,6 +2,7 @@ package br.com.ohanacraft.biotech.machine;
 
 import br.com.ohanacraft.biotech.BioTech;
 import br.com.ohanacraft.biotech.Categories;
+import br.com.ohanacraft.biotech.addons.supremeexpansion.SupremeComponents;
 import br.com.ohanacraft.biotech.dto.InterfaceMachineDTO;
 import br.com.ohanacraft.biotech.dto.MobTechDTO.MobTechType;
 import br.com.ohanacraft.biotech.generic.SimpleItemContainerMachine;
@@ -35,6 +36,7 @@ import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
+import org.springframework.scheduling.annotation.Async;
 
 import javax.annotation.Nonnull;
 import java.util.ArrayList;
@@ -43,6 +45,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+@Async
 public class TechGenerator extends SimpleItemContainerMachine {
 
   public static final SlimefunItemStack TECH_GENERATOR = new SlimefunItemStack(
@@ -56,11 +59,9 @@ public class TechGenerator extends SimpleItemContainerMachine {
       Energy.energyPowerPerSecond(2000),
       "");
   public static final ItemStack[] RECIPE_TECH_GENERATOR = {
-      Components.BIOTECH_SYNTHETIC_AMETHYST, Components.BIOTECH_SYNTHETIC_AMETHYST, Components.BIOTECH_SYNTHETIC_AMETHYST,
-      SlimefunItems.REINFORCED_ALLOY_INGOT, new ItemStack(Material.LOOM),
-      SlimefunItems.REINFORCED_ALLOY_INGOT,
-      Components.TRIPLE_COMPRESSED_OAK_WOOD, SlimefunItems.ELECTRIC_MOTOR,
-      Components.TRIPLE_COMPRESSED_OAK_WOOD
+      Components.BIOTECH_SYNTHETIC_AMETHYST, Components.BIOTECH_SYNTHETIC_RUBY, Components.BIOTECH_SYNTHETIC_AMETHYST,
+      SlimefunItems.REINFORCED_ALLOY_INGOT, new ItemStack(Material.LOOM), SlimefunItems.REINFORCED_ALLOY_INGOT,
+          SupremeComponents.CARRIAGE_MACHINE, SlimefunItems.HEATING_COIL, SupremeComponents.CARRIAGE_MACHINE
   };
 
   public TechGenerator(SlimefunItemStack item, ItemStack[] recipe) {

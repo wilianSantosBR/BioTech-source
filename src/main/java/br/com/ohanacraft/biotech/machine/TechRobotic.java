@@ -19,11 +19,6 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
 import io.github.thebusybiscuit.slimefun4.utils.LoreBuilder;
 import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import javax.annotation.Nonnull;
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.ChestMenu;
 import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.ClickAction;
@@ -36,7 +31,15 @@ import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
+import org.springframework.scheduling.annotation.Async;
 
+import javax.annotation.Nonnull;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+@Async
 public class TechRobotic extends SimpleItemContainerMachine {
 
     public static final SlimefunItemStack TECH_ROBOTIC = new SlimefunItemStack("BIOTECH_TECH_ROBOTIC",
@@ -49,9 +52,9 @@ public class TechRobotic extends SimpleItemContainerMachine {
         Energy.energyPowerPerSecond(500),
         "");
     public static final ItemStack[] RECIPE_TECH_ROBOTIC = {
-            SupremeComponents.INDUCTOR_MACHINE, Components.BIOTECH_SYNTHETIC_RUBY, SupremeComponents.INDUCTOR_MACHINE,
+            SupremeComponents.INDUCTIVE_MACHINE, Components.BIOTECH_SYNTHETIC_RUBY, SupremeComponents.INDUCTIVE_MACHINE,
             SlimefunItems.REINFORCED_PLATE, SlimefunItems.ELECTRIC_MOTOR, SlimefunItems.REINFORCED_PLATE,
-            SupremeComponents.STAINLESS_MACHINE, Components.BIOTECH_SYNTHETIC_RUBY, SupremeComponents.STAINLESS_MACHINE
+            SupremeComponents.RUSTLESS_MACHINE, Components.BIOTECH_SYNTHETIC_RUBY, SupremeComponents.RUSTLESS_MACHINE
     };
 
 

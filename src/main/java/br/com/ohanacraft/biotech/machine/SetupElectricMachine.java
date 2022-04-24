@@ -3,9 +3,10 @@ package br.com.ohanacraft.biotech.machine;
 import br.com.ohanacraft.biotech.BioTech;
 import br.com.ohanacraft.biotech.Categories;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import org.springframework.scheduling.annotation.Async;
+
 import javax.annotation.Nonnull;
-
-
+@Async
 public class SetupElectricMachine {
 
 

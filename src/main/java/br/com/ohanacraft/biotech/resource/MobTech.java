@@ -15,8 +15,9 @@ import io.github.thebusybiscuit.slimefun4.core.attributes.NotPlaceable;
 import io.github.thebusybiscuit.slimefun4.core.attributes.Radioactive;
 import io.github.thebusybiscuit.slimefun4.core.attributes.Radioactivity;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
-import javax.annotation.Nonnull;
 import org.bukkit.inventory.ItemStack;
+
+import javax.annotation.Nonnull;
 
 public class MobTech extends SlimefunItem implements Radioactive, NotPlaceable {
 
@@ -52,7 +53,7 @@ public class MobTech extends SlimefunItem implements Radioactive, NotPlaceable {
 
     SlimefunItemStack slimefunItemStack = BioTech.buildItemFromMobTechDTO(item, 1);
     new MobTech(Categories.TECHMOB_CATEGORY, slimefunItemStack,
-        RecipeType.ENHANCED_CRAFTING_TABLE, getRoboticStartRecipe(item.getMobTechType()))
+        RecipeType.ENHANCED_CRAFTING_TABLE, getRoboticStartRecipe(item))
         .setMobTechType(item.getMobTechType())
         .setMobTechTier(1)
         .register(plugin);
@@ -69,26 +70,34 @@ public class MobTech extends SlimefunItem implements Radioactive, NotPlaceable {
     }
   }
 
-  private static ItemStack[] getRoboticStartRecipe(MobTechType mobTechType) {
+  private static ItemStack[] getRoboticStartRecipe(MobTechDTO mobTech) {
+    MobTechType mobTechType = mobTech.getMobTechType();
+    SlimefunItemStack itemStack = null;
+    if(mobTech.getId().contains("_BEE")){
+      itemStack = BioTech.buildItemFromMobTechDTO(BeeTech.SIMPLE_BEE, 0);
+    } else if(mobTech.getId().contains("_GOLEM")){
+      itemStack = BioTech.buildItemFromMobTechDTO(IronGolemTech.SIMPLE_GOLEM, 0);
+    }
+
     if (MobTechType.ROBOTIC_ACCELERATION == mobTechType) {
       return new ItemStack[]{
-          SlimefunItems.PLASTIC_SHEET, SlimefunItems.LAVA_CRYSTAL, SlimefunItems.PLASTIC_SHEET,
+          SlimefunItems.PLASTIC_SHEET, SlimefunItems.FIRE_RUNE, SlimefunItems.PLASTIC_SHEET,
           SlimefunItems.PLASTIC_SHEET, SlimefunItems.PROGRAMMABLE_ANDROID_2, SlimefunItems.PLASTIC_SHEET,
-          SlimefunItems.REINFORCED_PLATE, Components.BIOTECH_SYNTHETIC_RUBY, SlimefunItems.REINFORCED_PLATE
+              Components.BIOTECH_SYNTHETIC_RUBY, itemStack, Components.BIOTECH_SYNTHETIC_RUBY
       };
     }
     if (MobTechType.ROBOTIC_CLONING == mobTechType) {
       return new ItemStack[]{
           SlimefunItems.PLASTIC_SHEET, SlimefunItems.RAINBOW_RUNE, SlimefunItems.PLASTIC_SHEET,
           SlimefunItems.PLASTIC_SHEET, SlimefunItems.PROGRAMMABLE_ANDROID_2, SlimefunItems.PLASTIC_SHEET,
-          SlimefunItems.REINFORCED_PLATE, Components.BIOTECH_SYNTHETIC_RUBY, SlimefunItems.REINFORCED_PLATE
+              Components.BIOTECH_SYNTHETIC_RUBY, itemStack, Components.BIOTECH_SYNTHETIC_RUBY
       };
     }
     if (MobTechType.ROBOTIC_EFFICIENCY == mobTechType) {
       return new ItemStack[]{
-          SlimefunItems.PLASTIC_SHEET, SlimefunItems.SOLAR_GENERATOR_4, SlimefunItems.PLASTIC_SHEET,
+          SlimefunItems.PLASTIC_SHEET, SlimefunItems.LIGHTNING_RUNE, SlimefunItems.PLASTIC_SHEET,
           SlimefunItems.PLASTIC_SHEET, SlimefunItems.PROGRAMMABLE_ANDROID_2, SlimefunItems.PLASTIC_SHEET,
-          SlimefunItems.REINFORCED_PLATE, Components.BIOTECH_SYNTHETIC_RUBY, SlimefunItems.REINFORCED_PLATE
+              Components.BIOTECH_SYNTHETIC_RUBY, itemStack, Components.BIOTECH_SYNTHETIC_RUBY
       };
     }
     return null;
@@ -111,14 +120,14 @@ public class MobTech extends SlimefunItem implements Radioactive, NotPlaceable {
       simpleInput = BioTech.buildItemFromMobTechDTO(IronGolemTech.SIMPLE_GOLEM, 0);
     }
 
-    TechMutation.addRecipe(simpleInput, simpleInput,
-        (MobTechType.MUTATION_BERSERK == item.getMobTechType()) ? 20 : 5,
+    TechMutation.addRecipe(simpleInput, getGeneMutation(item.getMobTechType()),
+        (MobTechType.MUTATION_BERSERK == item.getMobTechType()) ? 20 : 10,
         BioTech.buildItemFromMobTechDTO(item, 1));
     for (int i = 2; i <= 9; i++) {
       final SlimefunItemStack inputTier = BioTech.buildItemFromMobTechDTO(item, (i - 1));
       final SlimefunItemStack itemStack = BioTech.buildItemFromMobTechDTO(item, i);
       TechMutation.addRecipe(inputTier, inputTier,
-          (MobTechType.MUTATION_BERSERK == item.getMobTechType()) ? 20 : 5,
+          (MobTechType.MUTATION_BERSERK == item.getMobTechType()) ? 20 : 10,
           itemStack);
       new MobTech(Categories.TECHMOB_CATEGORY, itemStack,
           RecipeType.NULL, new ItemStack[]{TechMutation.TECH_MUTATION})
@@ -127,6 +136,17 @@ public class MobTech extends SlimefunItem implements Radioactive, NotPlaceable {
           .register(plugin);
     }
 
+  }
+
+  private static SlimefunItemStack getGeneMutation(MobTechType mobTechType) {
+    if (MobTechType.MUTATION_BERSERK == mobTechType) {
+      return Components.BIOTECH_GENE_BERSERK;
+    }else if (MobTechType.MUTATION_INTELLIGENCE == mobTechType){
+      return Components.BIOTECH_GENE_INTELLIGENCE;
+    } else if (MobTechType.MUTATION_LUCK == mobTechType) {
+      return Components.BIOTECH_GENE_LUCK;
+    }
+    return Components.BIOTECH_GENE_CORE;
   }
 
   private Integer mobTechTier;

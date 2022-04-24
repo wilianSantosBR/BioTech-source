@@ -2,7 +2,9 @@ package br.com.ohanacraft.biotech.resource;
 
 import br.com.ohanacraft.biotech.BioTech;
 import br.com.ohanacraft.biotech.Categories;
+import br.com.ohanacraft.biotech.machine.TechMutation;
 import br.com.ohanacraft.biotech.util.ItemNotPlaceable;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.core.attributes.MachineTier;
@@ -199,24 +201,78 @@ public class Components {
 
     // componente
     public static final SlimefunItemStack BIOTECH_CENTER_CARD_SIMPLE = new SlimefunItemStack("BIOTECH_CENTER_CARD_SIMPLE",
-        Material.MUSIC_DISC_11,
-        "&BComponente Básico para Card", "", "&fComponente para Maquina de produzir itens",
-        "", LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE));
+            Material.MUSIC_DISC_11,
+            "&BComponente Básico para Card", "", "&fComponente para Maquina de produzir itens",
+            "", LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE));
     private static final ItemStack[] RECIPE_BIOTECH_CENTER_CARD_SIMPLE = new ItemStack[]{
-        SlimefunItems.BASIC_CIRCUIT_BOARD, SlimefunItems.ELECTRO_MAGNET, SlimefunItems.BASIC_CIRCUIT_BOARD,
-        SlimefunItems.BASIC_CIRCUIT_BOARD, Components.BIOTECH_SYNTHETIC_AMETHYST, SlimefunItems.BASIC_CIRCUIT_BOARD,
-        SlimefunItems.BASIC_CIRCUIT_BOARD, SlimefunItems.ELECTRO_MAGNET, SlimefunItems.BASIC_CIRCUIT_BOARD
+            SlimefunItems.BASIC_CIRCUIT_BOARD, SlimefunItems.ELECTRO_MAGNET, SlimefunItems.BASIC_CIRCUIT_BOARD,
+            SlimefunItems.BASIC_CIRCUIT_BOARD, Components.BIOTECH_SYNTHETIC_AMETHYST, SlimefunItems.BASIC_CIRCUIT_BOARD,
+            SlimefunItems.BASIC_CIRCUIT_BOARD, SlimefunItems.ELECTRO_MAGNET, SlimefunItems.BASIC_CIRCUIT_BOARD
     };
 
     public static final SlimefunItemStack BIOTECH_CENTER_CARD_ADVANCED = new SlimefunItemStack("BIOTECH_CENTER_CARD_ADVANCED",
-        Material.MUSIC_DISC_PIGSTEP,
-        "&BComponente Avançado para Card", "", "&fComponente para Maquina de produzir itens",
-        "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE));
+            Material.MUSIC_DISC_PIGSTEP,
+            "&BComponente Avançado para Card", "", "&fComponente para Maquina de produzir itens",
+            "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE));
     private static final ItemStack[] RECIPE_BIOTECH_CENTER_CARD_ADVANCED = new ItemStack[]{
-        SlimefunItems.ADVANCED_CIRCUIT_BOARD, BIOTECH_CENTER_CARD_SIMPLE, SlimefunItems.ADVANCED_CIRCUIT_BOARD,
+            SlimefunItems.ADVANCED_CIRCUIT_BOARD, BIOTECH_CENTER_CARD_SIMPLE, SlimefunItems.ADVANCED_CIRCUIT_BOARD,
             BIOTECH_CENTER_CARD_SIMPLE, Components.BIOTECH_SYNTHETIC_RUBY, BIOTECH_CENTER_CARD_SIMPLE,
-        SlimefunItems.ELECTRO_MAGNET, BIOTECH_CENTER_CARD_SIMPLE, SlimefunItems.ELECTRO_MAGNET
+            SlimefunItems.ELECTRO_MAGNET, BIOTECH_CENTER_CARD_SIMPLE, SlimefunItems.ELECTRO_MAGNET
     };
+
+    //pó
+
+    public static final SlimefunItemStack BIOTECH_DUST_NETHERITE = new SlimefunItemStack("BIOTECH_DUST_NETHERITE",
+            Material.MELON_SEEDS,
+            "&fNetherite Dust", "");
+    private static final ItemStack[] RECIPE_BIOTECH_DUST_NETHERITE = new ItemStack[]{
+            new ItemStack(Material.NETHERITE_INGOT), null, null,
+            null, null, null,
+            null, null, null
+    };
+
+    public static final SlimefunItemStack BIOTECH_DUST_GLOW_INK = new SlimefunItemStack("BIOTECH_DUST_GLOW_INK",
+            Material.PUMPKIN_SEEDS,
+            "&fGlow Ink Dust", "");
+    private static final ItemStack[] RECIPE_BIOTECH_DUST_GLOW_INK = new ItemStack[]{
+            new ItemStack(Material.GLOW_INK_SAC), null, null,
+            null, null, null,
+            null, null, null
+    };
+
+    public static final SlimefunItemStack BIOTECH_DUST_AMETHYST = new SlimefunItemStack("BIOTECH_DUST_AMETHYST",
+            Material.BEETROOT_SEEDS,
+            "&fAmethyst Dust", "");
+    private static final ItemStack[] RECIPE_BIOTECH_DUST_AMETHYST = new ItemStack[]{
+            new ItemStack(Material.AMETHYST_SHARD), null, null,
+            null, null, null,
+            null, null, null
+    };
+
+    //Gene
+
+    public static final SlimefunItemStack BIOTECH_GENE_BERSERK = new SlimefunItemStack("BIOTECH_GENE_BERSERK",
+            Material.FIRE_CORAL,
+            "&fBerserk Gene", "");
+
+    public static final SlimefunItemStack BIOTECH_GENE_INTELLIGENCE = new SlimefunItemStack("BIOTECH_GENE_INTELLIGENCE",
+            Material.TUBE_CORAL,
+            "&fIntelligence Gene", "");
+
+    public static final SlimefunItemStack BIOTECH_GENE_LUCK = new SlimefunItemStack("BIOTECH_GENE_LUCK",
+            Material.HORN_CORAL,
+            "&fLuck Gene", "");
+
+    public static final SlimefunItemStack BIOTECH_GENE_CORE = new SlimefunItemStack("BIOTECH_GENE_CORE",
+            Material.CONDUIT,
+            "&fGene Core", "");
+    private static final ItemStack[] RECIPE_BIOTECH_GENE_CORE = new ItemStack[]{
+            Components.BIOTECH_GENE_BERSERK, Components.BIOTECH_SYNTHETIC_RUBY, Components.BIOTECH_GENE_BERSERK,
+            Components.BIOTECH_GENE_INTELLIGENCE, Components.BIOTECH_SYNTHETIC_RUBY, Components.BIOTECH_GENE_INTELLIGENCE,
+            Components.BIOTECH_GENE_LUCK, Components.BIOTECH_SYNTHETIC_RUBY, Components.BIOTECH_GENE_LUCK
+    };
+
+
 
     public static void setup(BioTech plugin) {
 
@@ -255,16 +311,48 @@ public class Components {
         //gemas
         registerEnhancedCraft(plugin, Components.BIOTECH_SYNTHETIC_AMETHYST, Components.RECIPE_BIOTECH_SYNTHETIC_AMETHYST);
         registerEnhancedCraft(plugin, Components.BIOTECH_SYNTHETIC_RUBY, Components.RECIPE_BIOTECH_SYNTHETIC_RUBY);
-        
+
         //discos
         registerEnhancedCraft(plugin, Components.BIOTECH_CENTER_CARD_SIMPLE, Components.RECIPE_BIOTECH_CENTER_CARD_SIMPLE);
         registerEnhancedCraft(plugin, Components.BIOTECH_CENTER_CARD_ADVANCED, Components.RECIPE_BIOTECH_CENTER_CARD_ADVANCED);
 
+        //po
+        registerGrindStone(plugin, Components.BIOTECH_DUST_NETHERITE, Components.RECIPE_BIOTECH_DUST_NETHERITE);
+        registerGrindStone(plugin, Components.BIOTECH_DUST_GLOW_INK, Components.RECIPE_BIOTECH_DUST_GLOW_INK);
+        registerGrindStone(plugin, Components.BIOTECH_DUST_AMETHYST, Components.RECIPE_BIOTECH_DUST_AMETHYST);
 
+        //gene
+        addRecipeTechMutation(Components.BIOTECH_DUST_NETHERITE, SlimefunItems.FIRE_RUNE ,Components.BIOTECH_GENE_BERSERK);
+        addRecipeTechMutation(Components.BIOTECH_DUST_GLOW_INK, SlimefunItems.LIGHTNING_RUNE,Components.BIOTECH_GENE_LUCK);
+        addRecipeTechMutation(Components.BIOTECH_DUST_AMETHYST, SlimefunItems.RAINBOW_RUNE,Components.BIOTECH_GENE_INTELLIGENCE);
+
+        registerTechMutation(plugin, Components.BIOTECH_GENE_BERSERK);
+        registerTechMutation(plugin, Components.BIOTECH_GENE_LUCK);
+        registerTechMutation(plugin, Components.BIOTECH_GENE_INTELLIGENCE);
+
+        //gene core
+        registerEnhancedCraft(plugin, Components.BIOTECH_GENE_CORE, Components.RECIPE_BIOTECH_GENE_CORE);
+
+        //radiação
+        addRecipeTechMutation(SlimefunItems.URANIUM, SlimefunItems.URANIUM,SlimefunItems.NEPTUNIUM);
+        addRecipeTechMutation(SlimefunItems.NEPTUNIUM, SlimefunItems.NEPTUNIUM,SlimefunItems.PLUTONIUM);
+        addRecipeTechMutation(SlimefunItems.PLUTONIUM, SlimefunItems.URANIUM,SlimefunItems.BOOSTED_URANIUM);
     }
 
     private static void registerEnhancedCraft(BioTech plugin, SlimefunItemStack itemStack, ItemStack[] recipe) {
         new ItemNotPlaceable(Categories.RESOURCE_CATEGORY, itemStack, RecipeType.ENHANCED_CRAFTING_TABLE, recipe).register(plugin);
+    }
+
+    private static void registerGrindStone(BioTech plugin, SlimefunItemStack itemStack, ItemStack[] recipe) {
+        new SlimefunItem(Categories.RESOURCE_CATEGORY, itemStack, RecipeType.GRIND_STONE, recipe, new SlimefunItemStack(itemStack, 1)).register(plugin);
+    }
+
+    private static void addRecipeTechMutation(SlimefunItemStack itemStack1, SlimefunItemStack itemStack2, SlimefunItemStack output) {
+        TechMutation.addRecipe(itemStack1,  itemStack2, 100, output);
+    }
+
+    private static void registerTechMutation(BioTech plugin, SlimefunItemStack output) {
+        new ItemNotPlaceable(Categories.RESOURCE_CATEGORY, output, RecipeType.NULL, new ItemStack[]{TechMutation.TECH_MUTATION}).register(plugin);
     }
 }
 

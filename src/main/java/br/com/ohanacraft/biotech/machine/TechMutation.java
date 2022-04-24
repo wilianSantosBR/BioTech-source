@@ -2,6 +2,7 @@ package br.com.ohanacraft.biotech.machine;
 
 import br.com.ohanacraft.biotech.BioTech;
 import br.com.ohanacraft.biotech.Categories;
+import br.com.ohanacraft.biotech.addons.supremeexpansion.SupremeComponents;
 import br.com.ohanacraft.biotech.dto.InterfaceMachineDTO;
 import br.com.ohanacraft.biotech.dto.MobTechMutationDTO;
 import br.com.ohanacraft.biotech.generic.SimpleItemContainerMachine;
@@ -14,11 +15,6 @@ import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
 import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import javax.annotation.Nonnull;
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.ChestMenu;
 import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.ClickAction;
@@ -31,15 +27,23 @@ import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.ItemStack;
+import org.springframework.scheduling.annotation.Async;
 
+import javax.annotation.Nonnull;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+@Async
 public class TechMutation extends SimpleItemContainerMachine {
 
     public static final SlimefunItemStack TECH_MUTATION = new SlimefunItemStack("BIOTECH_TECH_MUTATION",
             Material.SLIME_BLOCK, "&aTech &bMutation", "");
     public static final ItemStack[] RECIPE_TECH_MUTATION = {
-        Components.TRIPLE_COMPRESSED_SLIME_BALL, Components.BIOTECH_SYNTHETIC_RUBY, Components.TRIPLE_COMPRESSED_MAGMA_CREAM,
-        SlimefunItems.REINFORCED_PLATE, SlimefunItems.ELECTRIC_MOTOR, SlimefunItems.REINFORCED_PLATE,
-        Components.TRIPLE_COMPRESSED_SPONGE, Components.BIOTECH_SYNTHETIC_RUBY, Components.TRIPLE_COMPRESSED_LEATHER
+            SupremeComponents.INDUCTIVE_MACHINE, Components.BIOTECH_SYNTHETIC_RUBY, SupremeComponents.INDUCTIVE_MACHINE,
+        SlimefunItems.REINFORCED_PLATE, SlimefunItems.BOOSTED_URANIUM, SlimefunItems.REINFORCED_PLATE,
+            SupremeComponents.RUSTLESS_MACHINE, Components.BIOTECH_SYNTHETIC_RUBY, SupremeComponents.RUSTLESS_MACHINE
     };
 
 
