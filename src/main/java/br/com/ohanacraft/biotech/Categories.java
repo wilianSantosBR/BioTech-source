@@ -28,5 +28,8 @@ public class Categories {
     public static ItemGroup CARDS_RESOURCE_CATEGORY = new SubItemGroup(new NamespacedKey(BioTech.inst(), "CARDS_RESOURCE_CATEGORY"), MULTI_CATEGORY,
             new CustomItemStack(Material.MUSIC_DISC_PIGSTEP, "&4Resource Cards"));
 
+    public static ItemGroup ELETRIC_CATEGORY = new SubItemGroup(new NamespacedKey(BioTech.inst(), "ELETRIC_CATEGORY"), MULTI_CATEGORY,
+            new CustomItemStack(Material.REDSTONE, "&4Eletric Category"));
+
 
 }
