@@ -2,6 +2,7 @@ package br.com.ohanacraft.biotech.machine;
 
 import br.com.ohanacraft.biotech.addons.supremeexpansion.Cetrus;
 import br.com.ohanacraft.biotech.addons.supremeexpansion.SupremeComponents;
+import br.com.ohanacraft.biotech.resource.Components;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -68,11 +69,9 @@ public class MobCollector extends AContainer implements RecipeDisplayItem {
       LoreBuilder.powerBuffer(1000), LoreBuilder.powerPerSecond(20));
 
   public static final ItemStack[] RECIPE_MOB_COLLECTOR_MACHINE = new ItemStack[]{
-      SupremeComponents.STAINLESS_MACHINE, new ItemStack(Material.RESPAWN_ANCHOR),
-      SupremeComponents.STAINLESS_MACHINE,
-      SupremeComponents.INDUCTOR_MACHINE, SupremeComponents.CRYSTALLIZER_MACHINE, SupremeComponents.INDUCTOR_MACHINE,
-      SupremeComponents.ADAMANTIUM_PLATE, SlimefunItems.PROGRAMMABLE_ANDROID_BUTCHER,
-      SupremeComponents.ADAMANTIUM_PLATE};
+      SupremeComponents.RUSTLESS_MACHINE, new ItemStack(Material.RESPAWN_ANCHOR), SupremeComponents.RUSTLESS_MACHINE,
+      SupremeComponents.INDUCTIVE_MACHINE, Components.BIOTECH_SYNTHETIC_RUBY, SupremeComponents.INDUCTIVE_MACHINE,
+      SupremeComponents.ADAMANTIUM_PLATE, SlimefunItems.PROGRAMMABLE_ANDROID_3_BUTCHER, SupremeComponents.ADAMANTIUM_PLATE};
 
   public static final SlimefunItemStack MOB_COLLECTOR_MACHINE_II = new SlimefunItemStack(
       "MOB_COLLECTOR_II", Material.RESPAWN_ANCHOR,

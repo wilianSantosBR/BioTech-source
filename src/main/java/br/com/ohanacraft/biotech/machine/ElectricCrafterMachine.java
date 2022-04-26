@@ -3,6 +3,7 @@ package br.com.ohanacraft.biotech.machine;
 import br.com.ohanacraft.biotech.generic.MediumContainerMachine;
 import br.com.ohanacraft.biotech.addons.supremeexpansion.Cetrus;
 import br.com.ohanacraft.biotech.addons.supremeexpansion.SupremeComponents;
+import br.com.ohanacraft.biotech.resource.Components;
 import br.com.ohanacraft.biotech.util.Energy;
 import br.com.ohanacraft.biotech.util.SimpleRecipe;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
@@ -28,11 +29,9 @@ public class ElectricCrafterMachine extends MediumContainerMachine {
       Energy.energyPowerPerSecond(20));
 
   public static final ItemStack[] RECIPE_ELECTRIC_CRAFTER_MACHINE = new ItemStack[]{
-      SupremeComponents.STAINLESS_MACHINE, SlimefunItems.VANILLA_AUTO_CRAFTER,
-      SupremeComponents.STAINLESS_MACHINE,
-      SupremeComponents.INDUCTOR_MACHINE, SupremeComponents.ADAMANTIUM_PLATE, SupremeComponents.INDUCTOR_MACHINE,
-      SupremeComponents.ADAMANTIUM_PLATE, SlimefunItems.ENHANCED_AUTO_CRAFTER,
-      SupremeComponents.ADAMANTIUM_PLATE};
+      SupremeComponents.RUSTLESS_MACHINE, SlimefunItems.VANILLA_AUTO_CRAFTER, SupremeComponents.RUSTLESS_MACHINE,
+      SupremeComponents.INDUCTIVE_MACHINE, Components.BIOTECH_SYNTHETIC_RUBY, SupremeComponents.INDUCTIVE_MACHINE,
+      SupremeComponents.ADAMANTIUM_PLATE, SlimefunItems.ENHANCED_AUTO_CRAFTER, SupremeComponents.ADAMANTIUM_PLATE};
 
   public static final SlimefunItemStack ELECTRIC_CRAFTER_MACHINE_II = new SlimefunItemStack(
       "ELECTRIC_CRAFTER_MACHINE_II",

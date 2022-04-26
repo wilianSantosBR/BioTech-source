@@ -25,11 +25,9 @@ public class ForgeIngotMachine extends SimpleItemContainerMachine {
       LoreBuilder.powerBuffer(1000), LoreBuilder.powerPerSecond(20));
 
   public static final ItemStack[] RECIPE_FORGE_INGOT_MACHINE = new ItemStack[]{
-      SupremeComponents.STAINLESS_MACHINE, new ItemStack(Material.BLAST_FURNACE),
-      SupremeComponents.STAINLESS_MACHINE,
-      SupremeComponents.INDUCTOR_MACHINE, SupremeComponents.CRYSTALLIZER_MACHINE, SupremeComponents.INDUCTOR_MACHINE,
-      SlimefunItems.ELECTRIC_INGOT_FACTORY_3, SlimefunItems.ELECTRIC_SMELTERY_2,
-      SlimefunItems.CARBON_PRESS_3};
+      SupremeComponents.RUSTLESS_MACHINE, new ItemStack(Material.BLAST_FURNACE), SupremeComponents.RUSTLESS_MACHINE,
+      SupremeComponents.INDUCTIVE_MACHINE, SupremeComponents.PETRIFIER_MACHINE, SupremeComponents.INDUCTIVE_MACHINE,
+      SlimefunItems.ELECTRIC_INGOT_FACTORY_3, SlimefunItems.ELECTRIC_SMELTERY_2, SlimefunItems.CARBON_PRESS_3};
 
   public static final SlimefunItemStack FORGE_INGOT_MACHINE_II = new SlimefunItemStack(
       "FORGE_INGOT_MACHINE_II", Material.BLAST_FURNACE,

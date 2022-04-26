@@ -3,6 +3,7 @@ package br.com.ohanacraft.biotech.machine;
 import br.com.ohanacraft.biotech.addons.supremeexpansion.Cetrus;
 import br.com.ohanacraft.biotech.addons.supremeexpansion.SupremeComponents;
 import br.com.ohanacraft.biotech.generic.SimpleItemContainerMachine;
+import br.com.ohanacraft.biotech.resource.Components;
 import br.com.ohanacraft.biotech.util.SimpleItemRecipe;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -25,11 +26,9 @@ public class ForgeMagicalMachine extends SimpleItemContainerMachine {
       LoreBuilder.powerBuffer(1000), LoreBuilder.powerPerSecond(20));
 
   public static final ItemStack[] RECIPE_FORGE_MAGICAL_MACHINE = new ItemStack[]{
-      SupremeComponents.STAINLESS_MACHINE, new ItemStack(Material.ENCHANTING_TABLE),
-      SupremeComponents.STAINLESS_MACHINE,
-      SupremeComponents.INDUCTOR_MACHINE, SupremeComponents.CRYSTALLIZER_MACHINE, SupremeComponents.INDUCTOR_MACHINE,
-      SlimefunItems.ELECTRIC_GOLD_PAN_3, SlimefunItems.ELECTRIC_ORE_GRINDER_3,
-      SlimefunItems.ELECTRIFIED_CRUCIBLE_3};
+      SupremeComponents.RUSTLESS_MACHINE, new ItemStack(Material.ENCHANTING_TABLE),SupremeComponents.RUSTLESS_MACHINE,
+      SupremeComponents.INDUCTIVE_MACHINE, Components.BIOTECH_SYNTHETIC_RUBY, SupremeComponents.INDUCTIVE_MACHINE,
+      SlimefunItems.ELECTRIC_GOLD_PAN_3, SlimefunItems.PROGRAMMABLE_ANDROID_3, SlimefunItems.ELECTRIC_ORE_GRINDER_3};
 
   public static final SlimefunItemStack FORGE_MAGICAL_MACHINE_II = new SlimefunItemStack(
       "FORGE_MAGICAL_MACHINE_II", Material.ENCHANTING_TABLE,

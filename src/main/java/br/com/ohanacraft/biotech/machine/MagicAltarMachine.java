@@ -3,6 +3,7 @@ package br.com.ohanacraft.biotech.machine;
 import br.com.ohanacraft.biotech.generic.MediumContainerMachine;
 import br.com.ohanacraft.biotech.addons.supremeexpansion.Cetrus;
 import br.com.ohanacraft.biotech.addons.supremeexpansion.SupremeComponents;
+import br.com.ohanacraft.biotech.resource.Components;
 import br.com.ohanacraft.biotech.util.Energy;
 import br.com.ohanacraft.biotech.util.SimpleRecipe;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
@@ -28,8 +29,7 @@ public class MagicAltarMachine extends MediumContainerMachine {
       Energy.energyPowerPerSecond(20));
 
   public static final ItemStack[] RECIPE_MAGIC_ALTAR_MACHINE = new ItemStack[]{
-      SlimefunItems.ANCIENT_PEDESTAL, SupremeComponents.CRYSTALLIZER_MACHINE,
-      SlimefunItems.ANCIENT_PEDESTAL,
+      SlimefunItems.ANCIENT_PEDESTAL, Components.BIOTECH_SYNTHETIC_RUBY, SlimefunItems.ANCIENT_PEDESTAL,
       SupremeComponents.CONVEYANCE_MACHINE, SlimefunItems.ANCIENT_ALTAR, SupremeComponents.CONVEYANCE_MACHINE,
       SlimefunItems.ANCIENT_PEDESTAL, SupremeComponents.INDUCTOR_MACHINE, SlimefunItems.ANCIENT_PEDESTAL};
 

@@ -2,6 +2,7 @@ package br.com.ohanacraft.biotech.machine;
 
 import br.com.ohanacraft.biotech.addons.supremeexpansion.Cetrus;
 import br.com.ohanacraft.biotech.addons.supremeexpansion.SupremeComponents;
+import br.com.ohanacraft.biotech.resource.Components;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -46,11 +47,9 @@ public class VirtualGarden extends AContainer implements NotHopperable, RecipeDi
       LoreBuilder.powerBuffer(1000), LoreBuilder.powerPerSecond(20));
 
   public static final ItemStack[] RECIPE_VIRTUAL_GARDEN_MACHINE = new ItemStack[]{
-      SupremeComponents.STAINLESS_MACHINE, new ItemStack(Material.STRIPPED_WARPED_HYPHAE),
-      SupremeComponents.STAINLESS_MACHINE,
-      SupremeComponents.INDUCTOR_MACHINE, SupremeComponents.CRYSTALLIZER_MACHINE, SupremeComponents.INDUCTOR_MACHINE,
-      SupremeComponents.ADAMANTIUM_PLATE, SlimefunItems.PROGRAMMABLE_ANDROID_FARMER,
-      SupremeComponents.ADAMANTIUM_PLATE};
+      Components.BIOTECH_SYNTHETIC_RUBY, new ItemStack(Material.STRIPPED_WARPED_HYPHAE), Components.BIOTECH_SYNTHETIC_RUBY,
+      SupremeComponents.RUSTLESS_MACHINE, SupremeComponents.PETRIFIER_MACHINE, SupremeComponents.RUSTLESS_MACHINE,
+      SupremeComponents.ADAMANTIUM_PLATE, SlimefunItems.PROGRAMMABLE_ANDROID_2_FARMER, SupremeComponents.ADAMANTIUM_PLATE};
 
   public static final SlimefunItemStack VIRTUAL_GARDEN_MACHINE_II = new SlimefunItemStack(
       "VIRTUAL_GARDEN_II", Material.STRIPPED_WARPED_HYPHAE,

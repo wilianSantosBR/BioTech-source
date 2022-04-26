@@ -10,6 +10,7 @@ import br.com.ohanacraft.biotech.addons.supremeexpansion.Attribute;
 import br.com.ohanacraft.biotech.addons.supremeexpansion.Cetrus;
 import br.com.ohanacraft.biotech.addons.supremeexpansion.SupremeComponents;
 import br.com.ohanacraft.biotech.generic.MediumContainerMachine;
+import br.com.ohanacraft.biotech.resource.Components;
 import br.com.ohanacraft.biotech.util.Energy;
 import br.com.ohanacraft.biotech.util.SimpleRecipe;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
@@ -36,12 +37,9 @@ public class FoundryMachine extends MediumContainerMachine {
       Energy.energyPowerPerSecond(1000));
 
   public static final ItemStack[] RECIPE_FOUNDRY_MACHINE = new ItemStack[]{
-      SlimefunItems.ELECTRIC_INGOT_FACTORY_3, SlimefunItems.ELECTRIC_INGOT_FACTORY_3,
-      SlimefunItems.ELECTRIC_INGOT_FACTORY_3,
-      SlimefunItems.ELECTRIC_INGOT_FACTORY_3, SupremeComponents.CRYSTALLIZER_MACHINE,
-      SlimefunItems.ELECTRIC_INGOT_FACTORY_3,
-      SlimefunItems.ELECTRIC_SMELTERY_2, SlimefunItems.ELECTRIC_SMELTERY_2,
-      SlimefunItems.ELECTRIC_SMELTERY_2};
+      SlimefunItems.ELECTRIC_INGOT_FACTORY_3, SlimefunItems.ELECTRIC_INGOT_FACTORY_3, SlimefunItems.ELECTRIC_INGOT_FACTORY_3,
+      SupremeComponents.INDUCTIVE_MACHINE, Components.BIOTECH_SYNTHETIC_RUBY, SupremeComponents.INDUCTIVE_MACHINE,
+      SlimefunItems.ELECTRIC_SMELTERY_2, SlimefunItems.PROGRAMMABLE_ANDROID_3, SlimefunItems.ELECTRIC_SMELTERY_2};
 
   public static final SlimefunItemStack FOUNDRY_MACHINE_II = new SlimefunItemStack(
       "FOUNDRY_MACHINE_II",

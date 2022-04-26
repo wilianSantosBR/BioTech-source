@@ -3,6 +3,7 @@ package br.com.ohanacraft.biotech.machine;
 import br.com.ohanacraft.biotech.generic.UtilMachine;
 import br.com.ohanacraft.biotech.addons.supremeexpansion.Cetrus;
 import br.com.ohanacraft.biotech.addons.supremeexpansion.SupremeComponents;
+import br.com.ohanacraft.biotech.resource.Components;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
@@ -49,11 +50,9 @@ public class VirtualAquarium extends AContainer implements RecipeDisplayItem {
       LoreBuilder.powerBuffer(1000), LoreBuilder.powerPerSecond(20));
 
   public static final ItemStack[] RECIPE_VIRTUAL_AQUARIUM_MACHINE = new ItemStack[]{
-      SupremeComponents.STAINLESS_MACHINE, new ItemStack(Material.FISHING_ROD),
-      SupremeComponents.STAINLESS_MACHINE,
-      SupremeComponents.INDUCTOR_MACHINE, SupremeComponents.CRYSTALLIZER_MACHINE, SupremeComponents.INDUCTOR_MACHINE,
-      SupremeComponents.ADAMANTIUM_PLATE, SlimefunItems.PROGRAMMABLE_ANDROID_FISHERMAN,
-      SupremeComponents.ADAMANTIUM_PLATE};
+      Components.BIOTECH_SYNTHETIC_RUBY, new ItemStack(Material.FISHING_ROD), Components.BIOTECH_SYNTHETIC_RUBY,
+      SupremeComponents.INDUCTIVE_MACHINE, SupremeComponents.PETRIFIER_MACHINE, SupremeComponents.INDUCTIVE_MACHINE,
+      SupremeComponents.ADAMANTIUM_PLATE, SlimefunItems.PROGRAMMABLE_ANDROID_2_FISHERMAN, SupremeComponents.ADAMANTIUM_PLATE};
 
   public static final SlimefunItemStack VIRTUAL_AQUARIUM_MACHINE_II = new SlimefunItemStack(
       "VIRTUAL_AQUARIUM_II", Material.DARK_PRISMARINE,
