@@ -10,25 +10,26 @@ import io.github.thebusybiscuit.slimefun4.core.attributes.MachineType;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
 import io.github.thebusybiscuit.slimefun4.implementation.items.electric.AbstractEnergyProvider;
 import io.github.thebusybiscuit.slimefun4.utils.LoreBuilder;
-import java.util.function.Predicate;
-import java.util.logging.Level;
-import javax.annotation.Nonnull;
-import javax.annotation.ParametersAreNonnullByDefault;
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.World;
 import org.bukkit.entity.Cow;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Pig;
 import org.bukkit.entity.Sheep;
 import org.bukkit.inventory.ItemStack;
 
+import javax.annotation.Nonnull;
+import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.concurrent.Future;
+import java.util.function.Predicate;
+
 public class GeneratorMob extends AbstractEnergyProvider {
 
   public static final SlimefunItemStack BIOTECH_GENERATOR_MOB_BASIC = new SlimefunItemStack(
-          "BIOTECH_GENERATOR_MOB_BASIC", Material.TARGET,
-          "&bBasic Generator Mob", "",
+          "BIOTECH_GENERATOR_MOB_BASIC", Material.COMPOSTER,
+          "&bBasic Generator Mob", "Em fim colocamos uma utilidade para os peidos do Nordico",
           LoreBuilder.machine(MachineTier.BASIC, MachineType.GENERATOR),
           Energy.energyBuffer(500), Energy.energyPowerPerSecond(10));
 
@@ -38,8 +39,8 @@ public class GeneratorMob extends AbstractEnergyProvider {
           SlimefunItems.SMALL_CAPACITOR, SlimefunItems.ALUMINUM_INGOT, SlimefunItems.SMALL_CAPACITOR};
 
   public static final SlimefunItemStack BIOTECH_GENERATOR_MOB = new SlimefunItemStack(
-      "BIOTECH_GENERATOR_MOB", Material.TARGET,
-      "&bGenerator Mob", "",
+      "BIOTECH_GENERATOR_MOB", Material.COMPOSTER,
+      "&bGenerator Mob", "Em fim colocamos uma utilidade para os peidos do Nordico",
           LoreBuilder.machine(MachineTier.BASIC, MachineType.GENERATOR),
           Energy.energyBuffer(4500), Energy.energyPowerPerSecond(90));
 
@@ -49,8 +50,8 @@ public class GeneratorMob extends AbstractEnergyProvider {
           GeneratorMob.BIOTECH_GENERATOR_MOB_BASIC, SlimefunItems.SILICON, GeneratorMob.BIOTECH_GENERATOR_MOB_BASIC};
 
   public static final SlimefunItemStack BIOTECH_GENERATOR_MOB_ADVANCED = new SlimefunItemStack(
-          "BIOTECH_GENERATOR_MOB_ADVANCED", Material.TARGET,
-          "&bGenerator Mob Avanced", "",
+          "BIOTECH_GENERATOR_MOB_ADVANCED", Material.COMPOSTER,
+          "&bGenerator Mob Avanced", "Em fim colocamos uma utilidade para os peidos do Nordico",
           LoreBuilder.machine(MachineTier.BASIC, MachineType.GENERATOR),
           Energy.energyBuffer(22500), Energy.energyPowerPerSecond(450));
 
@@ -87,8 +88,14 @@ public class GeneratorMob extends AbstractEnergyProvider {
 
   @ParametersAreNonnullByDefault
   private boolean isAnimalNearby(Location l) {
-    Predicate<Entity> predicate = this::isValidAnimal;
-    return !l.getWorld().getNearbyEntities(l, mobRange, mobRange, mobRange, predicate).isEmpty();
+    try{
+      Predicate<Entity> predicate = this::isValidAnimal;
+      Future<Boolean> task = Bukkit.getScheduler().callSyncMethod(BioTech.instance, () -> l.getWorld().getNearbyEntities(l, mobRange, mobRange, mobRange, predicate).isEmpty());
+      return !task.get();
+    }catch (Exception e){
+      e.printStackTrace();
+      return false;
+    }
   }
 
   @ParametersAreNonnullByDefault
@@ -102,8 +109,7 @@ public class GeneratorMob extends AbstractEnergyProvider {
   }
 
   public final GeneratorMob setEnergy(int value) {
-    final int i = value / 2;
-    this.energy = Math.round(i);
+    this.energy = value;
     return this;
   }
 

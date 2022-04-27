@@ -29,7 +29,8 @@ public class Categories {
             new CustomItemStack(Material.MUSIC_DISC_PIGSTEP, "&4Resource Cards"));
 
     public static ItemGroup ELETRIC_CATEGORY = new SubItemGroup(new NamespacedKey(BioTech.inst(), "ELETRIC_CATEGORY"), MULTI_CATEGORY,
-            new CustomItemStack(Material.REDSTONE, "&4Eletric Category"));
-
+            new CustomItemStack(new SlimefunItemStack("ELECTRIC_ITEM",
+                    "77400ea19dbd84f75c39ad6823ac4ef786f39f48fc6f84602366ac29b837422", "Eletric Item"),
+                    "&4Electric"));
 
 }
