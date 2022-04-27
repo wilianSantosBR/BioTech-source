@@ -103,6 +103,12 @@ public class GenerateCardSimple {
         "", LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE));
 
 
+    public static final SlimefunItemStack BIOTECH_CARD_QUARTZ_BLOCK = new SlimefunItemStack(
+        "BIOTECH_CARD_QUARTZ_BLOCK", Material.MUSIC_DISC_13,
+        "&bCard de Quartz Block", "", "&fAltera para Produção de Quartz Block",
+        "", LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE));
+
+
     public static final SlimefunItemStack BIOTECH_CARD_LAPIS = new SlimefunItemStack(
         "BIOTECH_CARD_LAPIS", Material.MUSIC_DISC_13,
         "&bCard de Lapiz", "", "&fAltera para Produção de Lapiz",
@@ -226,7 +232,10 @@ public class GenerateCardSimple {
             Material.GOLD_BLOCK, Material.GOLD_INGOT);
 
         TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_QUARTZ,
-            Material.QUARTZ_BLOCK, Material.QUARTZ);
+            Material.QUARTZ, Material.QUARTZ);
+
+        TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_QUARTZ_BLOCK,
+            Material.QUARTZ_BLOCK, Material.QUARTZ_BLOCK);
 
         TechGenerator.preSetup(plugin, GenerateCardSimple.BIOTECH_CARD_LAPIS,
             Material.LAPIS_LAZULI, Material.LAPIS_LAZULI);
