@@ -137,29 +137,68 @@ public class GenerateCardAdvanced {
   public static final SlimefunItemStack BIOTECH_CARD_REDSTONE_ALLOY = new SlimefunItemStack(
       "BIOTECH_CARD_REDSTONE_ALLOY", Material.MUSIC_DISC_CHIRP,
       "&bUpgrade Machine Redstone Alloy", "", "&fAltera para Produção de Redstone Alloy",
-      
+      "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE));
+
+
+  public static final SlimefunItemStack BIOTECH_CARD_PLASTIC_SHEET = new SlimefunItemStack(
+      "BIOTECH_CARD_PLASTIC_SHEET", Material.MUSIC_DISC_CHIRP,
+      "&bUpgrade Machine Plastic Sheet", "", "&fAltera para Produção de Plastic Sheet",
       "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE));
 
 
   public static final SlimefunItemStack BIOTECH_CARD_BATTERY = new SlimefunItemStack(
       "BIOTECH_CARD_BATTERY", Material.MUSIC_DISC_CHIRP,
       "&bUpgrade Machine Battery", "", "&fAltera para Produção de Battery",
-      
       "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE));
 
 
   public static final SlimefunItemStack BIOTECH_CARD_MAGNET = new SlimefunItemStack(
       "BIOTECH_CARD_MAGNET", Material.MUSIC_DISC_CHIRP,
       "&bUpgrade Machine Magnet", "", "&fAltera para Produção de Magnet",
-      
       "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE));
 
 
   public static final SlimefunItemStack BIOTECH_CARD_ELECTRO_MAGNET = new SlimefunItemStack(
       "BIOTECH_CARD_ELECTRO_MAGNET", Material.MUSIC_DISC_MALL,
       "&bUpgrade Machine Electro Magnet", "", "&fAltera para Produção de Electro Magnet",
-      
       "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE));
+
+
+  public static final SlimefunItemStack BIOTECH_CARD_ELECTRIC_MOTOR = new SlimefunItemStack(
+      "BIOTECH_CARD_ELECTRIC_MOTOR", Material.MUSIC_DISC_MALL,
+      "&bUpgrade Machine Electric Motor", "", "&fAltera para Produção de Electric Motor",
+      "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE));
+
+
+  public static final SlimefunItemStack BIOTECH_CARD_HEATING_COIL= new SlimefunItemStack(
+      "BIOTECH_CARD_HEATING_COIL", Material.MUSIC_DISC_MALL,
+      "&bUpgrade Machine Heating Coil", "", "&fAltera para Produção de Heating Coil",
+      "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE));
+
+
+  public static final SlimefunItemStack BIOTECH_CARD_SYNTHETIC_SAPPHIRE = new SlimefunItemStack(
+      "BIOTECH_CARD_SYNTHETIC_SAPPHIRE", Material.MUSIC_DISC_MALL,
+      "&bUpgrade Machine Synthetic Sapphire", "", "&fAltera para Produção de Synthetic Sapphire",
+      "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE));
+
+
+  public static final SlimefunItemStack BIOTECH_CARD_SYNTHETIC_EMERALD = new SlimefunItemStack(
+      "BIOTECH_CARD_SYNTHETIC_EMERALD", Material.MUSIC_DISC_MALL,
+      "&bUpgrade Machine Synthetic Emerald", "", "&fAltera para Produção de Synthetic Emerald",
+      "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE));
+
+
+  public static final SlimefunItemStack BIOTECH_CARD_SYNTHETIC_DIAMOND = new SlimefunItemStack(
+      "BIOTECH_CARD_SYNTHETIC_DIAMOND", Material.MUSIC_DISC_MALL,
+      "&bUpgrade Machine Synthetic Diamond", "", "&fAltera para Produção de Synthetic Diamond",
+      "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE));
+
+
+  public static final SlimefunItemStack BIOTECH_CARD_CARBONADO= new SlimefunItemStack(
+      "BIOTECH_CARD_CARBONADO", Material.MUSIC_DISC_STAL,
+      "&bUpgrade Machine Carbonado", "", "&fAltera para Produção de Carbonado",
+      "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE));
+
 
   public static final SlimefunItemStack BIOTECH_CARD_REINFORCED_ALLOY_INGOT = new SlimefunItemStack(
       "BIOTECH_CARD_REINFORCED_ALLOY_INGOT", Material.MUSIC_DISC_STAL,
@@ -230,6 +269,9 @@ public class GenerateCardAdvanced {
     TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_HARDENED_METAL_INGOT,
         SlimefunItems.HARDENED_METAL_INGOT, SlimefunItems.HARDENED_METAL_INGOT);
 
+    TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_PLASTIC_SHEET,
+        SlimefunItems.PLASTIC_SHEET, SlimefunItems.PLASTIC_SHEET);
+
     TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_BATTERY,
         SlimefunItems.BATTERY, SlimefunItems.BATTERY);
 
@@ -238,6 +280,24 @@ public class GenerateCardAdvanced {
 
     TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_ELECTRO_MAGNET,
         SlimefunItems.ELECTRO_MAGNET, SlimefunItems.ELECTRO_MAGNET);
+
+    TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_ELECTRIC_MOTOR,
+        SlimefunItems.ELECTRIC_MOTOR, SlimefunItems.ELECTRIC_MOTOR);
+
+    TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_HEATING_COIL,
+        SlimefunItems.HEATING_COIL, SlimefunItems.HEATING_COIL);
+
+    TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_SYNTHETIC_SAPPHIRE,
+        SlimefunItems.SYNTHETIC_SAPPHIRE, SlimefunItems.SYNTHETIC_SAPPHIRE);
+
+    TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_SYNTHETIC_EMERALD,
+        SlimefunItems.SYNTHETIC_EMERALD, SlimefunItems.SYNTHETIC_EMERALD);
+
+    TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_SYNTHETIC_DIAMOND,
+        SlimefunItems.SYNTHETIC_DIAMOND, SlimefunItems.SYNTHETIC_DIAMOND);
+
+    TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_CARBONADO,
+        SlimefunItems.CARBONADO, SlimefunItems.CARBONADO);
 
     TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_REINFORCED_ALLOY_INGOT,
         SlimefunItems.REINFORCED_ALLOY_INGOT, SlimefunItems.REINFORCED_ALLOY_INGOT);
