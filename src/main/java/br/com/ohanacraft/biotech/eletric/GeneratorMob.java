@@ -3,35 +3,28 @@ package br.com.ohanacraft.biotech.eletric;
 import br.com.ohanacraft.biotech.BioTech;
 import br.com.ohanacraft.biotech.Categories;
 import br.com.ohanacraft.biotech.util.Energy;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.core.attributes.EnergyNetProvider;
 import io.github.thebusybiscuit.slimefun4.core.attributes.MachineTier;
 import io.github.thebusybiscuit.slimefun4.core.attributes.MachineType;
-import io.github.thebusybiscuit.slimefun4.core.networks.energy.EnergyNetComponentType;
 import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
+import io.github.thebusybiscuit.slimefun4.implementation.items.electric.AbstractEnergyProvider;
 import io.github.thebusybiscuit.slimefun4.utils.LoreBuilder;
-import java.util.HashSet;
-import java.util.Set;
 import java.util.function.Predicate;
+import java.util.logging.Level;
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
-import org.apache.commons.lang.Validate;
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.block.Block;
+import org.bukkit.World;
 import org.bukkit.entity.Cow;
 import org.bukkit.entity.Entity;
-import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Pig;
 import org.bukkit.entity.Sheep;
 import org.bukkit.inventory.ItemStack;
-import org.springframework.scheduling.annotation.Async;
 
-@Async
-public class GeneratorMob extends SlimefunItem implements EnergyNetProvider  {
+public class GeneratorMob extends AbstractEnergyProvider {
 
   public static final SlimefunItemStack BIOTECH_GENERATOR_MOB_BASIC = new SlimefunItemStack(
           "BIOTECH_GENERATOR_MOB_BASIC", Material.TARGET,
@@ -69,7 +62,6 @@ public class GeneratorMob extends SlimefunItem implements EnergyNetProvider  {
   private int energy;
   private int buffer;
   private int mobRange = 4;
-  private static final Set<GeneratorMobMachineRecipe> recipes = new HashSet();
 
   public static void setup(@Nonnull BioTech plugin) {
 
@@ -91,35 +83,22 @@ public class GeneratorMob extends SlimefunItem implements EnergyNetProvider  {
             .setEnergy(450)
             .register(plugin);
 
-
-    recipes.clear();
-    addProduce(new GeneratorMobMachineRecipe((n) -> n instanceof Cow));
-    addProduce(new GeneratorMobMachineRecipe((n) -> n instanceof Pig));
-    addProduce(new GeneratorMobMachineRecipe((n) -> n instanceof Sheep));
-
-  }
-
-
-  @ParametersAreNonnullByDefault
-  private boolean isAnimalNearby(Block b, Predicate<LivingEntity> predicate) {
-    return !b.getWorld().getNearbyEntities(b.getLocation(), mobRange, mobRange, mobRange,
-        (n) -> this.isValidAnimal(n, predicate)).isEmpty();
   }
 
   @ParametersAreNonnullByDefault
-  private boolean isValidAnimal(Entity n, Predicate<LivingEntity> predicate) {
-    return n instanceof LivingEntity && predicate.test((LivingEntity) n);
+  private boolean isAnimalNearby(Location l) {
+    Predicate<Entity> predicate = this::isValidAnimal;
+    return !l.getWorld().getNearbyEntities(l, mobRange, mobRange, mobRange, predicate).isEmpty();
+  }
+
+  @ParametersAreNonnullByDefault
+  private boolean isValidAnimal(Entity n) {
+    return n instanceof Cow || n instanceof Sheep || n instanceof Pig;
   }
 
 
   public GeneratorMob(SlimefunItemStack item, ItemStack[] recipe) {
     super(Categories.ELETRIC_CATEGORY, item, RecipeType.ENHANCED_CRAFTING_TABLE, recipe);
-  }
-
-
-  public static void addProduce(@Nonnull GeneratorMobMachineRecipe produce) {
-    Validate.notNull(produce, "A produce cannot be null");
-    recipes.add(produce);
   }
 
   public final GeneratorMob setEnergy(int value) {
@@ -135,18 +114,23 @@ public class GeneratorMob extends SlimefunItem implements EnergyNetProvider  {
 
   @Nonnull
   @Override
-  public EnergyNetComponentType getEnergyComponentType() {
-    return EnergyNetComponentType.GENERATOR;
+  public ItemStack getProgressBar() {
+    return new ItemStack(Material.OBSERVER);
+  }
+
+  @Override
+  public int getEnergyProduction() {
+    return energy;
+  }
+
+  @Override
+  protected void registerDefaultFuelTypes() {
   }
 
   @Override
   public int getGeneratedOutput(Location l, Config config) {
     if(l != null) {
-      for (GeneratorMobMachineRecipe recipe : recipes) {
-        Block invBlock = l.getBlock();
-        recipe.getClass();
-        return isAnimalNearby(invBlock, recipe::test) ? energy : 0;
-      }
+      return isAnimalNearby(l) ? getEnergyProduction() : 0;
     }
     return 0;
   }
@@ -154,5 +138,15 @@ public class GeneratorMob extends SlimefunItem implements EnergyNetProvider  {
   @Override
   public int getCapacity() {
     return this.buffer;
+  }
+
+  @Override
+  public int[] getInputSlots() {
+    return new int[0];
+  }
+
+  @Override
+  public int[] getOutputSlots() {
+    return new int[0];
   }
 }
