@@ -2,6 +2,8 @@ package br.com.ohanacraft.biotech.eletric;
 
 import br.com.ohanacraft.biotech.BioTech;
 import br.com.ohanacraft.biotech.Categories;
+import br.com.ohanacraft.biotech.addons.supremeexpansion.SupremeComponents;
+import br.com.ohanacraft.biotech.resource.Components;
 import br.com.ohanacraft.biotech.util.Energy;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
@@ -29,59 +31,62 @@ public class GeneratorMob extends AbstractEnergyProvider {
 
   public static final SlimefunItemStack BIOTECH_GENERATOR_MOB_BASIC = new SlimefunItemStack(
           "BIOTECH_GENERATOR_MOB_BASIC", Material.COMPOSTER,
-          "&bBasic Generator Mob", "Em fim colocamos uma utilidade para os peidos do Nordico",
+          "&bGenerator Mob Basic", "", "&7Gera energia a partir do metano gerado", "&7por Porcos, Vacas e Ovelhas",
+           "&8(precisa estar em até 3 blocos de distancia)", "",
           LoreBuilder.machine(MachineTier.BASIC, MachineType.GENERATOR),
-          Energy.energyBuffer(500), Energy.energyPowerPerSecond(10));
+          Energy.energyBuffer(1000), Energy.energyPowerPerSecond(50));
 
   public static final ItemStack[] RECIPE_BIOTECH_GENERATOR_MOB_BASIC = new ItemStack[]{
           SlimefunItems.SMALL_CAPACITOR, SlimefunItems.SILICON, SlimefunItems.SMALL_CAPACITOR,
           SlimefunItems.ALUMINUM_INGOT, SlimefunItems.ELECTRIC_MOTOR, SlimefunItems.ALUMINUM_INGOT,
           SlimefunItems.SMALL_CAPACITOR, SlimefunItems.ALUMINUM_INGOT, SlimefunItems.SMALL_CAPACITOR};
 
-  public static final SlimefunItemStack BIOTECH_GENERATOR_MOB = new SlimefunItemStack(
+  public static final SlimefunItemStack BIOTECH_GENERATOR_MOB_MEDIUM = new SlimefunItemStack(
       "BIOTECH_GENERATOR_MOB", Material.COMPOSTER,
-      "&bGenerator Mob", "Em fim colocamos uma utilidade para os peidos do Nordico",
+      "&bGenerator Mob Medium", "", "&7Gera energia a partir do metano gerado", "&7por Porcos, Vacas e Ovelhas",
+         "&8(precisa estar em até 3 blocos de distancia)", "",
           LoreBuilder.machine(MachineTier.BASIC, MachineType.GENERATOR),
-          Energy.energyBuffer(4500), Energy.energyPowerPerSecond(90));
+          Energy.energyBuffer(4000), Energy.energyPowerPerSecond(200));
 
-  public static final ItemStack[] RECIPE_BIOTECH_GENERATOR_MOB = new ItemStack[]{
-      GeneratorMob.BIOTECH_GENERATOR_MOB_BASIC, SlimefunItems.SILICON, GeneratorMob.BIOTECH_GENERATOR_MOB_BASIC,
-          SlimefunItems.ALUMINUM_INGOT, SlimefunItems.CARBONADO, SlimefunItems.ALUMINUM_INGOT,
-          GeneratorMob.BIOTECH_GENERATOR_MOB_BASIC, SlimefunItems.SILICON, GeneratorMob.BIOTECH_GENERATOR_MOB_BASIC};
+  public static final ItemStack[] RECIPE_BIOTECH_GENERATOR_MOB_MEDIUM = new ItemStack[]{
+      GeneratorMob.BIOTECH_GENERATOR_MOB_BASIC, SlimefunItems.FERROSILICON, GeneratorMob.BIOTECH_GENERATOR_MOB_BASIC,
+          SlimefunItems.REINFORCED_PLATE, Components.BIOTECH_SYNTHETIC_RUBY, SlimefunItems.REINFORCED_PLATE,
+          GeneratorMob.BIOTECH_GENERATOR_MOB_BASIC, SlimefunItems.ALUMINUM_BRONZE_INGOT, GeneratorMob.BIOTECH_GENERATOR_MOB_BASIC};
 
   public static final SlimefunItemStack BIOTECH_GENERATOR_MOB_ADVANCED = new SlimefunItemStack(
           "BIOTECH_GENERATOR_MOB_ADVANCED", Material.COMPOSTER,
-          "&bGenerator Mob Avanced", "Em fim colocamos uma utilidade para os peidos do Nordico",
+          "&bGenerator Mob Advanced", "", "&7Gera energia a partir do metano gerado", "&7por Porcos, Vacas e Ovelhas",
+          "&8(precisa estar em até 3 blocos de distancia)", "",
           LoreBuilder.machine(MachineTier.BASIC, MachineType.GENERATOR),
-          Energy.energyBuffer(22500), Energy.energyPowerPerSecond(450));
+          Energy.energyBuffer(16000), Energy.energyPowerPerSecond(800));
 
   public static final ItemStack[] RECIPE_BIOTECH_GENERATOR_MOB_ADVANCED = new ItemStack[]{
-          GeneratorMob.BIOTECH_GENERATOR_MOB, SlimefunItems.CARBONADO_EDGED_CAPACITOR, GeneratorMob.BIOTECH_GENERATOR_MOB,
-          SlimefunItems.HEATING_COIL, SlimefunItems.ELECTRIC_MOTOR, SlimefunItems.HEATING_COIL,
-          SlimefunItems.LEAD_DUST, SlimefunItems.STEEL_INGOT, SlimefunItems.LEAD_DUST};
+          GeneratorMob.BIOTECH_GENERATOR_MOB_MEDIUM, SlimefunItems.CARBONADO, GeneratorMob.BIOTECH_GENERATOR_MOB_MEDIUM,
+          SlimefunItems.HEATING_COIL, SlimefunItems.PLUTONIUM, SlimefunItems.HEATING_COIL,
+      GeneratorMob.BIOTECH_GENERATOR_MOB_MEDIUM, SupremeComponents.INDUCTIVE_MACHINE, GeneratorMob.BIOTECH_GENERATOR_MOB_MEDIUM};
 
   private int energy;
   private int buffer;
-  private int mobRange = 4;
+  private int mobRange = 3;
 
   public static void setup(@Nonnull BioTech plugin) {
 
     new GeneratorMob(
             GeneratorMob.BIOTECH_GENERATOR_MOB_BASIC, GeneratorMob.RECIPE_BIOTECH_GENERATOR_MOB_BASIC)
-            .setBuffer(500)
-            .setEnergy(10)
+            .setBuffer(1000)
+            .setEnergy(50)
             .register(plugin);
 
     new GeneratorMob(
-            GeneratorMob.BIOTECH_GENERATOR_MOB, GeneratorMob.RECIPE_BIOTECH_GENERATOR_MOB)
-            .setBuffer(4500)
-            .setEnergy(90)
+            GeneratorMob.BIOTECH_GENERATOR_MOB_MEDIUM, GeneratorMob.RECIPE_BIOTECH_GENERATOR_MOB_MEDIUM)
+            .setBuffer(4000)
+            .setEnergy(200)
             .register(plugin);
 
     new GeneratorMob(
             GeneratorMob.BIOTECH_GENERATOR_MOB_ADVANCED, GeneratorMob.RECIPE_BIOTECH_GENERATOR_MOB_ADVANCED)
-            .setBuffer(22500)
-            .setEnergy(450)
+            .setBuffer(16000)
+            .setEnergy(800)
             .register(plugin);
 
   }
@@ -90,7 +95,8 @@ public class GeneratorMob extends AbstractEnergyProvider {
   private boolean isAnimalNearby(Location l) {
     try{
       Predicate<Entity> predicate = this::isValidAnimal;
-      Future<Boolean> task = Bukkit.getScheduler().callSyncMethod(BioTech.instance, () -> l.getWorld().getNearbyEntities(l, mobRange, mobRange, mobRange, predicate).isEmpty());
+      Future<Boolean> task = Bukkit.getScheduler().callSyncMethod(BioTech.instance,
+          () -> l.getWorld().getNearbyEntities(l, mobRange, mobRange, mobRange, predicate).isEmpty());
       return !task.get();
     }catch (Exception e){
       e.printStackTrace();
