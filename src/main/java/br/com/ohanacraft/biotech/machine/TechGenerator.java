@@ -124,6 +124,17 @@ public class TechGenerator extends SimpleItemContainerMachine {
     TechGenerator.addReceitasParaProduzir(item, output);
   }
 
+  public static void preSetup(BioTech plugin, SlimefunItemStack item, ItemStack input1,
+      ItemStack input2, ItemStack output) {
+    new ItemNotPlaceable(Categories.CARDS_RESOURCE_CATEGORY,
+        item, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new ItemStack(input1), new ItemStack(input2), new ItemStack(input1),
+        new ItemStack(input2), Components.BIOTECH_CENTER_CARD_SIMPLE, new ItemStack(input2),
+        new ItemStack(input1), new ItemStack(input2), new ItemStack(input1)
+    }).register(plugin);
+    TechGenerator.addReceitasParaProduzir(item, output);
+  }
+
   public static void preSetup(BioTech plugin, int tierCard, SlimefunItemStack item,
       Material input, Material output) {
     preSetup(plugin, tierCard, item, new ItemStack(input), new ItemStack(output));
@@ -137,6 +148,17 @@ public class TechGenerator extends SimpleItemContainerMachine {
         new ItemStack(input), getCardTier(tierCard),
         new ItemStack(input),
         new ItemStack(input), new ItemStack(input), new ItemStack(input)
+    }).register(plugin);
+    TechGenerator.addReceitasParaProduzir(item, output);
+  }
+
+  public static void preSetup(BioTech plugin, int tierCard, SlimefunItemStack item,
+      ItemStack input1,  ItemStack input2, ItemStack output) {
+    new ItemNotPlaceable(Categories.CARDS_RESOURCE_CATEGORY,
+        item, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
+        new ItemStack(input1), new ItemStack(input2), new ItemStack(input1),
+        new ItemStack(input2), getCardTier(tierCard),new ItemStack(input2),
+        new ItemStack(input1), new ItemStack(input2), new ItemStack(input1)
     }).register(plugin);
     TechGenerator.addReceitasParaProduzir(item, output);
   }

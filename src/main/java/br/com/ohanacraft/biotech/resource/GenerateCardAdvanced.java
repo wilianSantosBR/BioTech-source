@@ -1,6 +1,7 @@
 package br.com.ohanacraft.biotech.resource;
 
 import br.com.ohanacraft.biotech.BioTech;
+import br.com.ohanacraft.biotech.addons.supremeexpansion.SupremeComponents;
 import br.com.ohanacraft.biotech.machine.TechGenerator;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.core.attributes.MachineTier;
@@ -279,28 +280,28 @@ public class GenerateCardAdvanced {
         SlimefunItems.PLASTIC_SHEET, SlimefunItems.PLASTIC_SHEET);
 
     TechGenerator.preSetup(plugin, 3, GenerateCardAdvanced.BIOTECH_CARD_HARDENED_METAL_INGOT,
-        SlimefunItems.HARDENED_METAL_INGOT, SlimefunItems.HARDENED_METAL_INGOT);
+        SlimefunItems.HARDENED_METAL_INGOT, SupremeComponents.TITANIUM_PLATE, SlimefunItems.HARDENED_METAL_INGOT);
 
     TechGenerator.preSetup(plugin, 3, GenerateCardAdvanced.BIOTECH_CARD_REDSTONE_ALLOY,
-        SlimefunItems.REDSTONE_ALLOY, SlimefunItems.REDSTONE_ALLOY);
+        SlimefunItems.REDSTONE_ALLOY, SupremeComponents.TITANIUM_PLATE, SlimefunItems.REDSTONE_ALLOY);
 
     TechGenerator.preSetup(plugin, 3, GenerateCardAdvanced.BIOTECH_CARD_ELECTRO_MAGNET,
-        SlimefunItems.ELECTRO_MAGNET, SlimefunItems.ELECTRO_MAGNET);
+        SlimefunItems.ELECTRO_MAGNET, SupremeComponents.IRIDIUM_PLATE, SlimefunItems.ELECTRO_MAGNET);
 
     TechGenerator.preSetup(plugin, 3, GenerateCardAdvanced.BIOTECH_CARD_ELECTRIC_MOTOR,
-        SlimefunItems.ELECTRIC_MOTOR, SlimefunItems.ELECTRIC_MOTOR);
+        SlimefunItems.ELECTRIC_MOTOR, SupremeComponents.AURUM_PLATE, SlimefunItems.ELECTRIC_MOTOR);
 
     TechGenerator.preSetup(plugin, 3, GenerateCardAdvanced.BIOTECH_CARD_HEATING_COIL,
-        SlimefunItems.HEATING_COIL, SlimefunItems.HEATING_COIL);
+        SlimefunItems.HEATING_COIL, SupremeComponents.AURUM_PLATE, SlimefunItems.HEATING_COIL);
 
     TechGenerator.preSetup(plugin, 3, GenerateCardAdvanced.BIOTECH_CARD_SYNTHETIC_DIAMOND,
-        SlimefunItems.SYNTHETIC_DIAMOND, SlimefunItems.SYNTHETIC_DIAMOND);
+        SlimefunItems.SYNTHETIC_DIAMOND, SupremeComponents.ADAMANTIUM_PLATE, SlimefunItems.SYNTHETIC_DIAMOND);
 
     TechGenerator.preSetup(plugin, 3, GenerateCardAdvanced.BIOTECH_CARD_CARBONADO,
-        SlimefunItems.CARBONADO, SlimefunItems.CARBONADO);
+        SlimefunItems.CARBONADO, SupremeComponents.ADAMANTIUM_PLATE, SlimefunItems.CARBONADO);
 
     TechGenerator.preSetup(plugin, 3, GenerateCardAdvanced.BIOTECH_CARD_REINFORCED_ALLOY_INGOT,
-        SlimefunItems.REINFORCED_ALLOY_INGOT, SlimefunItems.REINFORCED_ALLOY_INGOT);
+        SlimefunItems.REINFORCED_ALLOY_INGOT, SupremeComponents.ADAMANTIUM_PLATE, SlimefunItems.REINFORCED_ALLOY_INGOT);
 
   }
 }
