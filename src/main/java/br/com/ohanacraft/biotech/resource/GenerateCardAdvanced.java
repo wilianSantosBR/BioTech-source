@@ -236,17 +236,17 @@ public class GenerateCardAdvanced {
     TechGenerator.preSetup(plugin, GenerateCardAdvanced.BIOTECH_CARD_NICKEL,
         SlimefunItems.NICKEL_INGOT, SlimefunItems.NICKEL_INGOT);
 
-    TechGenerator.preSetup(plugin, GenerateCardAdvanced.BIOTECH_CARD_FERROSILICON,
-        SlimefunItems.FERROSILICON, SlimefunItems.FERROSILICON);
-
-    TechGenerator.preSetup(plugin, GenerateCardAdvanced.BIOTECH_CARD_DAMASCUS,
-        SlimefunItems.DAMASCUS_STEEL_INGOT, SlimefunItems.DAMASCUS_STEEL_INGOT);
-
-    TechGenerator.preSetup(plugin, GenerateCardAdvanced.BIOTECH_CARD_COBALT,
-        SlimefunItems.COBALT_INGOT, SlimefunItems.COBALT_INGOT);
-
     TechGenerator.preSetup(plugin, GenerateCardAdvanced.BIOTECH_CARD_DURALUMIN_INGOT,
         SlimefunItems.DURALUMIN_INGOT, SlimefunItems.DURALUMIN_INGOT);
+
+    TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_FERROSILICON,
+        SlimefunItems.FERROSILICON, SlimefunItems.FERROSILICON);
+
+    TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_DAMASCUS,
+        SlimefunItems.DAMASCUS_STEEL_INGOT, SlimefunItems.DAMASCUS_STEEL_INGOT);
+
+    TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_COBALT,
+        SlimefunItems.COBALT_INGOT, SlimefunItems.COBALT_INGOT);
 
     TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_ALUMINUM_BRONZE_INGOT,
         SlimefunItems.ALUMINUM_BRONZE_INGOT, SlimefunItems.ALUMINUM_BRONZE_INGOT);
@@ -263,14 +263,11 @@ public class GenerateCardAdvanced {
     TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_CARBON_PRESS,
         SlimefunItems.COMPRESSED_CARBON, SlimefunItems.COMPRESSED_CARBON);
 
-    TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_REDSTONE_ALLOY,
-        SlimefunItems.REDSTONE_ALLOY, SlimefunItems.REDSTONE_ALLOY);
+    TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_SYNTHETIC_SAPPHIRE,
+        SlimefunItems.SYNTHETIC_SAPPHIRE, SlimefunItems.SYNTHETIC_SAPPHIRE);
 
-    TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_HARDENED_METAL_INGOT,
-        SlimefunItems.HARDENED_METAL_INGOT, SlimefunItems.HARDENED_METAL_INGOT);
-
-    TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_PLASTIC_SHEET,
-        SlimefunItems.PLASTIC_SHEET, SlimefunItems.PLASTIC_SHEET);
+    TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_SYNTHETIC_EMERALD,
+        SlimefunItems.SYNTHETIC_EMERALD, SlimefunItems.SYNTHETIC_EMERALD);
 
     TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_BATTERY,
         SlimefunItems.BATTERY, SlimefunItems.BATTERY);
@@ -278,28 +275,31 @@ public class GenerateCardAdvanced {
     TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_MAGNET,
         SlimefunItems.MAGNET, SlimefunItems.MAGNET);
 
-    TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_ELECTRO_MAGNET,
+    TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_PLASTIC_SHEET,
+        SlimefunItems.PLASTIC_SHEET, SlimefunItems.PLASTIC_SHEET);
+
+    TechGenerator.preSetup(plugin, 3, GenerateCardAdvanced.BIOTECH_CARD_HARDENED_METAL_INGOT,
+        SlimefunItems.HARDENED_METAL_INGOT, SlimefunItems.HARDENED_METAL_INGOT);
+
+    TechGenerator.preSetup(plugin, 3, GenerateCardAdvanced.BIOTECH_CARD_REDSTONE_ALLOY,
+        SlimefunItems.REDSTONE_ALLOY, SlimefunItems.REDSTONE_ALLOY);
+
+    TechGenerator.preSetup(plugin, 3, GenerateCardAdvanced.BIOTECH_CARD_ELECTRO_MAGNET,
         SlimefunItems.ELECTRO_MAGNET, SlimefunItems.ELECTRO_MAGNET);
 
-    TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_ELECTRIC_MOTOR,
+    TechGenerator.preSetup(plugin, 3, GenerateCardAdvanced.BIOTECH_CARD_ELECTRIC_MOTOR,
         SlimefunItems.ELECTRIC_MOTOR, SlimefunItems.ELECTRIC_MOTOR);
 
-    TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_HEATING_COIL,
+    TechGenerator.preSetup(plugin, 3, GenerateCardAdvanced.BIOTECH_CARD_HEATING_COIL,
         SlimefunItems.HEATING_COIL, SlimefunItems.HEATING_COIL);
 
-    TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_SYNTHETIC_SAPPHIRE,
-        SlimefunItems.SYNTHETIC_SAPPHIRE, SlimefunItems.SYNTHETIC_SAPPHIRE);
-
-    TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_SYNTHETIC_EMERALD,
-        SlimefunItems.SYNTHETIC_EMERALD, SlimefunItems.SYNTHETIC_EMERALD);
-
-    TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_SYNTHETIC_DIAMOND,
+    TechGenerator.preSetup(plugin, 3, GenerateCardAdvanced.BIOTECH_CARD_SYNTHETIC_DIAMOND,
         SlimefunItems.SYNTHETIC_DIAMOND, SlimefunItems.SYNTHETIC_DIAMOND);
 
-    TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_CARBONADO,
+    TechGenerator.preSetup(plugin, 3, GenerateCardAdvanced.BIOTECH_CARD_CARBONADO,
         SlimefunItems.CARBONADO, SlimefunItems.CARBONADO);
 
-    TechGenerator.preSetup(plugin, 2, GenerateCardAdvanced.BIOTECH_CARD_REINFORCED_ALLOY_INGOT,
+    TechGenerator.preSetup(plugin, 3, GenerateCardAdvanced.BIOTECH_CARD_REINFORCED_ALLOY_INGOT,
         SlimefunItems.REINFORCED_ALLOY_INGOT, SlimefunItems.REINFORCED_ALLOY_INGOT);
 
   }

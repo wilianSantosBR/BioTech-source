@@ -2,6 +2,7 @@ package br.com.ohanacraft.biotech.resource;
 
 import br.com.ohanacraft.biotech.BioTech;
 import br.com.ohanacraft.biotech.Categories;
+import br.com.ohanacraft.biotech.addons.supremeexpansion.SupremeComponents;
 import br.com.ohanacraft.biotech.machine.TechMutation;
 import br.com.ohanacraft.biotech.util.ItemNotPlaceable;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
@@ -206,7 +207,7 @@ public class Components {
             "", LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE));
     private static final ItemStack[] RECIPE_BIOTECH_CENTER_CARD_SIMPLE = new ItemStack[]{
             SlimefunItems.BASIC_CIRCUIT_BOARD, SlimefunItems.ELECTRO_MAGNET, SlimefunItems.BASIC_CIRCUIT_BOARD,
-            SlimefunItems.BASIC_CIRCUIT_BOARD, Components.BIOTECH_SYNTHETIC_AMETHYST, SlimefunItems.BASIC_CIRCUIT_BOARD,
+            SlimefunItems.ADVANCED_CIRCUIT_BOARD, Components.BIOTECH_SYNTHETIC_AMETHYST, SlimefunItems.ADVANCED_CIRCUIT_BOARD,
             SlimefunItems.BASIC_CIRCUIT_BOARD, SlimefunItems.ELECTRO_MAGNET, SlimefunItems.BASIC_CIRCUIT_BOARD
     };
 
@@ -217,7 +218,17 @@ public class Components {
     private static final ItemStack[] RECIPE_BIOTECH_CENTER_CARD_ADVANCED = new ItemStack[]{
             SlimefunItems.ADVANCED_CIRCUIT_BOARD, BIOTECH_CENTER_CARD_SIMPLE, SlimefunItems.ADVANCED_CIRCUIT_BOARD,
             BIOTECH_CENTER_CARD_SIMPLE, Components.BIOTECH_SYNTHETIC_RUBY, BIOTECH_CENTER_CARD_SIMPLE,
-            SlimefunItems.ELECTRO_MAGNET, BIOTECH_CENTER_CARD_SIMPLE, SlimefunItems.ELECTRO_MAGNET
+            SlimefunItems.HEATING_COIL, BIOTECH_CENTER_CARD_SIMPLE, SlimefunItems.HEATING_COIL
+    };
+
+    public static final SlimefunItemStack BIOTECH_CENTER_CARD_ULTIMATE = new SlimefunItemStack("BIOTECH_CENTER_CARD_ULTIMATE",
+            Material.MUSIC_DISC_PIGSTEP,
+            "&BComponente Ultimate para Card", "", "&fComponente para Maquina de produzir itens",
+            "", LoreBuilder.machine(MachineTier.END_GAME, MachineType.MACHINE));
+    private static final ItemStack[] RECIPE_BIOTECH_CENTER_CARD_ULTIMATE = new ItemStack[]{
+            Components.BIOTECH_SYNTHETIC_RUBY, BIOTECH_CENTER_CARD_ADVANCED, Components.BIOTECH_SYNTHETIC_RUBY,
+            BIOTECH_CENTER_CARD_ADVANCED, SupremeComponents.PETRIFIER_MACHINE, BIOTECH_CENTER_CARD_ADVANCED,
+            SlimefunItems.REINFORCED_PLATE, BIOTECH_CENTER_CARD_ADVANCED, SlimefunItems.REINFORCED_PLATE
     };
 
     //pó
@@ -315,6 +326,7 @@ public class Components {
         //discos
         registerEnhancedCraft(plugin, Components.BIOTECH_CENTER_CARD_SIMPLE, Components.RECIPE_BIOTECH_CENTER_CARD_SIMPLE);
         registerEnhancedCraft(plugin, Components.BIOTECH_CENTER_CARD_ADVANCED, Components.RECIPE_BIOTECH_CENTER_CARD_ADVANCED);
+        registerEnhancedCraft(plugin, Components.BIOTECH_CENTER_CARD_ULTIMATE, Components.RECIPE_BIOTECH_CENTER_CARD_ULTIMATE);
 
         //po
         registerGrindStone(plugin, Components.BIOTECH_DUST_NETHERITE, Components.RECIPE_BIOTECH_DUST_NETHERITE);

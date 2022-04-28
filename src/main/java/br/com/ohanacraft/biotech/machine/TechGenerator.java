@@ -134,14 +134,21 @@ public class TechGenerator extends SimpleItemContainerMachine {
     new ItemNotPlaceable(Categories.CARDS_RESOURCE_CATEGORY,
         item, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[]{
         new ItemStack(input), new ItemStack(input), new ItemStack(input),
-        new ItemStack(input),
-        tierCard <= 1
-            ? Components.BIOTECH_CENTER_CARD_SIMPLE
-            : Components.BIOTECH_CENTER_CARD_ADVANCED,
+        new ItemStack(input), getCardTier(tierCard),
         new ItemStack(input),
         new ItemStack(input), new ItemStack(input), new ItemStack(input)
     }).register(plugin);
     TechGenerator.addReceitasParaProduzir(item, output);
+  }
+
+  private static ItemStack getCardTier(int tierCard) {
+    if(tierCard >= 3) {
+      return Components.BIOTECH_CENTER_CARD_ULTIMATE;
+    } else if(tierCard == 2) {
+      return Components.BIOTECH_CENTER_CARD_ADVANCED;
+    } else {
+      return Components.BIOTECH_CENTER_CARD_SIMPLE;
+    }
   }
 
   @Override
