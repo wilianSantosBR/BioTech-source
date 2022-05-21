@@ -82,7 +82,7 @@ public class TechGenerator extends SimpleItemContainerMachine implements Radioac
   }
 
   public List<SimpleRecipe> getReceitasParaExibir() {
-    // ordena para receitas com maior quantidade de itens
+    // ordena para receitas com maior quantidade  itens
     return receitasParaProduzir.stream()
         .sorted((o1, o2) -> Integer.compare(o1.getRecipe().length, o2.getRecipe().length))
         .collect(Collectors.toList());
