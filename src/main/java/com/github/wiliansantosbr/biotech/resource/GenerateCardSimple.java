@@ -29,174 +29,174 @@ public class GenerateCardSimple {
     // cards basicos
     public static final SlimefunItemStack BIOTECH_CARD_STONE = new SlimefunItemStack(
         "BIOTECH_CARD_STONE", Material.MUSIC_DISC_STRAD,
-        "&bCard de Stone", "", "&fAltera para Produção de Stone",
+        "&bCard de Stone", "", "&fChange to Production Stone",
         "", LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_GRANITE = new SlimefunItemStack(
         "BIOTECH_CARD_GRANITE", Material.MUSIC_DISC_STRAD,
-        "&bCard de Granite", "", "&fAltera para Produção de Granite",
+        "&bCard de Granite", "", "&fChange to Production Granite",
         "", LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_DIORITE = new SlimefunItemStack(
         "BIOTECH_CARD_DIORITE", Material.MUSIC_DISC_STRAD,
-        "&bCard de Diorite", "", "&fAltera para Produção de Diorite",
+        "&bCard de Diorite", "", "&fChange to Production Diorite",
         "", LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_ANDESITE = new SlimefunItemStack(
         "BIOTECH_CARD_ANDESITE", Material.MUSIC_DISC_STRAD,
-        "&bCard de Andesite", "", "&fAltera para Produção de Andesite",
+        "&bCard de Andesite", "", "&fChange to Production Andesite",
         "", LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_GRAVEL = new SlimefunItemStack(
         "BIOTECH_CARD_GRAVEL", Material.MUSIC_DISC_STRAD,
-        "&bCard de Gravel", "", "&fAltera para Produção de Gravel",
+        "&bCard de Gravel", "", "&fChange to Production Gravel",
         "", LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_SAND = new SlimefunItemStack(
         "BIOTECH_CARD_SAND", Material.MUSIC_DISC_STRAD,
-        "&bCard de Sand", "", "&fAltera para Produção de Sand",
+        "&bCard de Sand", "", "&fChange to Production Sand",
         "", LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_ENDSTONE = new SlimefunItemStack(
         "BIOTECH_CARD_ENDSTONE", Material.MUSIC_DISC_STRAD,
-        "&bCard de Endstone", "", "&fAltera para Produção de Endstone",
+        "&bCard de Endstone", "", "&fChange to Production Endstone",
         "", LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_CLAY = new SlimefunItemStack(
         "BIOTECH_CARD_CLAY", Material.MUSIC_DISC_STRAD,
-        "&bCard de Glay", "", "&fAltera para Produção de Glay",
+        "&bCard de Glay", "", "&fChange to Production Glay",
         "", LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_SNOW = new SlimefunItemStack(
         "BIOTECH_CARD_SNOW", Material.MUSIC_DISC_STRAD,
-        "&bCard de Snow", "", "&fAltera para Produção de Snow",
+        "&bCard de Snow", "", "&fChange to Production Snow",
         "", LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_COAL = new SlimefunItemStack(
         "BIOTECH_CARD_COAL", Material.MUSIC_DISC_13,
-        "&bCard de Coal", "", "&fAltera para Produção de Coal",
+        "&bCard de Coal", "", "&fChange to Production Coal",
         "", LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_IRON = new SlimefunItemStack(
         "BIOTECH_CARD_IRON", Material.MUSIC_DISC_13,
-        "&bCard de Iron", "", "&fAltera para Produção de Iron",
+        "&bCard de Iron", "", "&fChange to Production Iron",
         "", LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_GOLD = new SlimefunItemStack(
         "BIOTECH_CARD_GOLD", Material.MUSIC_DISC_13,
-        "&bCard de Gold", "", "&fAltera para Produção de Gold",
+        "&bCard de Gold", "", "&fChange to Production Gold",
         "", LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_QUARTZ = new SlimefunItemStack(
         "BIOTECH_CARD_QUARTZ", Material.MUSIC_DISC_13,
-        "&bCard de Quartz", "", "&fAltera para Produção de Quartz",
+        "&bCard de Quartz", "", "&fChange to Production Quartz",
         "", LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_QUARTZ_BLOCK = new SlimefunItemStack(
         "BIOTECH_CARD_QUARTZ_BLOCK", Material.MUSIC_DISC_13,
-        "&bCard de Quartz Block", "", "&fAltera para Produção de Quartz Block",
+        "&bCard de Quartz Block", "", "&fChange to Production Quartz Block",
         "", LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_LAPIS = new SlimefunItemStack(
         "BIOTECH_CARD_LAPIS", Material.MUSIC_DISC_13,
-        "&bCard de Lapiz", "", "&fAltera para Produção de Lapiz",
+        "&bCard de Lapiz", "", "&fChange to Production Lapiz",
         "", LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_REDSTONE = new SlimefunItemStack(
         "BIOTECH_CARD_REDSTONE", Material.MUSIC_DISC_13,
-        "&bCard de Redstone", "", "&fAltera para Produção de Redstone",
+        "&bCard de Redstone", "", "&fChange to Production Redstone",
         "", LoreBuilder.machine(MachineTier.BASIC, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_DIAMOND = new SlimefunItemStack(
         "BIOTECH_CARD_DIAMOND", Material.MUSIC_DISC_FAR,
-        "&bCard de Diamond", "", "&fAltera para Produção de Diamond",
+        "&bCard de Diamond", "", "&fChange to Production Diamond",
         "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_EMERALD = new SlimefunItemStack(
         "BIOTECH_CARD_EMERALD", Material.MUSIC_DISC_FAR,
-        "&bCard de Emerald", "", "&fAltera para Produção de Emerald",
+        "&bCard de Emerald", "", "&fChange to Production Emerald",
         "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_NETHERITE = new SlimefunItemStack(
         "BIOTECH_CARD_NETHERITE", Material.MUSIC_DISC_FAR,
-        "&bCard de Netherite", "", "&fAltera para Produção de Netherite",
+        "&bCard de Netherite", "", "&fChange to Production Netherite",
         "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_AMETHYST = new SlimefunItemStack(
             "BIOTECH_CARD_AMETHYST", Material.MUSIC_DISC_FAR,
-            "&bCard de Ametista", "", "&fAltera para Produção de Ametista",
+            "&bCard de Ametista", "", "&fChange to Production Ametista",
             "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_IRON_DUST = new SlimefunItemStack(
         "BIOTECH_CARD_IRON_DUST", Material.MUSIC_DISC_MELLOHI,
-        "&bCard de Iron Dust", "", "&fAltera para Produção de Iron Dust",
+        "&bCard de Iron Dust", "", "&fChange to Production Iron Dust",
         "", LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&7BioTech Component");
 
     public static final SlimefunItemStack BIOTECH_CARD_LEAD_DUST = new SlimefunItemStack(
         "BIOTECH_CARD_LEAD_DUST", Material.MUSIC_DISC_MELLOHI,
-        "&bCard de Lead Dust", "", "&fAltera para Produção de Lead Dust",
+        "&bCard de Lead Dust", "", "&fChange to Production Lead Dust",
         "", LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_GOLD_DUST = new SlimefunItemStack(
         "BIOTECH_CARD_GOLD_DUST", Material.MUSIC_DISC_MELLOHI,
-        "&bCard de Gold Dust", "", "&fAltera para Produção de Gold Dust",
+        "&bCard de Gold Dust", "", "&fChange to Production Gold Dust",
         "", LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_COPPER_DUST = new SlimefunItemStack(
         "BIOTECH_CARD_COPPER_DUST", Material.MUSIC_DISC_MELLOHI,
-        "&bCard de Copper Dust", "", "&fAltera para Produção de Copper Dust",
+        "&bCard de Copper Dust", "", "&fChange to Production Copper Dust",
         "", LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_MAGNESIUM_DUST = new SlimefunItemStack(
         "BIOTECH_CARD_MAGNESIUM_DUST", Material.MUSIC_DISC_MELLOHI,
-        "&bCard de Magnesium Dust", "", "&fAltera para Produção de Magnesium Dust",
+        "&bCard de Magnesium Dust", "", "&fChange to Production Magnesium Dust",
         "", LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_ALUMINUM_DUST = new SlimefunItemStack(
         "BIOTECH_CARD_ALUMINUM_DUST", Material.MUSIC_DISC_MELLOHI,
-        "&bCard de Aluminum Dust", "", "&fAltera para Produção de Aluminum Dust",
+        "&bCard de Aluminum Dust", "", "&fChange to Production Aluminum Dust",
         "", LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_SILVER_DUST = new SlimefunItemStack(
         "BIOTECH_CARD_SILVER_DUST", Material.MUSIC_DISC_MELLOHI,
-        "&bCard de Silver Dust", "", "&fAltera para Produção de Silver Dust",
+        "&bCard de Silver Dust", "", "&fChange to Production Silver Dust",
         "", LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_TIN_DUST = new SlimefunItemStack(
         "BIOTECH_CARD_TIN_DUST", Material.MUSIC_DISC_MELLOHI,
-        "&bCard de Tin Dust", "", "&fAltera para Produção de Tin Dust",
+        "&bCard de Tin Dust", "", "&fChange to Production Tin Dust",
         "", LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&7BioTech Component");
 
 
     public static final SlimefunItemStack BIOTECH_CARD_ZINC_DUST = new SlimefunItemStack(
         "BIOTECH_CARD_ZINC_DUST", Material.MUSIC_DISC_MELLOHI,
-        "&bCard de Zinc Dust", "", "&fAltera para Produção de Zinc Dust",
+        "&bCard de Zinc Dust", "", "&fChange to Production Zinc Dust",
         "", LoreBuilder.machine(MachineTier.MEDIUM, MachineType.MACHINE), "", "&7BioTech Component");
 
 

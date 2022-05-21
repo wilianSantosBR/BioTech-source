@@ -29,8 +29,8 @@ public class GeneratorMob extends AbstractEnergyProvider {
 
   public static final SlimefunItemStack BIOTECH_GENERATOR_MOB_BASIC = new SlimefunItemStack(
       "BIOTECH_GENERATOR_MOB_BASIC", Material.COMPOSTER, "&bGenerator Mob Basic", "",
-      "&7Gera energia a partir do metano gerado", "&7por Porcos, Vacas e Ovelhas",
-      "&8(precisa estar em até 3 blocos de distancia)", "",
+      "&7Generate energy from generated methane", "&7by Pigs, Cows and Sheep",
+      "&8(must be within 3 blocks of distance)", "",
       LoreBuilder.machine(MachineTier.BASIC, MachineType.GENERATOR), UtilEnergy.energyBuffer(1000),
       UtilEnergy.energyPowerPerSecond(50),
       "", "&7BioTech Machine");
@@ -41,8 +41,8 @@ public class GeneratorMob extends AbstractEnergyProvider {
       SlimefunItems.SMALL_CAPACITOR};
 
   public static final SlimefunItemStack BIOTECH_GENERATOR_MOB_MEDIUM = new SlimefunItemStack("BIOTECH_GENERATOR_MOB",
-      Material.COMPOSTER, "&bGenerator Mob Medium", "", "&7Gera energia a partir do metano gerado",
-      "&7por Porcos, Vacas e Ovelhas", "&8(precisa estar em até 3 blocos de distancia)", "",
+      Material.COMPOSTER, "&bGenerator Mob Medium", "", "&7Generate energy from generated methane",
+      "&7by Pigs, Cows and Sheep", "&8(must be within 3 blocks of distance)", "",
       LoreBuilder.machine(MachineTier.BASIC, MachineType.GENERATOR), UtilEnergy.energyBuffer(4000),
       UtilEnergy.energyPowerPerSecond(200),
       "", "&7BioTech Machine");
@@ -55,8 +55,8 @@ public class GeneratorMob extends AbstractEnergyProvider {
 
   public static final SlimefunItemStack BIOTECH_GENERATOR_MOB_ADVANCED = new SlimefunItemStack(
       "BIOTECH_GENERATOR_MOB_ADVANCED", Material.COMPOSTER, "&bGenerator Mob Advanced", "",
-      "&7Gera energia a partir do metano gerado", "&7por Porcos, Vacas e Ovelhas",
-      "&8(precisa estar em até 3 blocos de distancia)", "",
+      "&7Generate energy from generated methane", "&7by Pigs, Cows and Sheep",
+      "&8(must be within 3 blocks of distance)", "",
       LoreBuilder.machine(MachineTier.BASIC, MachineType.GENERATOR), UtilEnergy.energyBuffer(16000),
       UtilEnergy.energyPowerPerSecond(800),
       "", "&7BioTech Machine");
