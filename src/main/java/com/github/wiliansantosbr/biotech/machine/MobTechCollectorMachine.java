@@ -44,7 +44,7 @@ public class MobTechCollectorMachine extends AContainer implements RecipeDisplay
 
 
   public static final SlimefunItemStack MOB_TECH_COLLECTOR_MACHINE = new SlimefunItemStack(
-      "MOB_TECH_COLLECTOR_MACHINE", Material.SCAFFOLDING,
+      "MOB_TECH_COLLECTOR_MACHINE", Material.NETHER_GOLD_ORE,
       "&bMobTech Collector Machine", "", "&fThis machine allows you to collect ",
       "&fMobTech head nearby mobs. (4 block)",
       "", LoreBuilder.machine(MachineTier.ADVANCED, MachineType.MACHINE), LoreBuilder.speed(1),
