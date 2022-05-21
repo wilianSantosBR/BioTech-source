@@ -7,21 +7,10 @@ import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.core.attributes.Radioactivity;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.GitHubBuildsUpdater;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import java.util.logging.Level;
-import javax.annotation.Nonnull;
 import org.bukkit.ChatColor;
-import org.bukkit.configuration.ConfigurationSection;
-import org.bukkit.enchantments.Enchantment;
-import org.bukkit.enchantments.EnchantmentWrapper;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
 
 public class BioTech extends JavaPlugin implements SlimefunAddon {
 
@@ -42,8 +31,15 @@ public class BioTech extends JavaPlugin implements SlimefunAddon {
             new GitHubBuildsUpdater(this, getFile(), "wilianSantosBR/BioTech/main").start();
         }
 
-        Setup.setup(this);
-
+        Plugin lx = getServer().getPluginManager().getPlugin("SupremeExpansion");
+        if (lx == null) {
+            BioTech.inst().log(Level.WARNING, "########################################");
+            BioTech.inst().log(Level.WARNING, "   This addon depends on another addon  ");
+            BioTech.inst().log(Level.WARNING, "             SupremeExpansion           ");
+            BioTech.inst().log(Level.WARNING, "########################################");
+        } else {
+            Setup.setup(this);
+        }
 
     }
 
